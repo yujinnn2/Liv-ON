@@ -6,12 +6,12 @@ let swiper = new Swiper(".sec02_mySwiper", {
   centeredSlides: true,
   grabCursor: true,
   pagination: {
-    el: ".sec02_swiper-pagination",
+    el: "sec02_swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".sec02_swiper-button-next",
-    prevEl: ".sec02_swiper-button-prev",
+    nextEl: "sec02_swiper-button-next",
+    prevEl: "sec02_swiper-button-prev",
   }
 });
 

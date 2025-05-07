@@ -208,27 +208,27 @@ header {
     }
 
     .swiper-image-one {
-      background-image: url('/Liv-ON/assets/images/main-photo.svg');
+      background-image: url('../images/main-photo-1.svg');
     }
 
     .swiper-image-two {
-      background-image: url('/Liv-ON/assets/images/main-photo.svg');
+      background-image: url('../images/main-photo-1.svg');
     }
 
     .swiper-image-three {
-      background-image: url('/Liv-ON/assets/images/main-photo-3.svg');
+      background-image: url('../images/main-photo-2.svg');
     }
 
     .swiper-image-four {
-      background-image: url('/Liv-ON/assets/images/main-photo-3.svg');
+      background-image: url('../images/main-photo-2.svg');
     }
 
     .swiper-image-five {
-      background-image: url('/Liv-ON/assets/images/main-photo-2.svg');
+      background-image: url('../images/main-photo-3.svg');
     }
 
     .swiper-image-six {
-      background-image: url('/Liv-ON/assets/images/main-photo-2.svg');
+      background-image: url('../images/main-photo-3.svg');
     }
   }
 }
@@ -247,9 +247,9 @@ header {
   }
 
   .swiper .sec02_mySwiper {
-    // width: 100%;
-    // height: 100%;
-    // position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
 
   .swiper-wrapper {
