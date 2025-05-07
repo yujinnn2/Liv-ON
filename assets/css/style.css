@@ -1,6 +1,6 @@
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-header {
+header .container {
   width: 100%;
   height: 80px;
   background: transparent;
@@ -11,25 +11,25 @@ header {
   position: fixed;
   z-index: 999;
 }
-header .logo h1 {
+header .container .logo h1 {
   font-size: 48px;
   color: #fff;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
 }
-header .hamburger {
+header .container .hamburger {
   display: none;
 }
-header .hamburger .line {
+header .container .hamburger .line {
   width: 30px;
   height: 3px;
   background-color: #efefef;
   margin: 6px 0;
 }
-header .nav-bar .active {
+header .container .nav-bar .active {
   height: 100vh;
 }
-header .nav-bar a {
+header .container .nav-bar a {
   display: block;
   color: #efefef;
   font-size: 20px;
@@ -39,18 +39,18 @@ header .nav-bar a {
   margin: 0 5px;
   text-decoration: none;
 }
-header .nav-bar ul {
+header .container .nav-bar ul {
   display: flex;
 }
-header .nav-bar ul li a:hover {
+header .container .nav-bar ul li a:hover {
   color: rgb(8, 23, 68);
   background: #fefefe;
 }
-header .nav-bar ul li a.active {
+header .container .nav-bar ul li a.active {
   color: rgb(8, 23, 68);
   background: #fefefe;
 }
-header .col-group i {
+header .container .col-group i {
   font-size: 25px;
   color: #fff;
   padding: 0 10px;
@@ -62,12 +62,12 @@ header .col-group i {
   width: 100vw;
   position: relative;
 }
-.section01 .swiper {
+.section01 .sec01_swiper {
   height: 100%;
   width: 100%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-.section01 .swiper .swiper-slide {
+.section01 .sec01_swiper .swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,17 +75,17 @@ header .col-group i {
   background-color: #fff;
   overflow: hidden;
 }
-.section01 .swiper .swiper-slide .swiper-image-a {
+.section01 .sec01_swiper .swiper-slide .swiper-image-a {
   width: 100%;
   height: 80%;
   position: relative;
 }
-.section01 .swiper .swiper-slide .swiper-image-b {
+.section01 .sec01_swiper .swiper-slide .swiper-image-b {
   width: 100%;
   height: 20%;
   position: relative;
 }
-.section01 .swiper .swiper-image-inner {
+.section01 .sec01_swiper .swiper-image-inner {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -96,25 +96,25 @@ header .col-group i {
   padding: 2rem;
   text-align: center;
 }
-.section01 .swiper .swiper-image-left {
+.section01 .sec01_swiper .swiper-image-left {
   background-color: hsla(0, 0%, 0%, 0.2);
   background-blend-mode: overlay;
   filter: sepia(100%);
   transition: all 1s ease;
 }
-.section01 .swiper .swiper-image-right {
+.section01 .sec01_swiper .swiper-image-right {
   background-color: hsla(0, 0%, 0%, 0.5);
   background-blend-mode: multiply;
   filter: hue-rotate(-60deg);
   transition: all 1s ease;
 }
-.section01 .swiper .swiper-slide-active .swiper-image-left {
+.section01 .sec01_swiper .swiper-slide-active .swiper-image-left {
   filter: sepia(0%);
 }
-.section01 .swiper .swiper-slide-active .swiper-image-right {
+.section01 .sec01_swiper .swiper-slide-active .swiper-image-right {
   filter: hue-rotate(10deg);
 }
-.section01 .swiper h1 {
+.section01 .sec01_swiper h1 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   color: #fff;
@@ -125,14 +125,14 @@ header .col-group i {
   transform: translateX(-20px);
   opacity: 0;
 }
-.section01 .swiper h1 span.emphasis {
+.section01 .sec01_swiper h1 span.emphasis {
   font-weight: 700;
   font-style: italic;
 }
-.section01 .swiper h1 span:not(.emphasis) {
+.section01 .sec01_swiper h1 span:not(.emphasis) {
   font-size: 3.5rem;
 }
-.section01 .swiper h1 + p {
+.section01 .sec01_swiper h1 + p {
   font-size: 14px;
   letter-spacing: 2px;
   margin: 10px 0 0;
@@ -142,7 +142,7 @@ header .col-group i {
   transform: translateX(-20px);
   opacity: 0;
 }
-.section01 .swiper p.paragraph {
+.section01 .sec01_swiper p.paragraph {
   color: #fff;
   font-size: 1rem;
   max-width: 500px;
@@ -152,42 +152,42 @@ header .col-group i {
   opacity: 0;
   text-align: left;
 }
-.section01 .swiper .swiper-slide-active h1,
-.section01 .swiper .swiper-slide-active h1 + p,
-.section01 .swiper .swiper-slide-active .paragraph {
+.section01 .sec01_swiper .swiper-slide-active h1,
+.section01 .sec01_swiper .swiper-slide-active h1 + p,
+.section01 .sec01_swiper .swiper-slide-active .paragraph {
   transform: translateX(0);
   opacity: 1;
 }
-.section01 .swiper .swiper-pagination {
+.section01 .sec01_swiper .swiper-pagination {
   position: absolute;
   bottom: 20px !important;
 }
-.section01 .swiper .swiper-pagination-bullet {
+.section01 .sec01_swiper .swiper-pagination-bullet {
   width: 15px;
   height: 2px;
   background: #fff;
   opacity: 0.4;
 }
-.section01 .swiper .swiper-pagination-bullet-active {
+.section01 .sec01_swiper .swiper-pagination-bullet-active {
   opacity: 1;
 }
-.section01 .swiper .swiper-image-one {
-  background-image: url("/Liv-ON/assets/images/main-photo.svg");
+.section01 .sec01_swiper .swiper-image-one {
+  background-image: url("../images/main-photo-1.png");
 }
-.section01 .swiper .swiper-image-two {
-  background-image: url("/Liv-ON/assets/images/main-photo.svg");
+.section01 .sec01_swiper .swiper-image-two {
+  background-image: url("../images/main-photo-1.png");
 }
-.section01 .swiper .swiper-image-three {
-  background-image: url("/Liv-ON/assets/images/main-photo-3.svg");
+.section01 .sec01_swiper .swiper-image-three {
+  background-image: url("../images/main-photo-2.png");
 }
-.section01 .swiper .swiper-image-four {
-  background-image: url("/Liv-ON/assets/images/main-photo-3.svg");
+.section01 .sec01_swiper .swiper-image-four {
+  background-image: url("../images/main-photo-2.png");
 }
-.section01 .swiper .swiper-image-five {
-  background-image: url("/Liv-ON/assets/images/main-photo-2.svg");
+.section01 .sec01_swiper .swiper-image-five {
+  background-image: url("../images/main-photo-3.png");
 }
-.section01 .swiper .swiper-image-six {
-  background-image: url("/Liv-ON/assets/images/main-photo-2.svg");
+.section01 .sec01_swiper .swiper-image-six {
+  background-image: url("../images/main-photo-3.png");
 }
 
 .section02 .container {
@@ -199,56 +199,57 @@ header .col-group i {
   color: #545146;
   margin-bottom: 38px;
 }
-.section02 .swiper-wrapper .swiper-slide {
+.section02 .swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.section02 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 420px !important;
-  height: 680px;
-  background: url("../images/swiper01.svg");
 }
-.section02 .swiper-button-prev:after,
-.section02 .swiper-button-next:after {
-  display: none;
-  position: absolute;
+.section02 .swiper-slide img {
+  display: block;
+  width: 413px;
+  height: 700px;
+  object-fit: cover;
 }
-.section02 .nav_btn {
+.section02 .next_btn {
   position: relative;
   left: 40px;
-  display: none;
+  top: -200px;
+  z-index: 9;
 }
 
 .section03 {
-  height: 650px;
-}
-.section03 .banner {
   width: 100%;
-  height: 100%;
-  background-image: url("../images/banner.svg");
+  height: 600px;
+  background-image: url("../images/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.section03 .banner .banner-text {
+.section03 .banner-text {
   position: relative;
   top: 240px;
   text-align: center;
   color: #fff;
 }
-.section03 .banner .banner-text .p {
+.section03 .banner-text .p {
   font-size: 24px;
 }
-.section03 .banner .banner-text .h3 {
+.section03 .banner-text .h3 {
   font-size: 32px;
 }
-.section03 .banner .button {
+.section03 .button {
   position: relative;
   top: 270px;
   text-align: center;
 }
-.section03 .banner .button .viewmore {
+.section03 .button .viewmore {
   width: 180px;
   height: 50px;
   color: #fff;

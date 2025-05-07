@@ -1,25 +1,19 @@
-
-
+// swiper 02
 let swiper = new Swiper(".sec02_mySwiper", {
-  slidesPerView: 5,
-  spaceBetween: 26,
+  slidesPerView: 4,
+  spaceBetween: 30,
   centeredSlides: true,
-  grabCursor: true,
-  pagination: {
-    el: "sec02_swiper-pagination",
-    clickable: true,
-  },
   navigation: {
-    nextEl: "sec02_swiper-button-next",
-    prevEl: "sec02_swiper-button-prev",
-  }
+    nextEl: ".swiper-button-next",
+    prevEl: ".next_btn",
+  },
 });
 
 
-
+//swiper 01
 document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.swiper', {
-    // direction: 'vertical',
+  const swiper = new Swiper('.sec01_swiper', {
+    direction: 'vertical',
     loop: true,
     pagination: {
       el: '.swiper-pagination',
@@ -36,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     on: {
       init: function () {
         // 초기화 시 첫 슬라이드 애니메이션 트리거
-        this.slides[this.activeIndex].classList.add('swiper-slide-active');
+        this.slides[this.activeIndex].classList.add('.sec01_swiper-slide-active');
       },
       slideChange: function () {
         // 슬라이드 변경 시 애니메이션 리셋
@@ -61,3 +55,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+

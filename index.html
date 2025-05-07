@@ -10,14 +10,14 @@
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Boxicons -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 
 <body>
   <!--  gng 메뉴 -->
   <header>
+   <div class="container">
     <div class="logo">
       <h1><span class="emphasis">Liv;ON</span></h1>
     </div>
@@ -43,10 +43,11 @@
       </div>
     </div>
   </header>
+   </div>
   <!-- section01 섹션1 -->
   <section class="section01">
     <div id="home-slider">
-      <div class="swiper zim">
+      <div class="sec01_swiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
@@ -111,7 +112,7 @@
   <section class="section02">
     <div class="container">
       <div class="row">
-        <div class="main-text col-md-8" >
+        <div class="main-text" col-md-8>
           <p>당신의 라이프 스타일을 반영한 최적의 주거 공간을 창조합니다.<br>
             소중한 일상을 더욱 가치 있게 만들어줄, 당신의 취향에 완벽히 어울리는 인테리어 디자인을 경험해보세요.<br>
             <br>
@@ -121,53 +122,77 @@
       </div>
     </div>
     <!-- Swiper -->
-    <div class="swiper sec02_mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-      </div>
-      <div class="sec02_swiper-pagination">
-      </div>
-      <div class="swiper-button-prev">
-        <img src="assets/images/nav_btn.svg" alt="좌측 이동 버튼" class="nav_btn">
-      </div>
+  <div class="swiper sec02_mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="assets/images/swiper01.svg" alt=""></div>
+      <div class="swiper-slide"><img src="assets/images/swiper02.svg" alt=""></div>
+      <div class="swiper-slide"><img src="assets/images/swiper03.svg" alt=""></div>
+      <div class="swiper-slide"><img src="assets/images/swiper01.svg" alt=""></div>
+      <div class="swiper-slide"><img src="assets/images/swiper02.svg" alt=""></div>
+      <div class="swiper-slide"><img src="assets/images/swiper03.svg" alt=""></div>
+      <div class="swiper-slide"><img src="assets/images/swiper01.svg" alt=""></div>
+      <div class="swiper-slide"><img src="assets/images/swiper01.svg" alt=""></div>
+      <div class="swiper-slide"><img src="assets/images/swiper01.svg" alt=""></div>
     </div>
-
+    <div class="next_btn"><img src="assets/images/nav_btn.svg" alt="" class="next_btn"></div>
+  </div>
   </section>
   <!-- section03 섹션3 -->
   <section class="section03">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="banner">
-            <div class="banner-text">
-              <p>간편한 홈스타일링</p>
-              <h3><strong>Liv;ON</strong>을 통해 나만을 위한 공간을 만들어보세요. </h3>
-            </div>
-            <div class="button">
-              <button class="viewmore">view more<img src="assets/images/next.svg" alt=""></button>
-            </div>
-          </div>
-        </div>
+    <div class="banner">
+      <div class="banner-text">
+        <p>간편한 홈스타일링</p>
+        <h3><strong>Liv;ON</strong>을 통해 나만을 위한 공간을 만들어보세요. </h3>
+      </div>
+      <div class="button">
+        <button class="viewmore">view more  <img src="assets/images/next.svg" alt=""></button>
       </div>
     </div>
   </section>
   <!-- section04 섹션4 -->
-
+  <section class="section04">
+    <div class="container">
+      <div class="row">
+        <nav>
+          <ul>
+            <li><a href="#">plant</a></li>
+            <li><a href="#">white</a></li>
+            <li><a href="#">luxury</a></li>
+            <li><a href="#">Dark</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <img src="assets/images/plant1.svg" alt="플랜테리어 이미지1" class="plant1">
+          <div class="main-text">
+            <p class="bedroom">Planterior photography | Bedroom </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/plant2.svg" alt="플랜테리어 이미지2" class="plant2">
+          <div class="main-text">
+            <p class="cactus">Planterior photography | cactus pot </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <p>플랜테리어는 단순한 인테리어를 넘어,자연과의 조화를<br> 이루는 새로운 라이프스타일을 제안합니다.<br>자연의 아름다움을 집안에 담아보세요.<br> 식물의 종류와 배치에 따라 각기 다른
+            분위기 연출이 가능하고,<br> 일상속에서의 작은 힐링을 경험 보세요.</p>
+        </div>
+        <div class="col-md-7">
+          <img src="assets/images/plant3.svg" alt="플랜테리어 이미지3" class="plant3">
+        </div>
+      </div>
+    </div>
+    <div class="point_text">
+      Planterior
+    </div>
+    <div class="point_text2">
+      Planterior
+    </div>
+  </section>
   <!-- section05 섹션5 -->
   <section class="section05">
     <div class="bg_img">
@@ -187,17 +212,15 @@
   <!-- section06 섹션6 -->
   <section class="section06">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p>Liv. 매거진</p>
-        </div>
+      <div class="row_1">
+        <p>Liv. 매거진</p>
       </div>
-      <div class="row">
+      <div class="row_2">
         <div class="col-md-4">
           <div class="img_section">
             <img src="assets/images/magazine.svg" alt="">
             <div class="text_section">
-              <p>Tv cf 속 그 공간,그 제품 2021 영림의 다양한 신제품들을<br> 담은 현장 속 인테리어 살펴고~~~~~~~~~~~~~~~ <img
+              <p>Tv cf 속 그 공간,그 제품 2021 영림의 다양한 신제품들을<br> 담은 현장 속 인테리어 살~~~~~~~~~~~~~~~ <img
                   src="assets/images/next_dark.svg" alt="우측 화살표" class="next_dark">
               </p>
             </div>
@@ -233,7 +256,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Bootstrap 5 -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- javascript -->
   <script src="assets/js/main.js"></script>
 
