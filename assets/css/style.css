@@ -1,0 +1,99 @@
+:root {
+  --black:#000000
+  --main-color: #fff;
+  --sub-color:#ccc;
+  --main-font-size: 30px;
+  --sub-font-size: 18px;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  position: fixed;
+  z-index: 999;
+}
+header .logo h1 {
+  font-size: 56px;
+  color: #fff;
+}
+header .hamburger {
+  display: none;
+}
+header .hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #efefef;
+  margin: 6px 0;
+}
+header .nav-bar .active {
+  height: 100vh;
+}
+header .nav-bar a {
+  display: block;
+  color: #efefef;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.2s;
+  margin: 0 5px;
+  text-decoration: none;
+}
+header .nav-bar ul {
+  display: flex;
+}
+header .nav-bar ul li a:hover {
+  color: rgb(8, 23, 68);
+  background: #fefefe;
+}
+header .nav-bar ul li a.active {
+  color: rgb(8, 23, 68);
+  background: #fefefe;
+}
+header .col-group i {
+  font-size: 25px;
+  color: #fff;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.section02 .swiper .sec02_.mySwiper {
+  padding-bottom: 80px;
+}
+.section02 .swiper-slide {
+  background: url("../images/main-photo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 680px;
+}
+.section02 .swiper-button-prev:after,
+.section02 .swiper-button-next:after {
+  display: none;
+  position: absolute;
+}
+.section02 .nav_btn {
+  position: relative;
+  left: 40px;
+}
+.section02 .main-text {
+  padding-top: 59px;
+  font-size: 16px;
+  color: #545146;
+  margin-bottom: 38px;
+}
+
+.section03 .banner {
+  background: url("../images/banner.svg");
+  max-width: 100%;
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */

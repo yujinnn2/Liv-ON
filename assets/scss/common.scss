@@ -1,0 +1,28 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+    --black:#000000
+    --main-color: #fff;
+    --sub-color:#ccc;
+    --main-font-size : 30px;
+    --sub-font-size: 18px;
+  }
+
+  *{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    img{
+      max-width: 100%;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .d-flex{
+    display:flex;
+  }
