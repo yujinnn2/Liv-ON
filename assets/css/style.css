@@ -1,17 +1,5 @@
-:root {
-  --black:#000000
-  --main-color: #fff;
-  --sub-color:#ccc;
-  --main-font-size: 30px;
-  --sub-font-size: 18px;
-}
-
-* {
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-
+@import url("../scss/common.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 header {
   width: 100%;
   height: 80px;
@@ -24,8 +12,10 @@ header {
   z-index: 999;
 }
 header .logo h1 {
-  font-size: 56px;
+  font-size: 48px;
   color: #fff;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
 }
 header .hamburger {
   display: none;
@@ -67,14 +57,158 @@ header .col-group i {
   cursor: pointer;
 }
 
-.section02 .swiper .sec02_.mySwiper {
-  padding-bottom: 80px;
+.section01 #home-slider {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
-.section02 .swiper-slide {
-  background: url("../images/main-photo.png");
+.section01 .swiper {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.section01 .swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+}
+.section01 .swiper .swiper-slide .swiper-image-a {
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+.section01 .swiper .swiper-slide .swiper-image-b {
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+.section01 .swiper .swiper-image-inner {
+  width: 100%;
+  height: 100%;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+.section01 .swiper .swiper-image-left {
+  background-color: hsla(0, 0%, 0%, 0.2);
+  background-blend-mode: overlay;
+  filter: sepia(100%);
+  transition: all 1s ease;
+}
+.section01 .swiper .swiper-image-right {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  background-blend-mode: multiply;
+  filter: hue-rotate(-60deg);
+  transition: all 1s ease;
+}
+.section01 .swiper .swiper-slide-active .swiper-image-left {
+  filter: sepia(0%);
+}
+.section01 .swiper .swiper-slide-active .swiper-image-right {
+  filter: hue-rotate(10deg);
+}
+.section01 .swiper h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 4.5rem;
+  line-height: 1;
+  margin: 0;
+  transition: all 0.8s ease;
+  transform: translateX(-20px);
+  opacity: 0;
+}
+.section01 .swiper h1 span.emphasis {
+  font-weight: 700;
+  font-style: italic;
+}
+.section01 .swiper h1 span:not(.emphasis) {
+  font-size: 3.5rem;
+}
+.section01 .swiper h1 + p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 10px 0 0;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.8s ease 0.2s;
+  transform: translateX(-20px);
+  opacity: 0;
+}
+.section01 .swiper p.paragraph {
+  color: #fff;
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0;
+  transition: all 0.8s ease 0.4s;
+  transform: translateX(-20px);
+  opacity: 0;
+  text-align: left;
+}
+.section01 .swiper .swiper-slide-active h1,
+.section01 .swiper .swiper-slide-active h1 + p,
+.section01 .swiper .swiper-slide-active .paragraph {
+  transform: translateX(0);
+  opacity: 1;
+}
+.section01 .swiper .swiper-pagination {
+  position: absolute;
+  bottom: 20px !important;
+}
+.section01 .swiper .swiper-pagination-bullet {
+  width: 15px;
+  height: 2px;
+  background: #fff;
+  opacity: 0.4;
+}
+.section01 .swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.section01 .swiper .swiper-image-one {
+  background-image: url("/Liv-ON/assets/images/main-photo.svg");
+}
+.section01 .swiper .swiper-image-two {
+  background-image: url("/Liv-ON/assets/images/main-photo.svg");
+}
+.section01 .swiper .swiper-image-three {
+  background-image: url("/Liv-ON/assets/images/main-photo-3.svg");
+}
+.section01 .swiper .swiper-image-four {
+  background-image: url("/Liv-ON/assets/images/main-photo-3.svg");
+}
+.section01 .swiper .swiper-image-five {
+  background-image: url("/Liv-ON/assets/images/main-photo-2.svg");
+}
+.section01 .swiper .swiper-image-six {
+  background-image: url("/Liv-ON/assets/images/main-photo-2.svg");
+}
+
+.section02 .container {
+  padding-top: 100px;
+}
+.section02 .container .main-text {
+  padding-top: 59px;
+  font-size: 16px;
+  color: #545146;
+  margin-bottom: 38px;
+}
+.section02 .swiper-wrapper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 420px !important;
   height: 680px;
+  background: url("../images/swiper01.svg");
 }
 .section02 .swiper-button-prev:after,
 .section02 .swiper-button-next:after {
@@ -84,16 +218,149 @@ header .col-group i {
 .section02 .nav_btn {
   position: relative;
   left: 40px;
-}
-.section02 .main-text {
-  padding-top: 59px;
-  font-size: 16px;
-  color: #545146;
-  margin-bottom: 38px;
+  display: none;
 }
 
+.section03 {
+  height: 650px;
+}
 .section03 .banner {
-  background: url("../images/banner.svg");
-  max-width: 100%;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/banner.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section03 .banner .banner-text {
+  position: relative;
+  top: 240px;
+  text-align: center;
+  color: #fff;
+}
+.section03 .banner .banner-text .p {
+  font-size: 24px;
+}
+.section03 .banner .banner-text .h3 {
+  font-size: 32px;
+}
+.section03 .banner .button {
+  position: relative;
+  top: 270px;
+  text-align: center;
+}
+.section03 .banner .button .viewmore {
+  width: 180px;
+  height: 50px;
+  color: #fff;
+  font-size: 22px;
+  border: 1px solid #fff;
+  background: none;
+  cursor: pointer;
+}
+
+.section04 .container ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 260px;
+  padding-bottom: 74px;
+}
+.section04 .container ul a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #908B79;
+}
+.section04 .container ul a:hover {
+  color: #545146;
+  font-weight: 600;
+}
+.section04 .bedroom {
+  writing-mode: vertical-rl;
+}
+.section04 .plant3 {
+  padding-top: 245px;
+  padding-bottom: 243px;
+}
+.section04 .row .col-md-8 {
+  display: flex;
+}
+.section04 .row .col-md-4 {
+  display: flex;
+  padding-top: 415px;
+}
+.section04 .row .col-md-5 {
+  padding-top: 400px;
+}
+.section04 .point_text {
+  font-family: "Noto-sans", sans-serif;
+  position: relative;
+  top: -970px;
+  left: 900px;
+  letter-spacing: 4rem;
+  font-size: 150px;
+  color: #D8D1B5;
+  opacity: 0.3;
+}
+.section04 .point_text2 {
+  font-family: "Noto-sans", sans-serif;
+  position: relative;
+  top: -1210px;
+  left: 915px;
+  letter-spacing: 4rem;
+  font-size: 150px;
+  color: #545146;
+  opacity: 0.7;
+}
+
+.section05 .bg_img {
+  width: 100%;
+  height: 870px;
+  background: url("../images/forest.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section05 .bg_img .col-md-12 {
+  position: relative;
+  top: 320px;
+  color: #fff;
+  text-align: center;
+}
+.section05 .bg_img .col-md-12 h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.section05 .bg_img .col-md-12 p {
+  font-size: 20px;
+  padding-top: 30px;
+}
+.section05 .bg_img .button {
+  position: relative;
+  top: 340px;
+  text-align: center;
+}
+.section05 .bg_img .button .viewmore {
+  width: 180px;
+  height: 50px;
+  color: #fff;
+  font-size: 22px;
+  border: 2px solid #fff;
+  background: none;
+  cursor: pointer;
+}
+
+.section06 .container .row_1 {
+  padding-top: 150px;
+}
+.section06 .container .row_1 p {
+  font-size: 42px;
+  font-weight: 700;
+  color: #545146;
+}
+.section06 .container .row_2 {
+  padding-top: 43px;
+  padding-bottom: 155px;
+  display: flex;
+}
+.section06 .container .row_2 .next_dark {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
