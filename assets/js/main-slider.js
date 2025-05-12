@@ -1,6 +1,6 @@
 
 // 슬라이드의 내부 콘텐츠가 좌우로 움직이는 정도를 조절 (0 ~ 1 사이 값)
-var interleaveOffset = 0.5;
+var interleaveOffset = .8;
 
 // Swiper 슬라이더 설정 객체
 var swiperOptions = {
