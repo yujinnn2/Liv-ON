@@ -496,4 +496,51 @@ a:hover {
 
 .section06 .next_dark {
   cursor: pointer;
+}
+
+.demon {
+  overflow: hidden;
+  background: var(--light-bg-color);
+}
+.demon ul {
+  gap: 50px;
+}
+.demon .d-flex {
+  text-align: center;
+  margin: 0 auto;
+}
+.demon .d-flex a {
+  color: #181818;
+}
+.demon .text {
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+.demon .main-text {
+  padding-top: 400px;
+}
+.demon .plant3 {
+  padding-top: 200px;
+}
+.demon .bg-text {
+  position: relative;
+  top: -830px;
+  left: 230px;
+}
+.demon .bg-text p {
+  font-size: 200px;
+  letter-spacing: 2rem;
+  color: #181818;
+  opacity: 0.3;
+}
+.demon .bg-text2 {
+  position: relative;
+  top: -1135px;
+  left: 205px;
+}
+.demon .bg-text2 p {
+  font-size: 200px;
+  letter-spacing: 2rem;
+  color: var(--middle-bg-color);
+  opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */

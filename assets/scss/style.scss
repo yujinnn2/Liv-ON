@@ -612,3 +612,62 @@ a {
         cursor: pointer;
     }
 }
+
+
+
+.demon{
+    overflow: hidden;
+    background: var(--light-bg-color);
+
+    ul {
+        gap: 50px;
+    }
+
+    .d-flex {
+        text-align: center;
+        margin: 0 auto;
+
+        a {
+            color: #181818;
+        }
+    }
+
+    .text {
+        writing-mode: vertical-rl;
+        text-align: center;
+    }
+
+    .main-text {
+        padding-top: 400px;
+    }
+
+    .plant3 {
+        padding-top: 200px;
+    }
+
+    .bg-text {
+        position: relative;
+        top: -830px;
+        left: 230px;
+
+        p {
+            font-size: 200px;
+            letter-spacing: 2rem;
+            color: #181818;
+            opacity: .3;
+        }
+    }
+
+    .bg-text2 {
+        position: relative;
+        top: -1135px;
+        left: 205px;
+
+        p {
+            font-size: 200px;
+            letter-spacing: 2rem;
+            color: var(--middle-bg-color);
+            opacity: .7;
+        }
+    }
+}
