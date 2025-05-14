@@ -7,9 +7,6 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 2,
     }
   },
-  pagination: {
-    el: ".swiper-pagination",
-  },
   clickable: true,
   navigation: {
     prevEl: ".sec02_swiper-button-prev",
