@@ -1,5 +1,54 @@
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+header {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  position: fixed;
+  z-index: 999;
+}
+header .logo h1 {
+  font-size: 30px;
+  color: #333;
+  padding: 10px 25px;
+}
+header .nav-bar ul {
+  display: flex;
+}
+header .hbg {
+  display: none;
+}
+header .hbg .line {
+  width: 30px;
+  height: 3px;
+  background: #efefef;
+  margin: 6px 0;
+}
+header .nav-bar a {
+  display: block;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.2s;
+  margin: 0 5px;
+}
+header .nav-bar ul li a:hover {
+  color: rgb(8, 23, 68);
+  background: #fefefe;
+}
+header .nav-bar ul li a.active {
+  color: rgb(8, 23, 68);
+  background: #fefefe;
+}
+header .nav-bar.active {
+  height: 100vh;
+}
+
 .hero-slider {
   width: 100%;
   height: 700px;
@@ -296,8 +345,8 @@ a:hover {
 @media (max-width: 540px) {
   .section02 .nav_btn {
     width: 40px;
-    top: -115px;
-    left: 115px;
+    top: -210px;
+    left: 70px;
   }
 }
 @media (max-width: 430px) {
@@ -309,7 +358,16 @@ a:hover {
 }
 .section03 {
   overflow: hidden;
-  background: var(--light-bg-color);
+}
+.section03 .nav-tabs {
+  justify-content: center;
+  border: none;
+}
+.section03 .nav-tabs .nav-link.active {
+  border: none;
+}
+.section03 .nav-link {
+  color: #6C685A;
 }
 .section03 ul {
   gap: 50px;
@@ -321,9 +379,23 @@ a:hover {
 .section03 .d-flex a {
   color: #181818;
 }
-.section03 .text {
-  writing-mode: vertical-rl;
-  text-align: center;
+.section03 .text_1 {
+  position: relative;
+  top: -70px;
+  left: -830px;
+  z-index: 10;
+}
+.section03 .text_2 {
+  position: relative;
+  top: -20px;
+  left: -80px;
+  z-index: 10;
+}
+.section03 .text_3 {
+  position: relative;
+  top: 136px;
+  left: 1212px;
+  z-index: 10;
 }
 .section03 .main-text {
   padding-top: 400px;
@@ -333,7 +405,7 @@ a:hover {
 }
 .section03 .bg-text {
   position: relative;
-  top: -830px;
+  top: -815px;
   left: 230px;
 }
 .section03 .bg-text p {
@@ -341,35 +413,86 @@ a:hover {
   letter-spacing: 2rem;
   color: #181818;
   opacity: 0.3;
+  text-shadow: -10px 10px 1px #D8D1B5;
 }
-.section03 .bg-text2 {
-  position: relative;
-  top: -1135px;
-  left: 205px;
+.section03 html,
+.section03 body {
+  height: 100%;
 }
-.section03 .bg-text2 p {
-  font-size: 200px;
-  letter-spacing: 2rem;
-  color: var(--middle-bg-color);
-  opacity: 0.7;
+.section03 body {
+  background: #A6B8B1;
+  display: grid;
+  place-content: center;
+  grid-gap: 2rem;
+}
+.section03 .link {
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  font: 300 1.55rem/1.4 "Josefin Sans";
+  text-transform: uppercase;
+  letter-spacing: 0.1175em;
+  word-spacing: 0.3em;
+  text-decoration: none;
+}
+.section03 .link__svg {
+  width: 100%;
+  height: auto;
+  transform-box: fill-box;
+  fill: #2B3338;
+  stroke: #2B3338;
+  stroke-width: 0.05em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.section03 .link__cloud {
+  transform-origin: 50% 50%;
+  animation: rotate normal infinite 60s linear;
+  fill: rgba(255, 255, 255, 0.15);
+}
+.section03 .link__face, .section03 .link__arrow {
+  transform-origin: 50% 50%;
+  transition: transform 0.15s cubic-bezier(0.32, 0, 0.67, 0);
+}
+.link:hover .section03 .link__face, .link:hover .section03 .link__arrow {
+  transform: scale(1.1);
+  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.section03 .link__arrow {
+  stroke-width: 0.075em;
+}
+.section03 .link__text {
+  animation: rotateReverse normal infinite 20s linear;
+  transform-origin: 50% 50%;
+}
+.link:hover .section03 .link__text {
+  animation-play-state: paused;
+}
+.section03 .link--alt {
+  font-size: 1.15rem;
+  letter-spacing: 0;
+  word-spacing: 0;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateReverse {
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 @media (max-width: 1280px) {
   .section03 .bg-text {
     top: -730px;
   }
-  .section03 .bg-text2 {
-    top: -1035px;
-  }
 }
 @media (max-width: 1024px) {
   .section03 .bg-text {
     top: -680px;
-    left: 200px;
-  }
-  .section03 .bg-text2 {
-    top: -985px;
-    left: 175px;
+    left: 128px;
   }
   .section03 .main-text {
     padding-top: 330px;
@@ -377,17 +500,10 @@ a:hover {
 }
 @media (max-width: 768px) {
   .section03 .bg-text {
-    top: -580px;
-    left: 200px;
+    top: -540px;
+    left: 150px;
   }
   .section03 .bg-text p {
-    font-size: 150px;
-  }
-  .section03 .bg-text2 {
-    top: -805px;
-    left: 175px;
-  }
-  .section03 .bg-text2 p {
     font-size: 150px;
   }
   .section03 .main-text {
@@ -404,14 +520,6 @@ a:hover {
     letter-spacing: 0;
   }
   .section03 .bg-text p {
-    font-size: 50px;
-  }
-  .section03 .bg-text2 {
-    top: -702px;
-    left: 7px;
-    letter-spacing: 0;
-  }
-  .section03 .bg-text2 p {
     font-size: 50px;
   }
   .section03 .main-text {
@@ -431,14 +539,6 @@ a:hover {
     letter-spacing: 0;
   }
   .section03 .bg-text p {
-    font-size: 30px;
-  }
-  .section03 .bg-text2 {
-    top: -560px;
-    left: 7px;
-    letter-spacing: 0;
-  }
-  .section03 .bg-text2 p {
     font-size: 30px;
   }
   .section03 .main-text {
@@ -449,201 +549,33 @@ a:hover {
   }
 }
 .section04 {
-  font-family: math;
-  color: #333;
-}
-.section04 .col-md-4 {
-  text-align: center;
-  padding-top: 300px;
-}
-.section04 .col-md-4 button {
-  color: #333;
-  background: none;
-  border: 1px solid #333;
-}
-.section04 .col-md-4 button a {
-  color: #333;
-  padding: 10px;
-}
-.section04 .col-md-4 h3 {
-  font-weight: 700;
-}
-
-.section05 {
   width: 100%;
 }
-.section05 .bg_img {
+.section04 .bg_img {
   height: 937px;
   background: url("../images/tree.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.section05 .bg_img .main_text {
+.section04 .bg_img .main_text {
   text-align: center;
   margin: 0 auto;
   padding: 350px 0;
   color: #fff;
 }
-.section05 .bg_img button {
+.section04 .bg_img button {
   color: #fff;
   background: none;
   border: 1px solid #fff;
 }
-.section05 .bg_img button a {
+.section04 .bg_img button a {
   color: #fff;
-  padding: 10px;
+}
+.section04 h3 {
+  font-weight: 700;
 }
 
-.section06 .next_dark {
+.section05 .next_dark {
   cursor: pointer;
-}
-
-.demon {
-  overflow: hidden;
-  background: var(--light-bg-color);
-}
-.demon .nav-tabs {
-  justify-content: center;
-  color: #C0BAA1;
-}
-.demon .nav-link {
-  color: #6C685A;
-}
-.demon ul {
-  gap: 50px;
-}
-.demon .d-flex {
-  text-align: center;
-  margin: 0 auto;
-}
-.demon .d-flex a {
-  color: #181818;
-}
-.demon .text {
-  writing-mode: vertical-rl;
-  text-align: center;
-}
-.demon .main-text {
-  padding-top: 400px;
-}
-.demon .plant3 {
-  padding-top: 200px;
-}
-.demon .bg-text {
-  position: relative;
-  top: -830px;
-  left: 230px;
-}
-.demon .bg-text p {
-  font-size: 200px;
-  letter-spacing: 2rem;
-  color: #181818;
-  opacity: 0.3;
-}
-.demon .bg-text2 {
-  position: relative;
-  top: -1135px;
-  left: 205px;
-}
-.demon .bg-text2 p {
-  font-size: 200px;
-  letter-spacing: 2rem;
-  color: var(--middle-bg-color);
-  opacity: 0.7;
-}
-
-@media (max-width: 1280px) {
-  .section03 .bg-text {
-    top: -730px;
-  }
-  .section03 .bg-text2 {
-    top: -1035px;
-  }
-}
-@media (max-width: 1024px) {
-  .section03 .bg-text {
-    top: -680px;
-    left: 200px;
-  }
-  .section03 .bg-text2 {
-    top: -985px;
-    left: 175px;
-  }
-  .section03 .main-text {
-    padding-top: 330px;
-  }
-}
-@media (max-width: 768px) {
-  .section03 .bg-text {
-    top: -580px;
-    left: 200px;
-  }
-  .section03 .bg-text p {
-    font-size: 150px;
-  }
-  .section03 .bg-text2 {
-    top: -805px;
-    left: 175px;
-  }
-  .section03 .bg-text2 p {
-    font-size: 150px;
-  }
-  .section03 .main-text {
-    padding-top: 250px;
-  }
-}
-@media (max-width: 540px) {
-  .section03 .col-md-4 {
-    padding-top: 32px;
-  }
-  .section03 .bg-text {
-    top: -615px;
-    left: 0px;
-    letter-spacing: 0;
-  }
-  .section03 .bg-text p {
-    font-size: 50px;
-  }
-  .section03 .bg-text2 {
-    top: -702px;
-    left: 7px;
-    letter-spacing: 0;
-  }
-  .section03 .bg-text2 p {
-    font-size: 50px;
-  }
-  .section03 .main-text {
-    padding-top: 100px;
-  }
-  .section03 .plant3 {
-    padding-top: 0px;
-  }
-}
-@media (max-width: 430px) {
-  .section03 .col-md-4 {
-    padding-top: 32px;
-  }
-  .section03 .bg-text {
-    top: -550px;
-    left: 0px;
-    letter-spacing: 0;
-  }
-  .section03 .bg-text p {
-    font-size: 30px;
-  }
-  .section03 .bg-text2 {
-    top: -560px;
-    left: 7px;
-    letter-spacing: 0;
-  }
-  .section03 .bg-text2 p {
-    font-size: 30px;
-  }
-  .section03 .main-text {
-    padding-top: 100px;
-  }
-  .section03 .plant3 {
-    padding-top: 0px;
-  }
 }/*# sourceMappingURL=style.css.map */
