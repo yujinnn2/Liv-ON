@@ -16,7 +16,7 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/scss/style.css">
 
 <body>
   <header>
@@ -197,141 +197,182 @@
       <div class="bg-text">
         <p>planterior</p>
       </div> -->
-      <!-- <div class="bg-text2">
+  <!-- <div class="bg-text2">
         <p>planterior</p>
       </div> -->
-    <!-- </div>
+  <!-- </div>
   </section> -->
-  <!-- section04 섹션4 -->
-  <section class="section04">
-    <div class="container">
-      <div class="row mt-5">
-        <div class="col-md-6">
-          <img src="assets/images/demo.png" alt="">
+
+
+
+  <section class="demon mt-5">
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <!-- tab 01 -->
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+          role="tab" aria-controls="nav-home" aria-selected="true">Planterior</button>
+        <!-- tab 02 -->
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Dark</button>
+        <!-- tab 03 -->
+        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button"
+          role="tab" aria-controls="nav-contact" aria-selected="false">Luxury</button>
+        <!-- tab 04 -->
+        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button"
+          role="tab" aria-controls="nav-contact" aria-selected="false">Modern</button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-md-8 d-flex">
+              <img src="assets/images/plant1.svg" alt="">
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex">
+              <img src="assets/images/plant2.svg" alt="">
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-5">
+              <div class="main-text">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit sed provident aut incidunt animi,
+                  ducimus
+                  laboriosam aliquid nulla enim dolorem saepe dicta quidem placeat. Corporis magni tenetur aperiam
+                  provident
+                  quo.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <img src="assets/images/plant3.svg" alt="" class="plant3">
+            </div>
+          </div>
+          <div class="bg-text">
+            <p>planterior</p>
+          </div>
         </div>
-        <div class="col-md-4 mt-5">
-          <h3>Yorem ipsum dolor
-            sit amet, consectetur </h3>
-          <p>interdum, ac aliquet odio mattis.</p>
-          <button class="mt-5"><a href="#">view more   <img src="assets/images/next_dark.svg" alt=""></a></button>
+      </div>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-md-8 d-flex">
+              <img src="assets/images/dark1.png" alt="">
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex">
+              <img src="assets/images/dark2.png" alt="">
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-5">
+              <div class="main-text">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit sed provident aut incidunt animi,
+                  ducimus
+                  laboriosam aliquid nulla enim dolorem saepe dicta quidem placeat. Corporis magni tenetur aperiam
+                  provident
+                  quo.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <img src="assets/images/dark3.png" alt="" class="plant3">
+            </div>
+          </div>
+          <div class="bg-text">
+            <p>planterior</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-md-8 d-flex">
+              <img src="assets/images/lux1.png" alt="">
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex">
+              <img src="assets/images/lux2.png" alt="">
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-5">
+              <div class="main-text">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit sed provident aut incidunt animi,
+                  ducimus
+                  laboriosam aliquid nulla enim dolorem saepe dicta quidem placeat. Corporis magni tenetur aperiam
+                  provident
+                  quo.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <img src="assets/images/lux3.png" alt="" class="plant3">
+            </div>
+          </div>
+          <div class="bg-text">
+            <p>planterior</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-md-8 d-flex">
+              <img src="assets/images/lux1.png" alt="">
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex">
+              <img src="assets/images/lux2.png" alt="">
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-5">
+              <div class="main-text">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit sed provident aut incidunt animi,
+                  ducimus
+                  laboriosam aliquid nulla enim dolorem saepe dicta quidem placeat. Corporis magni tenetur aperiam
+                  provident
+                  quo.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <img src="assets/images/lux3.png" alt="" class="plant3">
+            </div>
+          </div>
+          <div class="bg-text">
+            <p>planterior</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-
-
-<section class="demon">
-<nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-     <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-  </div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">     
-     <div class="row mt-5">
-        <div class="col-md-8 d-flex">
-          <img src="assets/images/plant1.svg" alt="">
-          <div class="text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <img src="assets/images/plant2.svg" alt="">
-          <div class="text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-md-5">
-          <div class="main-text">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit sed provident aut incidunt animi, ducimus
-              laboriosam aliquid nulla enim dolorem saepe dicta quidem placeat. Corporis magni tenetur aperiam provident
-              quo.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <img src="assets/images/plant3.svg" alt="" class="plant3">
-        </div>
-      </div>
-      <div class="bg-text">
-        <p>planterior</p>
-      </div>
-    </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-    <div class="row mt-5">
-        <div class="col-md-8 d-flex">
-          <img src="assets/images/plant1.svg" alt="">
-          <div class="text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <img src="assets/images/plant2.svg" alt="">
-          <div class="text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-md-5">
-          <div class="main-text">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit sed provident aut incidunt animi, ducimus
-              laboriosam aliquid nulla enim dolorem saepe dicta quidem placeat. Corporis magni tenetur aperiam provident
-              quo.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <img src="assets/images/plant3.svg" alt="" class="plant3">
-        </div>
-      </div>
-      <div class="bg-text">
-        <p>planterior</p>
-      </div>
-  </div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-    <div class="row mt-5">
-        <div class="col-md-8 d-flex">
-          <img src="assets/images/plant1.svg" alt="">
-          <div class="text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <img src="assets/images/plant2.svg" alt="">
-          <div class="text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-md-5">
-          <div class="main-text">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit sed provident aut incidunt animi, ducimus
-              laboriosam aliquid nulla enim dolorem saepe dicta quidem placeat. Corporis magni tenetur aperiam provident
-              quo.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <img src="assets/images/plant3.svg" alt="" class="plant3">
-        </div>
-      </div>
-      <div class="bg-text">
-        <p>planterior</p>
-      </div>
-  </div>
-</div>
-</section>
 
 
 
@@ -354,7 +395,7 @@
 
 
 
-    
+
   </section>
   <!-- section06 섹션  -->
   <section class="section06">

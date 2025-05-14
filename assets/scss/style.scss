@@ -616,6 +616,15 @@ a {
 
 
 .demon{
+
+    .nav-tabs{
+        justify-content: center;
+        color:#C0BAA1;
+    }
+    .nav-link{
+        color:#6C685A;
+
+    }
     overflow: hidden;
     background: var(--light-bg-color);
 
@@ -670,4 +679,132 @@ a {
             opacity: .7;
         }
     }
+}
+@media (max-width:1280px) {
+    .section03 .bg-text {
+        top: -730px;
+    }
+
+    .section03 .bg-text2 {
+        top: -1035px;
+    }
+}
+
+@media (max-width:1024px) {
+    .section03 {
+        .bg-text {
+            top: -680px;
+            left: 200px;
+        }
+
+        .bg-text2 {
+            top: -985px;
+            left: 175px;
+        }
+
+        .main-text {
+            padding-top: 330px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .section03 {
+        .bg-text {
+            top: -580px;
+            left: 200px;
+
+            p {
+                font-size: 150px;
+            }
+        }
+
+        .bg-text2 {
+            top: -805px;
+            left: 175px;
+
+            p {
+                font-size: 150px;
+            }
+        }
+
+        .main-text {
+            padding-top: 250px;
+        }
+    }
+
+}
+
+@media (max-width:540px) {
+    .section03 {
+        .col-md-4 {
+            padding-top: 32px;
+        }
+
+        .bg-text {
+            top: -615px;
+            left: 0px;
+            letter-spacing: 0;
+
+            p {
+                font-size: 50px;
+            }
+        }
+
+        .bg-text2 {
+            top: -702px;
+            left: 7px;
+            letter-spacing: 0;
+
+            p {
+                font-size: 50px;
+            }
+        }
+
+        .main-text {
+            padding-top: 100px;
+        }
+
+        .plant3 {
+            padding-top: 0px;
+        }
+    }
+
+}
+
+@media (max-width:430px) {
+    .section03 {
+        .col-md-4 {
+            padding-top: 32px;
+        }
+
+        .bg-text {
+            top: -550px;
+            left: 0px;
+            letter-spacing: 0;
+
+            p {
+                font-size: 30px;
+            }
+        }
+
+        .bg-text2 {
+            top: -560px;
+            left: 7px;
+            letter-spacing: 0;
+
+            p {
+                font-size: 30px;
+            }
+        }
+
+        .main-text {
+            padding-top: 100px;
+        }
+
+        .plant3 {
+            padding-top: 0px;
+        }
+    }
+
 }
