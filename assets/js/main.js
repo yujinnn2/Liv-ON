@@ -7,3 +7,5 @@ triggerTabList.forEach(function (triggerEl) {
     tabTrigger.show()
   })
 })
+
+  AOS.init();

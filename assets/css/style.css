@@ -1,5 +1,6 @@
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 header {
   width: 100%;
   height: 60px;
@@ -10,6 +11,9 @@ header {
   padding: 0 100px;
   position: fixed;
   z-index: 999;
+}
+header .container {
+  gap: 250px;
 }
 header .logo h1 {
   font-size: 30px;
@@ -50,7 +54,7 @@ header .nav-bar.active {
 
 .hero-slider {
   width: 100%;
-  height: 700px;
+  height: 1080px;
   display: flex;
   position: relative;
   z-index: 0;
@@ -160,7 +164,7 @@ header .nav-bar.active {
 }
 
 .hero-style {
-  height: 850px;
+  height: 955px;
   transition: all 0.4s ease;
 }
 @media screen and (min-width: 992px) {
@@ -176,7 +180,7 @@ header .nav-bar.active {
 .hero-style .slide-title h2 {
   font-family: math;
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   color: #FDFCF7;
   margin: 0 0 40px;
@@ -248,6 +252,70 @@ a:hover {
   text-decoration: none;
 }
 
+.scroll-down {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translate(0, 45px);
+  left: 50%;
+  color: rgba(255, 255, 255, 0.6);
+  bottom: 60px;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.scroll-down:after {
+  background: #ffffff;
+  -webkit-animation: cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: line-down 2.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+.scroll-down:after {
+  content: "";
+  width: 1px;
+  height: 45px;
+  position: absolute;
+  right: 50%;
+  bottom: 100%;
+  margin-bottom: 15px;
+}
+
+@keyframes line-down {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(5, 0, 2);
+    transform: scale3d(5, 0, 2);
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+  }
+  49% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  99% {
+    opacity: 0.5;
+    -webkit-transform: scale3d(0.5, 0, 1);
+    transform: scale3d(0.5, 0, 1);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.2, 0, 1);
+    transform: scale3d(0.2, 0, 1);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+}
 @media (max-width: 991px) {
   .hero-slider {
     height: 600px;
@@ -292,40 +360,9 @@ a:hover {
     margin-bottom: 30px;
   }
 }
-.section02 html,
-.section02 body {
-  position: relative;
-  height: 100%;
-}
-.section02 .swiper {
+.section02 {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.section02 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section02 .swiper-slide img {
-  display: block;
-  width: 413px;
-  height: 100%;
-  object-fit: cover;
-}
-.section02 .nav_btn {
-  width: 100px;
-  cursor: pointer;
-  position: relative;
-  top: -350px;
-  left: 350px;
-  z-index: 9;
-}
-.section02 .sec02_swiper-button-prev {
-  position: absolute;
+  height: auto;
 }
 
 @media (max-width: 1024px) {
@@ -354,6 +391,34 @@ a:hover {
     left: 50px;
   }
 }
+.section07 {
+  margin: 0 auto;
+  width: 90%;
+  height: 400px;
+  background: #FAF8EE;
+  border-radius: 30px;
+}
+.section07 .container {
+  padding-top: 60px;
+  text-align: center;
+}
+.section07 .container p {
+  font-weight: 700;
+  color: #6C685A;
+}
+.section07 .container h3 {
+  font-weight: 700;
+  color: #6C685A;
+}
+.section07 .container button {
+  color: #fff;
+  background: none;
+  border: 1px solid #6C685A;
+}
+.section07 .container button a {
+  color: #6C685A;
+}
+
 .section03 {
   overflow: hidden;
 }
@@ -377,9 +442,20 @@ a:hover {
 .section03 .d-flex a {
   color: #181818;
 }
-.section03 .text {
-  writing-mode: vertical-rl;
-  text-align: center;
+.section03 .text_1 {
+  position: relative;
+  top: -60px;
+  left: -50px;
+}
+.section03 .text_2 {
+  position: relative;
+  top: 40px;
+  left: -50px;
+}
+.section03 .text_3 {
+  position: relative;
+  top: -880px;
+  left: 1250px;
 }
 .section03 .main-text {
   padding-top: 400px;
@@ -398,6 +474,74 @@ a:hover {
   color: #181818;
   opacity: 0.3;
   text-shadow: -10px 10px 1px #D8D1B5;
+}
+.section03 html,
+.section03 body {
+  height: 100%;
+}
+.section03 body {
+  background: #A6B8B1;
+  display: grid;
+  place-content: center;
+  grid-gap: 2rem;
+}
+.section03 .link {
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  font: 300 1.55rem/1.4 "Josefin Sans";
+  text-transform: uppercase;
+  letter-spacing: 0.1175em;
+  word-spacing: 0.3em;
+  text-decoration: none;
+}
+.section03 .link__svg {
+  width: 100%;
+  height: auto;
+  transform-box: fill-box;
+  fill: #2B3338;
+  stroke: #2B3338;
+  stroke-width: 0.05em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.section03 .link__cloud {
+  transform-origin: 50% 50%;
+  animation: rotate normal infinite 60s linear;
+  fill: rgba(255, 255, 255, 0.15);
+}
+.section03 .link__face, .section03 .link__arrow {
+  transform-origin: 50% 50%;
+  transition: transform 0.15s cubic-bezier(0.32, 0, 0.67, 0);
+}
+.link:hover .section03 .link__face, .link:hover .section03 .link__arrow {
+  transform: scale(1.1);
+  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.section03 .link__arrow {
+  stroke-width: 0.075em;
+}
+.section03 .link__text {
+  animation: rotateReverse normal infinite 20s linear;
+  transform-origin: 50% 50%;
+}
+.link:hover .section03 .link__text {
+  animation-play-state: paused;
+}
+.section03 .link--alt {
+  font-size: 1.15rem;
+  letter-spacing: 0;
+  word-spacing: 0;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateReverse {
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 @media (max-width: 1280px) {
@@ -469,7 +613,7 @@ a:hover {
 }
 .section04 .bg_img {
   height: 937px;
-  background: url("../images/tree.png");
+  background: url("../images/forest.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
