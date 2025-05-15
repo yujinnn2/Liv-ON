@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+body{
+  background-color:#141414;
+  font-family: 'Lato', sans-serif;
+
+}
+.scroll-down{
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    color: rgba(255, 255, 255, 0.6);
+    bottom: 60px;
+    font-size: 16px;
+
+}
+.scroll-down:after{
+background: #ffffff;
+-webkit-animation: cubic-bezier(0.77, 0, 0.175, 1) infinite;
+animation: line-down 2.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+
+}
+.scroll-down:after {
+    content: '';
+    width: 1px;
+    height: 100px;
+    position: absolute;
+    right: 50%;
+    bottom: 100%;
+    margin-bottom: 15px;
+
+}
+
+@keyframes line-down {
+0% {
+    opacity: 1;
+    -webkit-transform: scale3d(5, 0, 2);
+    transform: scale3d(5, 0, 2);
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+  }
+  49% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  99% {
+    opacity: 0.5;
+    -webkit-transform: scale3d(0.5, 0, 1);
+    transform: scale3d(0.5, 0, 1);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.2, 0, 1);
+    transform: scale3d(0.2, 0, 1);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  }
+    </style>
+</head>
+<body>
+    
+
+<div class = "scroll-down">
+		<span>scroll</span>
+	</div>
+</body>
+</html>
