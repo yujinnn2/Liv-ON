@@ -6,6 +6,7 @@
   --sub-color:#ccc;
   --main-font-size: 30px;
   --sub-font-size: 18px;
+  --bs-body-font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 img {
@@ -18,4 +19,9 @@ img {
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: "pretendard";
+}
+
+body {
+  font-family: var(--bs-body-font-family);
 }/*# sourceMappingURL=common.css.map */
