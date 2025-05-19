@@ -5,65 +5,67 @@
 header {
     .container {
         gap: 250px;
-    }
 
-    width: 100%;
-    height: 60px;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 100px;
-    position: fixed;
-    z-index: 999;
-
-
-    .logo h1 {
-        font-size: 30px;
-        color: #fefefe;
-        font-family: math;
-    }
-
-    .nav-bar ul {
+        width: 100%;
+        height: 60px;
+        background: transparent;
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 100px;
+        position: fixed;
+        z-index: 999;
+
+
+        .logo h1 {
+            font-size: 30px;
+            color: #fefefe;
+            font-family: math;
+        }
+
+        .nav-bar ul {
+            display: flex;
+        }
+
+        .hbg {
+            display: none;
+
+            .line {
+                width: 30px;
+                height: 3px;
+                background: #efefef;
+                margin: 6px 0;
+            }
+        }
+
+        .nav-bar a {
+            display: block;
+            color: #fefefe;
+            font-size: 18px;
+            font-family: math;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.2s;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #545146;
+            background: #fefefe;
+        }
+
+        .nav-bar ul li a.active {
+            color: #545146;
+            background: #fefefe;
+        }
+
+        .nav-bar.active {
+            height: 100vh;
+        }
     }
 
-    .hbg {
-        display: none;
 
-        .line {
-        width: 30px;
-        height: 3px;
-        background: #efefef;
-        margin: 6px 0;
-      }
-    }
-
-    .nav-bar a {
-        display: block;
-        color: #fefefe;
-        font-size: 18px;
-        font-family: math;
-        padding: 10px 25px;
-        border-radius: 50px;
-        transition: all 0.2s;
-        margin: 0 5px;
-        text-decoration: none;
-    }
-
-    .nav-bar ul li a:hover {
-        color: rgba(8, 23, 68, 100);
-        background: #fefefe;
-    }
-
-    .nav-bar ul li a.active {
-        color: rgba(8, 23, 68, 100);
-        background: #fefefe;
-    }
-
-    .nav-bar.active {
-        height: 100vh;
-    }
 }
 
 
@@ -471,6 +473,7 @@ header {
 
 // section 03 섹션3
 .section03 {
+  // background: #FAF8EE;
     padding-top: 100px;
 
     .nav-tabs {
@@ -681,147 +684,145 @@ header {
         h3 {
             font-weight: 700;
         }
-}
 
+
+        
+}
 
 // section05 섹션5
-    .section05 {
-        .col-md-12 {
-            .d-flex {
-                justify-content: space-between;
+.section05 {
+  .col-md-12 {
+    .d-flex {
+      justify-content: space-between;
 
-                img {
-                    padding: 0 35px 0 10px;
-                    cursor: pointer;
-                }
-            }
-        }
+      img {
+        padding: 0 35px 0 10px;
+        cursor: pointer;
+      }
+    }
+  }
 
-        .col-md-4 {
-            columns: #535353;
+  .col-md-4 {
+    columns: #535353;
 
-            h4 {
-                font-size: 16px;
-                font-weight: 700;
-            }
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+    }
 
-            p {
-                font-size: 12px;
-            }
+    p {
+      font-size: 12px;
+    }
 
-            img {
-                cursor: pointer;
-            }
+    img {
+      cursor: pointer;
+    }
 
-            .date {
-                opacity: 0.7;
-            }
-        }
+    .date {
+      opacity: 0.7;
+    }
+  }
 
-        .next_dark {
-            cursor: pointer;
-        }
+  .next_dark {
+    cursor: pointer;
+  }
 }
-
-
 // section06 섹션6
-    .section06 {
-        .container {
-            .row {
+.section06 {
+  .container {
+    .row {
 
-                &:first-child {
-                    .col-md-4 {
-                        p {
-                            font-family: math;
-                            font-size: 24px;
-                            color: #333;
-                            margin: 0;
-                            padding-top: 10px;
-                        }
+      &:first-child {
+        .col-md-4 {
+          p {
+            font-family: math;
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+            padding-top: 10px;
+          }
 
-                        h3 {
-                            font-family: math;
-                            font-size: 60px;
-                        }
-                    }
-                }
+          h3 {
+            font-family: math;
+            font-size: 60px;
+          }
+        }
+      }
 
-                .col-md-2 {
-                    position: relative;
-                    height: 180px;
-                    overflow: hidden;
+      .col-md-2 {
+        position: relative;
+        height: 180px;
+        overflow: hidden;
 
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        display: block;
-                        transition: opacity 0.5s ease;
-                    }
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: rgba(255, 255, 255, 1);
-                        backdrop-filter: blur(2px);
-                        opacity: 1;
-                        z-index: 1;
-                        /* 호버 해제 시 2초 동안 지연 후 서서히 복귀 */
-                        transition:
-                            opacity 0.5s ease 2s, // 2초 딜레이 후 0.5초 동안 효과
-                            backdrop-filter 0.5s ease 2s;
-                    }
-
-                    &:hover {
-                        &::after {
-                            opacity: 0;
-                            backdrop-filter: blur(0);
-                            /* 호버 시 즉시 반응 (0.5초) */
-                            transition:
-                                opacity 0.5s ease 0s,
-                                backdrop-filter 0.5s ease 0s;
-                        }
-                    }
-                }
-            }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: opacity 0.5s ease;
         }
 
-
-        @media (max-width: 991px) {
-            padding: 60px 0;
-
-            .container .row .col-md-2 {
-                height: 150px;
-            }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 1);
+          backdrop-filter: blur(2px);
+          opacity: 1;
+          z-index: 1;
+          /* 호버 해제 시 2초 동안 지연 후 서서히 복귀 */
+          transition:
+            opacity 0.5s ease 2s, // 2초 딜레이 후 0.5초 동안 효과
+            backdrop-filter 0.5s ease 2s;
         }
 
-        @media (max-width: 767px) {
-            padding: 40px 0;
-
-            .container .row {
-                margin-bottom: 20px;
-
-                &:first-child .col-md-4 p {
-                    font-size: 20px;
-                    padding-bottom: 15px;
-                    text-align: center;
-                }
-
-                .col-md-2 {
-                    height: 120px;
-                    margin-bottom: 15px;
-                }
-            }
+        &:hover {
+          &::after {
+            opacity: 0;
+            backdrop-filter: blur(0);
+            /* 호버 시 즉시 반응 (0.5초) */
+            transition:
+              opacity 0.2s ease 0s,
+              backdrop-filter 0.5s ease 0s;
+          }
         }
+      }
+    }
+  }
 
-        @media (max-width: 540px) {}
+
+  @media (max-width: 991px) {
+    padding: 60px 0;
+
+    .container .row .col-md-2 {
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 40px 0;
+
+    .container .row {
+      margin-bottom: 20px;
+
+      &:first-child .col-md-4 p {
+        font-size: 20px;
+        padding-bottom: 15px;
+        text-align: center;
+      }
+
+      .col-md-2 {
+        height: 120px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 540px) {}
 }
-
-
 // footer 푸터 
 .main-footer {
     background-color: #f8f5f0;
@@ -1163,6 +1164,13 @@ header {
         }
     }
 
+    .section05{
+      .col-md-12 .d-flex img{
+        padding: 0 0 0 10px;
+      }
+
+    }
+
 }
 
 @media (max-width:1024px) {
@@ -1191,7 +1199,6 @@ header {
 @media (max-width:768px) {
 header {
     .conatiner {
-
       padding: 0 55px;
 
       .hbg {
@@ -1238,8 +1245,21 @@ header {
   }
  // section02 섹션2
     .section02 {
+           img{
+        margin-bottom: 2rem;
+      }
+      .col-sm-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    .hover-content{
+        height: 97%;
+      }
+    .hover-content h3 {
+      font-size: 3rem;
+    }
       .hover-content p {
-        font-size: 7px;
+        font-size: 1rem;
       }
     }
 
@@ -1265,13 +1285,20 @@ header {
       img{
         margin-bottom: 2rem;
       }
+      .hover-content{
+        height: 93%;
+      }
       .hover-content h3{
-        font-size: 3rem;
+        font-size: 2rem;
       }
        .hover-content p{
-        font-size: 1rem;
+        font-size: .7rem;
       }
-    }  
+      .col-sm-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
     .section03 {
         .col-md-4 {
             padding-top: 32px;
@@ -1309,6 +1336,29 @@ header {
         }
     }
 
+ /* 540px 이하 반응형 스타일 */
+  @media (max-width: 540px) {
+    .section05 .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 30px; /* 카드 사이 간격 */
+    }
+    
+    .section05 .img_section img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .section05 .row {
+      flex-direction: column;
+    }
+    
+    .section05 .d-flex p {
+      margin-top: 10px;
+    }
+  }
+
     .section06{
         .col-md-2{
             width:25%;
@@ -1318,60 +1368,71 @@ header {
 
 
 @media (max-width:430px) {
-    .section02{
+    .section02 {
         .col-md-12 h4 {
-            font-size: 19px;
+          font-size: 19px;
         }
-    }
-    .section03 {
+      }
+    
+      .section03 {
         .col-md-4 {
-            padding-top: 32px;
+          padding-top: 32px;
         }
-
+    
         .bg-text {
-            top: -550px;
-            left: 0px;
-            letter-spacing: 0;
-
-            p {
-                font-size: 30px;
-            }
+          top: -505px;
+          letter-spacing: 0;
+    
+          p {
+            font-size: 45px;
+          }
         }
-
+    
         .text_3 {
-            top: -1170px;
-            left: 275px;
+          top: -1170px;
+          left: 275px;
         }
-
+    
         .img02 {
-            height: 100%;
-            margin: 0;
-            padding: 0px;
+          height: 100%;
+          margin: 0;
+          padding: 0px;
         }
-
+    
         .main-text {
-            padding-top: 100px;
+          padding-top: 100px;
         }
-
+    
         .plant3 {
-            padding-top: 0px;
+          padding-top: 0px;
         }
-    }
-    .section04{
-        .main_text p{
-            font-size: 15px;
+      }
+    
+      .section04 {
+        .main_text p {
+          font-size: 15px;
         }
+      }
     }
-}
-
 @media (max-width:390px) {
-    .section03 {
-
-        .bg-text{
-            left: 50%;
-            p{
-                font-size: 45px;
-            }
-        }
+  .section02 {
+    .hover-content h3 {
+      font-size: 1.5rem;
     }
+
+    .hover-content p {
+      font-size: .5rem;
+    }
+  }
+
+  .section03 {
+
+    .bg-text {
+      left: 50%;
+
+      p {
+        font-size: 45px;
+      }
+    }
+  }
 }
