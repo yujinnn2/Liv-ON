@@ -41,3 +41,37 @@ hbg.onclick = function () {
   navBar.classList.toggle('active');
   $(function () { });
 };
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabEls = document.querySelectorAll('button[data-bs-toggle="tab"]');
+
+      tabEls.forEach(tabEl => {
+        tabEl.addEventListener('shown.bs.tab', function () {
+          // AOS 새로고침
+          AOS.refresh();
+
+          // 모든 탭 콘텐츠 숨기기
+          document.querySelectorAll('.tab-pane').forEach(pane => {
+            pane.querySelectorAll('[data-aos]').forEach(el => {
+              el.style.opacity = '0';
+              el.style.transform = 'translateY(20px)';
+            });
+          });
+
+          // 활성화된 탭의 요소에만 AOS 적용
+          const activePane = document.querySelector('.tab-pane.active');
+          if (activePane) {
+            setTimeout(() => {
+              activePane.querySelectorAll('[data-aos]').forEach(el => {
+                el.style.opacity = '';
+                el.style.transform = '';
+                AOS.init({
+                  once: false // 효과가 여러번 나타나도록 설정
+                });
+              });
+            }, 50);
+          }
+        });
+      });
+    });
