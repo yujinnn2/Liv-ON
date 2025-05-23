@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@import url("../scss/common.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+.section01 .main_title {
+  font-size: 100px;
+  font-family: math;
+  color: #333;
+  opacity: 0.3;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 162px;
+}
+.section01 .col-md-6 p {
+  font-size: 22px;
+  font-weight: 400;
+  color: #545146;
+  line-height: 180%;
+  padding-top: 145px;
+  padding: 35px 70px;
+}
+.section01 button {
+  border: none;
+  outline: none;
+  background: #D8D2C7;
+  border-radius: 5px;
+  padding: 12px 20px;
+  margin-top: 60px;
+  margin-left: 70px;
+}
+.section01 button a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.section02 {
+  padding-top: 140px;
+}
+.section02 .col-md-12 {
+  text-align: center;
+}
+.section02 .col-md-12 h3 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 600;
+}
+.section02 .col-md-12 h4 {
+  color: #D8D2C7;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 140%;
+  padding-top: 30px;
+}
+.section02 .col-md-12 p {
+  padding-top: 15px;
+}
+.section02 .row .col-md-4 {
+  width: 32%;
+}
+.section02 .row .col-md-4 .logo_text {
+  width: 100%;
+  height: 287.98px;
+  background-color: #D8D2C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section02 .row .col-md-4 .logo_text p {
+  color: #333;
+  font-size: 40px;
+  font-family: math;
+  font-weight: 600;
+}
+.section02 .row .bar {
+  width: 50px;
+  height: 3px;
+  background-color: #D8D2C7;
+  position: relative;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: -220px;
+  z-index: 10;
+}
+
+.section03 {
+  position: relative;
+  padding-bottom: 100px;
+}
+.section03 .col-md-12 {
+  padding-top: 170px;
+}
+.section03 .col-md-12 h3 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+.section03 .section03::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  /* 검은색 반투명 레이어 */
+  z-index: 1;
+}
+.section03 .section03 > * {
+  position: relative;
+  z-index: 2;
+  /* 내용은 딤 레이어 위에 표시 */
+}
+.section03 img {
+  filter: brightness(80%);
+}
+
+.footer {
+  background-color: #8E8675;
+  padding: 50px 0 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #e1e1e1;
+  border-top: 1px solid #eee;
+  /* 로고 & 주소 영역 */
+}
+.footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer .footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* 메뉴 & SNS 영역 */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.footer-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu a {
+  color: #e1e1e1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.footer-menu a:hover {
+  color: #000;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  color: #e1e1e1;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #000;
+}
+
+/* 저작권 영역 */
+.footer-copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #e1e1e1;
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-logo img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}/*# sourceMappingURL=Brand.css.map */

@@ -653,33 +653,26 @@ header .container .nav-bar.active {
   }
 }
 .footer {
-  background-color: #f8f8f8;
+  background-color: #8E8675;
   padding: 50px 0 20px;
   font-family: "Noto Sans KR", sans-serif;
-  color: #555;
+  color: #e1e1e1;
   border-top: 1px solid #eee;
+  /* 로고 & 주소 영역 */
 }
-
-.footer-container {
+.footer .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* 로고 & 주소 영역 */
-.footer-top {
+.footer .footer-top {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 30px;
+  justify-content: space-between;
 }
-
-.footer-logo img {
-  height: 40px;
-  margin-right: 50px;
-}
-
-.footer-info p {
+.footer .footer-info p {
   margin: 5px 0;
   font-size: 14px;
 }
@@ -703,7 +696,7 @@ header .container .nav-bar.active {
 }
 
 .footer-menu a {
-  color: #555;
+  color: #e1e1e1;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -719,7 +712,7 @@ header .container .nav-bar.active {
 }
 
 .footer-social a {
-  color: #777;
+  color: #e1e1e1;
   font-size: 18px;
   transition: color 0.3s;
 }
@@ -733,7 +726,7 @@ header .container .nav-bar.active {
   text-align: center;
   margin-top: 20px;
   font-size: 12px;
-  color: #999;
+  color: #e1e1e1;
 }
 
 /* 반응형 (모바일) */
@@ -778,29 +771,29 @@ header .container .nav-bar.active {
   }
 }
 @media (max-width: 768px) {
-  header .conatiner {
+  header .container {
     padding: 0 55px;
   }
-  header .conatiner .hbg {
+  header .container .hbg {
     display: block;
     cursor: pointer;
   }
-  header .conatiner .hbg .line {
+  header .container .hbg .line {
     background: #efefef;
     margin: 6px 0;
   }
-  header .conatiner .nav-bar {
+  header .container .nav-bar {
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
     width: 100vw;
     height: 0;
-    background: #3182f6;
+    background: #fefefe;
     transition: all 0.2s;
     overflow: hidden;
   }
-  header .conatiner .nav-bar ul {
+  header .container .nav-bar ul {
     opacity: 0;
     display: block;
     width: fit-content;
@@ -809,10 +802,10 @@ header .container .nav-bar.active {
     transition: all 0.5s;
     padding: 0;
   }
-  header .conatiner .nav-bar ul li a {
+  header .container .nav-bar ul li a {
     margin-bottom: 12px;
   }
-  header .conatiner .nav-bar .active ul {
+  header .container .nav-bar .active ul {
     opacity: 1;
   }
   .section02 .section02__img .hover-content .hover-desc p {
