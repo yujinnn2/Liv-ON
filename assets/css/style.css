@@ -584,74 +584,49 @@ header .container .nav-bar.active {
   cursor: pointer;
 }
 
-.section06 .container .row:first-child .col-md-4 p {
-  font-family: math;
-  font-size: 24px;
-  color: #333;
-  margin: 0;
-  padding-top: 10px;
-}
-.section06 .container .row:first-child .col-md-4 h3 {
-  font-family: math;
-  font-size: 60px;
-}
-.section06 .container .row .col-md-2 {
+.section06 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease;
   position: relative;
-  height: 180px;
+}
+
+.section06 .col-md-2 {
+  position: relative;
   overflow: hidden;
 }
-.section06 .container .row .col-md-2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: opacity 0.5s ease;
-}
-.section06 .container .row .col-md-2::after {
-  content: "";
+
+.instagram-hover {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(255, 255, 255);
-  backdrop-filter: blur(2px);
-  opacity: 1;
-  z-index: 1;
-  /* 호버 해제 시 2초 동안 지연 후 서서히 복귀 */
-  transition: opacity 0.5s ease 2s, backdrop-filter 0.5s ease 2s;
-}
-.section06 .container .row .col-md-2:hover::after {
+  bottom: 0;
+  background-color: rgba(72, 52, 42, 0.8); /* 모카무스 색상 (약간 어두운 브라운) */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
-  backdrop-filter: blur(0);
-  /* 호버 시 즉시 반응 (0.5초) */
-  transition: opacity 0.2s ease 0s, backdrop-filter 0.5s ease 0s;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+  text-align: center;
 }
-@media (max-width: 991px) {
-  .section06 {
-    padding: 60px 0;
-  }
-  .section06 .container .row .col-md-2 {
-    height: 150px;
-  }
+
+.section06 .col-md-2:hover .instagram-hover {
+  opacity: 1;
 }
-@media (max-width: 767px) {
-  .section06 {
-    padding: 40px 0;
-  }
-  .section06 .container .row {
-    margin-bottom: 20px;
-  }
-  .section06 .container .row:first-child .col-md-4 p {
-    font-size: 20px;
-    padding-bottom: 15px;
-    text-align: center;
-  }
-  .section06 .container .row .col-md-2 {
-    height: 120px;
-    margin-bottom: 15px;
-  }
+
+.instagram-hover i {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
+
+.instagram-hover span {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 .footer {
   background-color: #8E8675;
   padding: 50px 0 20px;
