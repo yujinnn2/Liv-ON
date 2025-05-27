@@ -5,21 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story</title>
-
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <!-- 일단 추가 -->
-  <link href="https://fonts.googleapis.com/css?family=Proxima+Nova" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/scss/Story.css">
-
-
+  <link rel="stylesheet" href="assets/css/Story.css">
 </head>
 
 <body>
+  <!-- section01 섹션1 -->
   <section class="section01">
     <div class="container">
       <div class="row">
@@ -27,73 +22,57 @@
           <h3 class="main_title">Liv;ON Story</h3>
         </div>
       </div>
+    </div>
+  </section>
+
+<!-- section02 섹션2 -->
+  <section class="section02">
+    <div class="container">
+      <div class="row">
+        <p>Event</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets/images/event01.png" alt="">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/event02.png" alt="">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/event03.png" alt="">
+        </div>
+      </div>
       <div class="row mt-5">
-        <div class="col-md-12">
-          <img src="assets/images/story01.png" alt="">
+        <div class="col-md-4">
+          <img src="assets/images/event01.png" alt="">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/event02.png" alt="">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/event03.png" alt="">
         </div>
       </div>
     </div>
   </section>
 
-
-
-  <section class="section03 mt-5">
-    <!-- nav button -->
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <!-- tab 02 -->
-        <button class="nav-link" id="nav-event-tab" data-bs-toggle="tab" data-bs-target="#nav-event" type="button"
-          role="tab" aria-controls="nav-event" aria-selected="false">Event</button>
-        <!-- tab 03 -->
-        <button class="nav-link" id="nav-news-tab" data-bs-toggle="tab" data-bs-target="#nav-news" type="button"
-          role="tab" aria-controls="nav-news" aria-selected="false">News</button>
-        <!-- tab 04 -->
-        <button class="nav-link" id="nav-media-tab" data-bs-toggle="tab" data-bs-target="#nav-media" type="button"
-          role="tab" aria-controls="nav-media" aria-selected="false">Media</button>
+  <!-- section03 섹션3 -->
+  <div class="section03">
+    <div class="container">
+      <div class="row mt-5">
+        <p>News</p>
       </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-    </div>
-    <!-- Event -->
-    <div class="tab-pane fade show active" id="nav-event" role="tabpanel" aria-labelledby="nav-event-tab">
-      <div class="container">
-        <div class="row mt-5">
-          <div class="col-md-4">
-            <img src="assets/images/event01.png" alt="">
-          </div>
-          <div class="col-md-4">
-            <img src="assets/images/event02.png" alt="">
-          </div>
-          <div class="col-md-4">
-            <img src="assets/images/event03.png" alt="">
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-md-4">
-            <img src="assets/images/event01.png" alt="">
-          </div>
-          <div class="col-md-4">
-            <img src="assets/images/event02.png" alt="">
-          </div>
-          <div class="col-md-4">
-            <img src="assets/images/event03.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- News -->
-    <div class="tab-pane fade" id="nav-news" role="tabpanel" aria-labelledby="nav-news-tab">
       <div class="row">
-        <div class="col-md-4 d-flex">
+        <div class="col-md-12 d-flex">
           <!-- Post -->
           <div class="post-module">
             <!-- Thumbnail -->
             <div class="thumbnail">
               <div class="date">
                 <div class="day">27</div>
-                <div class="month">Mar</div>
+                <div class="month">May</div>
               </div>
-              <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg'>
+              <img src='assets/images/article02.png'>
             </div>
             <!-- Post Content -->
             <div class="post-content">
@@ -116,7 +95,30 @@
                 <div class="day">27</div>
                 <div class="month">Mar</div>
               </div>
-              <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg'>
+              <img src='assets/images/article02.png'>
+            </div>
+            <!-- Post Content -->
+            <div class="post-content">
+              <div class="category">Photos</div>
+              <h1 class="title">City Lights in New York</h1>
+              <h2 class="sub_title">The city that never sleeps.</h2>
+              <p class="description">New York, the largest city in the U.S., is an architectural marvel with
+                plenty
+                of historic monuments, magnificent buildings and countless dazzling skyscrapers.</p>
+              <div class="post-meta">
+                <span class="timestamp"><i class="fa fa-clock-o"></i> 6 mins ago</span>
+                <span class="comments"><i class="fa fa-comments"></i><a href='#'> 39 comments</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="post-module">
+            <!-- Thumbnail -->
+            <div class="thumbnail">
+              <div class="date">
+                <div class="day">27</div>
+                <div class="month">Mar</div>
+              </div>
+              <img src='assets/images/article02.png'>
             </div>
 
             <!-- Post Content -->
@@ -133,6 +135,34 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-12 d-flex">
+          <!-- Post -->
+          <div class="post-module">
+            <!-- Thumbnail -->
+            <div class="thumbnail">
+              <div class="date">
+                <div class="day">27</div>
+                <div class="month">May</div>
+              </div>
+              <img src='assets/images/article02.png'>
+            </div>
+            <!-- Post Content -->
+            <div class="post-content">
+              <div class="category">Photos</div>
+              <h1 class="title">City Lights in New York</h1>
+              <h2 class="sub_title">The city that never sleeps.</h2>
+              <p class="description">New York, the largest city in the U.S., is an architectural marvel with
+                plenty
+                of historic monuments, magnificent buildings and countless dazzling skyscrapers.</p>
+              <div class="post-meta">
+                <span class="timestamp"><i class="fa fa-clock-o"></i> 6 mins ago</span>
+                <span class="comments"><i class="fa fa-comments"></i><a href='#'> 39 comments</a></span>
+              </div>
+            </div>
+          </div>
           <div class="post-module">
             <!-- Thumbnail -->
             <div class="thumbnail">
@@ -140,7 +170,30 @@
                 <div class="day">27</div>
                 <div class="month">Mar</div>
               </div>
-              <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg'>
+              <img src='assets/images/article02.png'>
+            </div>
+            <!-- Post Content -->
+            <div class="post-content">
+              <div class="category">Photos</div>
+              <h1 class="title">City Lights in New York</h1>
+              <h2 class="sub_title">The city that never sleeps.</h2>
+              <p class="description">New York, the largest city in the U.S., is an architectural marvel with
+                plenty
+                of historic monuments, magnificent buildings and countless dazzling skyscrapers.</p>
+              <div class="post-meta">
+                <span class="timestamp"><i class="fa fa-clock-o"></i> 6 mins ago</span>
+                <span class="comments"><i class="fa fa-comments"></i><a href='#'> 39 comments</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="post-module">
+            <!-- Thumbnail -->
+            <div class="thumbnail">
+              <div class="date">
+                <div class="day">27</div>
+                <div class="month">Mar</div>
+              </div>
+              <img src='assets/images/article02.png'>
             </div>
 
             <!-- Post Content -->
@@ -160,90 +213,111 @@
         </div>
       </div>
     </div>
-    <!-- Media -->
-    <div class="tab-pane fade" id="nav-news" role="tabpanel" aria-labelledby="nav-news-tab">
-      <div class="row">
-
-      </div>
-    </div>
-    </div>
-    </div>
-  </section>
+  </div>
 
 
-
-  <!-- <section class="section02 mt-5">
+  <!-- section04 섹션4 -->
+  <div class="section04 mt-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <h3 class="">Liv;ON의 새로운 소식을 확인해보세요.
-          </h3>
-          <h4 class="mt-5">모던함 속의 따뜻함, 미니멀 속의 디테일</h4>
-          <p class="mt-5">우리는 공간을 채우지 않습니다. 오히려 비움으로써 본질을 드러냅니다.<br> 당신의 일상에 조용히 스며드는 디자인, 기능보다는 감각, 트렌드보다는 시간의 깊이를
-            생각합니다.<br> 진짜 필요한 것만이 남는, 정제된 공간. 그것이 우리가 지향하는 미니멀 인테리어입니다.</p>
-        </div>
-        <div class="bar">
-        </div>
+        <p>Media</p>
       </div>
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="assets/images/barnd02.png" alt="">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="assets/images/media01.png" alt="">
+          <div class="text">
+            <p>‘7인의 부활’ 드라마 협찬 및 촬영지</p>
+          </div>
         </div>
-        <div class="col-md-4 ">
-          <img src="assets/images/brand05.png" alt="">
+        <div class="col-md-6">
+          <img src="assets/images/media02.png" alt="">
+          <div class="text">
+            <p>‘눈물의여왕’ 드라마 협찬 및 촬영지</p>
+          </div>
         </div>
-        <div class="col-md-4">
-          <img src="assets/images/brand03.png" alt="">
+        <div class="row mt-5" >
+        <div class="col-md-6">
+          <img src="assets/images/media03.png" alt="">
+          <div class="text">
+            <p>‘진짜가 나타났다’ 드라마 협찬 및 촬영지</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="assets/images/media04.png" alt="">
+          <div class="text">
+            <p>‘우리들의 블루스’ 드라마 협찬 및 촬영지</p>
+          </div>
+        </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </div>
+
+  <!-- footer 푸터 -->
+  <footer class="footer mt-5">
+    <div class="footer-container">
+      <!-- 로고 및 주소 영역 -->
+      <div class="footer-top">
+        <div class="footer-logo">
+          <h1>Liv;ON</h1>
+        </div>
+        <div class="footer-info">
+          <p>고객센터</p>
+          <p class="tel">1588-1234</p>
+          <p>평일 0900-1700</p>
+          <p>주말 0900-1700</p>
+        </div>
+        <div class="footer-info">
+          <p>서울특별시 강남구 테헤란로 123, Liv;ON 빌딩 10층</p>
+          <p>사업자등록번호: 123-45-67890 | 대표: 노유진</p>
+          <p>Tel: 02-1234-5678 | Email: contact@livon.com</p>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="footer-bottom ">
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2024 Liv;ON. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
 
 
-  <!-- Bootstrap 5 -->
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap 5 -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- article JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.post-module').hover(function () {
+                $(this).find('.description').stop().animate({
+                    height: "toggle",
+                    opacity: "toggle"
+                }, 300);
+            });
+        });
+    </script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      new Swiper('.swiper-container', {
-        slidesPerView: 'auto',
-        initialSlide: 2,
-        speed: 1000,
-        spaceBetween: 32,
-        loop: true,
-        centeredSlides: true,
-        roundLengths: true,
-        mousewheel: true,
-        grabCursor: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    });
-  </script>
-
-
-  <script>
-    $(document).ready(function () {
-      $('.post-module').hover(function () {
-        $(this).find('.description').stop().animate({
-          height: "toggle",
-          opacity: "toggle"
-        }, 300);
-      });
-    });
-  </script>
-
-
-
+    
 </body>
 
 </html>
