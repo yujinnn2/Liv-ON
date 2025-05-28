@@ -75,3 +75,4 @@ hbg.onclick = function () {
         });
       });
     });
+
