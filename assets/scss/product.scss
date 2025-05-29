@@ -1,0 +1,78 @@
+.section01{
+     .main_title {
+  font-size: 100px;
+  font-family: math;
+  color: #333;
+  opacity: 0.3;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 162px;
+}
+}
+
+
+
+ ul.tabs {
+     margin: 0px;
+     padding: 0px;
+     list-style: none;
+ }
+
+ ul.tabs li {
+     background: none;
+     color: #222;
+     display: inline-block;
+     padding: 10px 15px;
+     cursor: pointer;
+ }
+
+ ul.tabs li.current {
+     color: #222;
+ }
+
+ .tab-content {
+     display: none;
+     padding: 15px;
+ }
+
+ .tab-content.current {
+     display: inherit;
+ }
+ 
+        .tab-list img{
+            width: 20%;
+            height: 100px;
+        }
+        .tab_bg_content{
+            position: absolute;
+            z-index:-1;
+            top: 0;
+            width: 100%;
+            
+            height: auto;
+        }
+        .bg1{
+            width: 100%;
+            background-color: blanchedalmond;
+            height: 100vh;
+        }
+        .bg2{
+            width: 100%;
+            background-color: burlywood;
+            height: 100vh;
+        }
+        .bg3{
+            width: 100%;
+            background-color: antiquewhite;
+            height: 100vh;
+        }
+        .tab_bg{
+            position: relative;
+        }
+        .tab-list{
+            display: flex;
+        }
+        .tab-list div{
+            width: 30%;
+            cursor: pointer;
+        }
