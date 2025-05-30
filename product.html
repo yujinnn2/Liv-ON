@@ -52,15 +52,25 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="tab-list">
-                                        <div class="tab_01">
-                                            <img src="assets/images/bgBtn_tab_01.jpg" alt="">
-                                        </div>
-                                        <div class="tab_02">
-                                            <img src="assets/images/bgBtn_tab_01.jpg" alt="">
-                                        </div>
-                                        <div class="tab_03">
-                                            <img src="assets/images/bgBtn_tab_01.jpg" alt="">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="tab-list">
+                                                <div class="tab_01">
+                                                    <img src="assets/images/bgBtn_tab_01.jpg" alt="">
+                                                </div>
+                                                <div class="tab_02">
+                                                    <img src="assets/images/bgBtn_tab_01.jpg" alt="">
+                                                </div>
+                                                <div class="tab_03">
+                                                    <img src="assets/images/bgBtn_tab_01.jpg" alt="">
+                                                </div>
+                                                <div class="tab_04">
+                                                    <img src="assets/images/bgBtn_tab_01.jpg" alt="">
+                                                </div>
+                                                <div class="tab_05">
+                                                    <img src="assets/images/bgBtn_tab_01.jpg" alt="">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -69,6 +79,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- jeqeury -->
@@ -96,16 +107,36 @@
                 $('.bg').addClass('bg1');
                 $('.bg').removeClass('bg2');
                 $('.bg').removeClass('bg3');
+                $('.bg').removeClass('bg4');
+                $('.bg').removeClass('bg5');
             })
             $('.tab_02').click(function () {
                 $('.bg').addClass('bg2');
                 $('.bg').removeClass('bg1');
                 $('.bg').removeClass('bg3');
+                $('.bg').removeClass('bg4');
+                $('.bg').removeClass('bg5');
             })
             $('.tab_03').click(function () {
                 $('.bg').addClass('bg3');
                 $('.bg').removeClass('bg1');
                 $('.bg').removeClass('bg2');
+                $('.bg').removeClass('bg4');
+                $('.bg').removeClass('bg5');
+            })
+            $('.tab_04').click(function () {
+                $('.bg').addClass('bg4');
+                $('.bg').removeClass('bg1');
+                $('.bg').removeClass('bg2');
+                $('.bg').removeClass('bg3');
+                $('.bg').removeClass('bg5');
+            })
+            $('.tab_05').click(function () {
+                $('.bg').addClass('bg5');
+                $('.bg').removeClass('bg1');
+                $('.bg').removeClass('bg2');
+                $('.bg').removeClass('bg3');
+                $('.bg').removeClass('bg4');
             })
 
         })
