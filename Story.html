@@ -10,7 +10,7 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/Story.css">
+  <link rel="stylesheet" href="assets/scss/Story.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
     </div>
   </section>
 
-<!-- section02 섹션2 -->
+  <!-- section02 섹션2 -->
   <section class="section02">
     <div class="container">
       <div class="row">
@@ -69,15 +69,15 @@
             <!-- Thumbnail -->
             <div class="thumbnail">
               <div class="date">
-                <div class="day">27</div>
-                <div class="month">May</div>
+                <div class="day">5/27</div>
+                <div class="month"></div>
               </div>
               <img src='assets/images/article02.png'>
             </div>
             <!-- Post Content -->
             <div class="post-content">
-              <div class="category">Photos</div>
-              <h1 class="title">City Lights in New York</h1>
+              <div class="category">News</div>
+              <h1 class="title">(주)리브온 인테리어 사업확장과 함께 대규모 채용 예정</h1>
               <h2 class="sub_title">The city that never sleeps.</h2>
               <p class="description">New York, the largest city in the U.S., is an architectural marvel with
                 plenty
@@ -92,15 +92,15 @@
             <!-- Thumbnail -->
             <div class="thumbnail">
               <div class="date">
-                <div class="day">27</div>
-                <div class="month">Mar</div>
+                <div class="day">5/27</div>
+                <div class="month"></div>
               </div>
               <img src='assets/images/article02.png'>
             </div>
             <!-- Post Content -->
             <div class="post-content">
-              <div class="category">Photos</div>
-              <h1 class="title">City Lights in New York</h1>
+              <div class="category">News</div>
+              <h1 class="title">(주)리브온 인테리어 사업확장과 함께 대규모 채용 예정</h1>
               <h2 class="sub_title">The city that never sleeps.</h2>
               <p class="description">New York, the largest city in the U.S., is an architectural marvel with
                 plenty
@@ -115,16 +115,16 @@
             <!-- Thumbnail -->
             <div class="thumbnail">
               <div class="date">
-                <div class="day">27</div>
-                <div class="month">Mar</div>
+                <div class="day">5/31</div>
+                <div class="month"></div>
               </div>
               <img src='assets/images/article02.png'>
             </div>
 
             <!-- Post Content -->
             <div class="post-content">
-              <div class="category">Photos</div>
-              <h1 class="title">City Lights in New York</h1>
+              <div class="category">News</div>
+              <h1 class="title">(주)리브온 인테리어 사업확장과 함께 대규모 채용 예정</h1>
               <h2 class="sub_title">The city that never sleeps.</h2>
               <p class="description">New York, the largest city in the U.S., is an architectural marvel with
                 plenty
@@ -235,19 +235,19 @@
             <p>‘눈물의여왕’ 드라마 협찬 및 촬영지</p>
           </div>
         </div>
-        <div class="row mt-5" >
-        <div class="col-md-6">
-          <img src="assets/images/media03.png" alt="">
-          <div class="text">
-            <p>‘진짜가 나타났다’ 드라마 협찬 및 촬영지</p>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <img src="assets/images/media03.png" alt="">
+            <div class="text">
+              <p>‘진짜가 나타났다’ 드라마 협찬 및 촬영지</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <img src="assets/images/media04.png" alt="">
-          <div class="text">
-            <p>‘우리들의 블루스’ 드라마 협찬 및 촬영지</p>
+          <div class="col-md-6">
+            <img src="assets/images/media04.png" alt="">
+            <div class="text">
+              <p>‘우리들의 블루스’ 드라마 협찬 및 촬영지</p>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
@@ -298,26 +298,26 @@
 
 
 
-<!-- Bootstrap 5 -->
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap 5 -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- article JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.post-module').hover(function () {
-                $(this).find('.description').stop().animate({
-                    height: "toggle",
-                    opacity: "toggle"
-                }, 300);
-            });
-        });
-    </script>
+  <!-- article JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.post-module').hover(function () {
+        $(this).find('.description').stop().animate({
+          height: "toggle",
+          opacity: "toggle"
+        }, 300);
+      });
+    });
+  </script>
 
-    
+
 </body>
 
 </html>

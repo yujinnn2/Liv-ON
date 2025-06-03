@@ -15,7 +15,7 @@ header .container {
 }
 header .container .logo h1 {
   font-size: 30px;
-  color: #fefefe;
+  color: #545146;
   font-family: math;
 }
 header .container .nav-bar ul {
@@ -27,12 +27,12 @@ header .container .hbg {
 header .container .hbg .line {
   width: 30px;
   height: 3px;
-  background: #efefef;
+  background: #545146;
   margin: 6px 0;
 }
 header .container .nav-bar a {
   display: block;
-  color: #fefefe;
+  color: #545146;
   font-size: 18px;
   font-family: math;
   padding: 10px 25px;
@@ -51,6 +51,26 @@ header .container .nav-bar ul li a.active {
 }
 header .container .nav-bar.active {
   height: 100vh;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* 섹션1에서는 네비게이션 숨김 */
+.nav-bar {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 섹션2부터 네비게이션 보이기 */
+.nav-visible .nav-bar {
+  opacity: 1;
+  visibility: visible;
 }
 
 .hero-slider {

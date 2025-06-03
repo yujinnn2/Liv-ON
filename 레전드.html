@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* transform-origin은 위 inline 스타일에 설정했지만 필요에 따라 CSS에 추가해도 됩니다 */
+        .bg_img {
+            transition: transform 0.3s ease-out;
+        }
+
+        .section04 .bg_img {
+            height: 800px;
+            background: url(/assets/images/forest.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .section04 .bg_img .main_text {
+            text-align: center;
+            margin: 0 auto;
+            padding: 282px 0;
+            color: #fff;
+        }
+    </style>
+</head>
+<!-- HTML -->
+<section class="section04">
+    <div class="bg_img" style="transform-origin:center center;">
+        <div class="main_text">
+            <h3>시간이 흘러도 변하지 않는 가치</h3>
+            <p class="mt-5">
+                시간이 흐름에도 지속되는 삶의 가치를 담아 행복한 일상을 만들기 위해<br />
+                리브;온의 디자이너들은 끊임없이 고민하고 연구합니다.
+            </p>
+            <button class="mt-5 p-2">
+                <a href="#">view more <img src="assets/images/next.svg" alt="" /></a>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- GSAP & ScrollTrigger CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 초기 상태 숨기기
+    gsap.set(".bg_img", { opacity: 0, scale: 0, transformOrigin: "center center" });
+
+    gsap.to(".bg_img", {
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+            trigger: ".bg_img",
+            start: "top 80%",    // 뷰포트 기준으로 요소 top이 화면 하단 80% 위치에 닿으면 시작
+            end: "top 50%",      // 요소 top이 화면 중앙에 도달 시까지 진행
+            scrub: true,
+            markers: false,      // true로 하면 디버깅용 마커 표시
+        },
+        ease: "power1.out"
+    });
+</script>

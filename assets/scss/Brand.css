@@ -33,6 +33,68 @@
   font-size: 15px;
 }
 
+/* assets/scss/gallery.css */
+/* ========== BASE STYLES ========== */
+:root {
+  --primary: #2a2a2a;
+  --secondary: #555;
+  --accent: #545146;
+  --light-gray: #f8f9fa;
+  --dark-gray: #343a40;
+  --white: #ffffff;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--primary);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* ========== TYPOGRAPHY ========== */
+.main_title {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.main_title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent);
+  transition: var(--transition);
+}
+
+.main_title:hover::after {
+  width: 100%;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--secondary);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
 .section02 {
   padding-top: 140px;
 }
