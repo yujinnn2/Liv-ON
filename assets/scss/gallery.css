@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main_title {
   font-size: 100px;
   font-family: math;
@@ -312,19 +313,12 @@ p {
   background-color: var(--accent);
 }
 
-/* Gallery Grid */
 /* Active Content Area */
 .active-content {
   position: relative;
   margin-bottom: 3rem;
 }
 
-.active__img img {
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Product Buttons */
 .act__btn_01, .act__btn_02, .act__btn_03 {
   width: 40px;
   height: 40px;
@@ -369,8 +363,6 @@ p {
     opacity: 0.7;
   }
 }
-/* Product Info Cards */
-/* Position the cards */
 .text_wrap h4 {
   color: #ff6b6b;
   font-size: 0.9rem;
@@ -477,5 +469,99 @@ p {
   }
   .act__btn_bg, .act__btn_bg02, .act__btn_bg03 {
     display: none;
+  }
+}
+.footer {
+  background-color: #8E8675;
+  padding: 50px 0 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #e1e1e1;
+  border-top: 1px solid #eee;
+  /* 로고 & 주소 영역 */
+}
+.footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer .footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* 메뉴 & SNS 영역 */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.footer-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu a {
+  color: #e1e1e1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.footer-menu a:hover {
+  color: #000;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  color: #e1e1e1;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #000;
+}
+
+/* 저작권 영역 */
+.footer-copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #e1e1e1;
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-logo img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
   }
 }/*# sourceMappingURL=gallery.css.map */
