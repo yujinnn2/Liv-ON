@@ -212,6 +212,7 @@
  }
 }
 
+
 .section02{
     margin-top: 100px;
     .col-md-4{
@@ -559,6 +560,7 @@
  }
 }
 
+
 .section04{
     margin-top: 100px;
     .col-md-12{
@@ -568,7 +570,7 @@
             font-weight: 700;
         }
     }
-    .col-md-3{
+    .col-md-12{
         margin-top: 24px;
         p{
             margin:0px;
@@ -586,10 +588,41 @@
         .price{
             font-size: 18px;
             font-weight: 700;
-                     margin-top: 5px;
+            margin-top: 5px;
         }
     }
+    .hover-slide {
+    position: relative;
+  }
+  
+  .hover-slide .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hover-slide:hover .default-img {
+    opacity: 0;
+  }
+  
+  .hover-slide:hover .hover-img {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  
+  /* Swiper 슬라이드 내 이미지 컨테이너 스타일 */
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+  }
+
+  
 }
+
+
 
 .section05{
      margin-top: 100px;
@@ -615,6 +648,7 @@
         padding:10px 10px;
         background: none;
         font-size: 13px;
+        align-self: center;
 
     }
 }
