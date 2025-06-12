@@ -792,9 +792,10 @@ header {
     padding: 0;
   }
   header .container .nav-bar ul li a {
-    margin-bottom: 12px;
+    color: #545146;
+    background: #fff;
   }
-  header .container .nav-bar .active ul {
+  header .container .active ul {
     opacity: 1;
   }
   .section02 .section02__img .hover-content .hover-desc p {
