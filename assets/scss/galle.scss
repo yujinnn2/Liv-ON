@@ -55,9 +55,9 @@
         z-index: 2;
     }
 
-    .active_content {
-        position: relative;
-    }
+    // .active_content {
+    //     position: relative;
+    // }
 
     .act__btn_bg {
         width: 20px;
@@ -623,14 +623,10 @@
 }
 
 
-
 .section05{
      margin-top: 100px;
      .col-md-12{
         justify-content: space-between;
-     }
-    .col-md-4{
-        margin-right: 16.5%;
         h4{
             color:#000;
             font-size: 18px;
@@ -650,5 +646,191 @@
         font-size: 13px;
         align-self: center;
 
+    }
+    .act__btn_01 {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 3755px;
+        border-radius: 100px;
+        left: 675px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .act__btn_02 {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 4200px;
+        border-radius: 100px;
+        left: 840px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .act__btn_03 {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 4200px;
+        border-radius: 100px;
+        left: 1240px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+       .act__btn_bg {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        position: absolute;
+        top: 3750px;
+        left: 670px;
+        opacity: .3;
+        border-radius: 100px;
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 1;
+    }
+
+    .act__btn_bg02 {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        position: absolute;
+        top: 4195px;
+        left: 835px;
+        opacity: .3;
+        border-radius: 100px;
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 1;
+    }
+
+    .act__btn_bg03 {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        position: absolute;
+        top: 4195px;
+        left: 1235px;
+        opacity: .3;
+        border-radius: 100px;
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 1;
+    }
+
+     .act__text_01 {
+        position: absolute;
+        background: #fff;
+        border-radius: 5px;
+        top: 3760px;
+        width: 10%;
+        left: 700px;   
+        display: none;
+        padding: 20px;
+        opacity: 0;
+        display: flex;
+        transition: all 0.3s;
+    }
+
+    .act__text_02 {
+        position: absolute;
+        background: #fff;
+        border-radius: 5px;
+        top: 4215px;
+        width: 10%;
+        left: 655px;
+        display: none;
+        padding: 20px;
+        opacity: 0;
+        display: flex;
+        transition: all 0.3s;
+    }
+
+    .act__text_03 {
+        position: absolute;
+        background: #fff;
+        border-radius: 5px;
+        top: 4200px;
+        width: 10%;
+        left: 1260px;
+        display: none;
+        padding: 20px;
+        opacity: 0;
+        display: flex;
+        transition: all 0.3s;
+    }
+
+    h4 {
+        color: tomato;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .name {
+        color: #333;
+        font-weight: 600;
+    }
+
+    .sub {
+        color: #a5a4a4;
+        font-size: 15px;
+    }
+
+    .buy_wrap a {
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+    }
+     
+ .act_btn_show{
+    opacity: 1;
+ }
+}
+
+
+.section06 {
+    margin-top: 100px;
+
+    .col-md-8 {
+        padding: 0;
+        width: 64%;
+    }
+
+    .col-md-4 {
+        padding: 0;
+        background: #FAF8EE;
+        border-radius: 0 20px 20px 0 ;
+        width:35%;
+        p{
+            text-align: center;
+            font-weight: 600;
+            font-size: 20px;
+            margin-top: 5%;
+        }
+        p:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+    .text{
+        flex-direction: column;
+        justify-content: center;
+    }
+    button{
+        background:none;
+        border: none;
     }
 }

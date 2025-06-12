@@ -34,15 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// hbg button 
-let hbg = document.querySelector('.hbg');
-hbg.onclick = function () {
-  navBar = document.querySelector('.nav-bar');
-  navBar.classList.toggle('active');
-  $(function () { });
-};
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const tabEls = document.querySelectorAll('button[data-bs-toggle="tab"]');
 
@@ -95,3 +86,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+// hbg button 
+let hbg = document.querySelector('.hbg');
+hbg.onclick = function () {
+  navBar = document.querySelector('.nav-bar');
+  navBar.classList.toggle('active');
+  // $(function () { });
+};
