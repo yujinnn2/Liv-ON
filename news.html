@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section03 {
+            .col-md-12 {
+                gap: 40px;
+            }
+
+            .post-module {
+                position: relative;
+                z-index: 1;
+                display: block;
+                background: #ffffff;
+                min-width: 270px;
+                height: 470px;
+                box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+                transition: all 0.3s linear 0s;
+                margin-bottom: 30px;
+            }
+
+            .post-module:hover {
+                box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+            }
+
+            .post-module:hover .thumbnail img {
+                transform: scale(1.1);
+                opacity: 0.6;
+            }
+
+            .thumbnail {
+                background: #000000;
+                height: 400px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .thumbnail .date {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 1;
+                background: #908B79;
+                width: 55px;
+                height: 55px;
+                padding: 12.5px 0;
+                border-radius: 100%;
+                color: #ffffff;
+                font-weight: 700;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            .thumbnail .date .day {
+                font-size: 18px;
+            }
+
+            .thumbnail .date .month {
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+
+            .thumbnail img {
+                display: block;
+                width: 120%;
+                transition: all 0.3s linear 0s;
+            }
+
+            .post-content {
+                position: absolute;
+                bottom: 0;
+                background: #ffffff;
+                width: 100%;
+                padding: 30px;
+                box-sizing: border-box;
+                transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+            }
+
+            .post-content .category {
+                position: absolute;
+                top: -34px;
+                left: 0;
+                background: #908B79;
+                padding: 10px 15px;
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            .post-content .title {
+                margin: 0;
+                padding: 0 0 10px;
+                color: #333333;
+                font-size: 23px;
+                font-weight: 700;
+            }
+
+            .post-content .sub_title {
+                margin: 0;
+                padding: 0 0 20px;
+                color: #908B79;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            .post-content .description {
+                display: none;
+                color: #666666;
+                font-size: 14px;
+                line-height: 1.8em;
+            }
+
+            .post-content .post-meta {
+                margin: 30px 0 0;
+                color: #999999;
+            }
+
+            .post-content .post-meta .timestamp {
+                margin: 0 16px 0 0;
+            }
+
+            .post-content .post-meta a {
+                color: #999999;
+                text-decoration: none;
+            }
+
+            .hover .post-content .description {
+                display: block !important;
+                height: auto !important;
+                opacity: 1 !important;
+            }
+
+            button {
+                border: none;
+                outline: none;
+                background: #D8D2C7;
+                border-radius: 20px;
+                padding: 12px 20px;
+                margin-top: 60px;
+                margin-left: 70px;
+
+                a {
+                    text-decoration: none;
+                    color: #333;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .button {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- section03 섹션3 -->
+    <section class="section03">
+        <div class="container">
+            <div class="row mt-5">
+                <p>News</p>
+            </div>
+            <div class="row">
+                <div class="col-md-12 d-flex">
+                    <!-- Post 01 -->
+                    <div class="post-module">
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <div class="date">
+                                <div class="day">5/6</div>
+                                <div class="month"></div>
+                            </div>
+                            <img src='assets/images/article02.png'>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="category">News</div>
+                            <h1 class="title">(주)리브온 인테리어 사업확장과 함께 대규모 채용 예정</h1>
+                            <h2 class="sub_title">리브온 인테리어는 2025년 하반기 사업 확장을 위해 대규모 인재 채용을 진행할 예정입니다.</h2>
+                            <p class="description">
+                                모집 분야 : 인테리어 디자이너, 시공 관리자, CAD 전문가 등<br>
+                                자격 요건 : 공지사항 게시판의 첨부 파일 참조 (경력자 및 신입 모두 지원 가능)<br>
+                                문의 : 인사팀 02-1234-5678 / recruit@liveoninterior.co.kr<br>
+                                "우수한 인재들과 함께 성장하는 기회가 될 것" (김대표 인터뷰中)
+                            </p>
+                            <div class="post-meta">
+                                <span class="timestamp"><i class="fa fa-clock-o"></i> 6 mins ago</span>
+                                <span class="comments"><i class="fa fa-comments"></i><a href='#'> 28 comments</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 02 -->
+                    <div class="post-module">
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <div class="date">
+                                <div class="day">5/18</div>
+                                <div class="month"></div>
+                            </div>
+                            <img src='assets/images/article02.png'>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="category">News</div>
+                            <h1 class="title">2025 국내 인테리어 업체 평가서 '우수업체' 선정</h1>
+                            <h2 class="sub_title">(주)리브온 인테리어가 한국인테리어협회 주관 '2025 상반기 우수업체 평가'에서
+                                종합 1위를 차지하며 산업통상자원부 장관 표창을 수상했습니다.</h2>
+                            <p class="description">선정 이유<br>
+
+                                고객 만족도 98.7% (업계 평균 89.2%)<br>
+
+                                친환경 소재 사용률 82%<br>
+
+                                3년 연속 A/S 신속 대응률 1위<br>
+
+                                창의적인 공간 디자인 23건 특허 등록<br>
+
+                                "앞으로도 품격 있는 공간을 창조하겠습니다"(디자인팀 박성민 팀장)</p>
+                            <div class="post-meta">
+                                <span class="timestamp"><i class="fa fa-clock-o"></i> 26 mins ago</span>
+                                <span class="comments"><i class="fa fa-comments"></i><a href='#'> 60 comments</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 03 -->
+                    <div class="post-module">
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <div class="date">
+                                <div class="day">5/31</div>
+                                <div class="month"></div>
+                            </div>
+                            <img src='assets/images/article02.png'>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="category">News</div>
+                            <h1 class="title">S전자 신사옥 인테리어 공사 7년만에 완공, 6월 정식 오픈</h1>
+                            <h2 class="sub_title">(주)리브온 인테리어가 총괄한 S전자 신사옥(강남구 역삼동) 프로젝트가
+                                7년간의 공사를 마치고 2025년 6월 개장을 앞두고 있습니다.</h2>
+                            <p class="description">주요 작업 내용<br>
+
+                                건축사무소 (주)공간과의 협업 시스템 구축<br>
+
+                                지하 3층~지상 42층 전체 인테리어 시공<br>
+
+                                스마트 오피스 시스템 통합 설계<br>
+
+                                미래형 라운지 공간 12개 구역 구성<br>
+
+                                커스텀 가구 1,200점 제작 설치<br>
+
+                                "국내 최대 규모의 프리미엄 오피스 프로젝트" (시공팀 이철우 부장)</p>
+                            <div class="post-meta">
+                                <span class="timestamp"><i class="fa fa-clock-o"></i> 16 mins ago</span>
+                                <span class="comments"><i class="fa fa-comments"></i><a href='#'> 9 comments</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12 d-flex">
+                    <!-- Post 04 -->
+                    <div class="post-module">
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <div class="date">
+                                <div class="day">6/12</div>
+                                <div class="month"></div>
+                            </div>
+                            <img src='assets/images/article02.png'>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="category">News</div>
+                            <h1 class="title">2025년 글로벌 진출 본격화
+                                (해외 첫 지사 베트남 하노이 오픈 예정)</h1>
+                            <h2 class="sub_title">(주)리브온 인테리어가 2025년 4분기를 목표로 베트남 하노이에 첫 해외 지사를 설립합니다.</h2>
+                            <p class="description">주요 계획
+
+                                현지 법인 설립 및 디자인 연구소 운영 (2025.11 예정)<br>
+
+                                베트남 진출 한국 기업 대상 맞춤형 오피스 인테리어 서비스<br>
+
+                                현지 인테리어 전문가 30명 채용 및 한국 본사 파견 교육<br>
+
+                                한국-베트남 합작 프로젝트팀 구성<br>
+
+                                "동남아 시장에서 K-인테리어의 우수성을 알릴 것" (해외사업부 장영희 부사장)<br>
+
+                            </p>
+                            <div class="post-meta">
+                                <span class="timestamp"><i class="fa fa-clock-o"></i> 45 mins ago</span>
+                                <span class="comments"><i class="fa fa-comments"></i><a href='#'> 29 comments</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post 05 -->
+                    <div class="post-module">
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <div class="date">
+                                <div class="day">6/18</div>
+                                <div class="month"></div>
+                            </div>
+                            <img src='assets/images/article02.png'>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="category">News</div>
+                            <h1 class="title"> AI 디자인 플랫폼 'LiveON 3.0' 출시
+                                (3D 공간 계획부터 자재 추천까지 한번에)</h1>
+                            <h2 class="sub_title">자체 개발한 AI 인테리어 플랫폼 'LiveON 3.0'을 2025년 9월 정식 출시합니다.
+                                VR/AR 기술을 접목해 사용자가 원하는 스타일을 5분 내에 3D로 구현하는 시스템입니다.</h2>
+                            <p class="description">주요 기능<br>
+
+                                스마트폰 사진 업로드 → AI가 자동으로 5가지 스타일 제안<br>
+
+                                실시간 예산 계산 및 자재 추천 알고리즘<br>
+
+                                15,000개 이상의 실제 시공 데이터 기반 학습<br>
+
+                                계약 고객 전용 클라우드 저장소 제공<br>
+
+                                "디자인 시간을 70% 단축하는 기술 혁신" (R&D센터 김태윤 본부장)</p>
+                            <div class="post-meta">
+                                <span class="timestamp"><i class="fa fa-clock-o"></i> 38 mins ago</span>
+                                <span class="comments"><i class="fa fa-comments"></i><a href='#'> 15 comments</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-module">
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <div class="date">
+                                <div class="day">6/24</div>
+                                <div class="month"></div>
+                            </div>
+                            <img src='assets/images/article02.png'>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="category">News</div>
+                            <h1 class="title">리브온 인테리어, '제8회 대한민국 공간디자인대상' 3관왕 달성</h1>
+                            <h2 class="sub_title">(주)리브온 인테리어가 문화체육관광부 후원 '제8회 대한민국 공간디자인대상'에서
+                                주거·상업·공공 3개 부문을 동시 수상하며 업계 최초 트리플 크라운을 기록했습니다.</h2>
+                            <p class="description">수상 작품<br>
+
+                                주거부문 : '서울 한남동 파사드 리모델링 프로젝트'<br>
+
+                                상업부문 : '강남 프리미엄 아이웨딩 샵'<br>
+
+                                공공부문 : '인천 국제어린이도서관'<br>
+
+                                심사평 : "공간의 정체성을 살린 혁신적 디자인과 기능성의 완벽한 조화"</p>
+                            <div class="post-meta">
+                                <span class="timestamp"><i class="fa fa-clock-o"></i> 6 mins ago</span>
+                                <span class="comments"><i class="fa fa-comments"></i><a href='#'> 39 comments</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button>
+                <a href="#">더 보기</a>
+            </button>
+        </div>
+    </section>
+</body>
+
+</html>

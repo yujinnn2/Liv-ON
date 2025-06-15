@@ -1,13 +1,13 @@
 @import url('../scss/common.css');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-// header gnb menu
+// GNB
 header {
-  .container {
+  .d-flex {
     gap: 250px;
     width: 100%;
     height: 60px;
-    background: transparent;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;

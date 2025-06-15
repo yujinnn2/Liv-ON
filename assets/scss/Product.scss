@@ -1,0 +1,479 @@
+@import url('../scss/common.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+
+// GNB
+header {
+  .d-flex {
+    gap: 250px;
+    width: 100%;
+    height: 60px;
+    background: #8E8675;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: fixed;
+    z-index: 999;
+
+    .logo h1 {
+      font-size: 30px;
+      color: #FDFCF7;
+      font-family: math;
+      padding-top: 10px;
+    }
+
+    .nav-bar ul {
+      display: flex;
+      list-style: none;
+      padding-top: 20px;
+    }
+
+    .hbg {
+      display: none;
+
+      .line {
+        width: 30px;
+        height: 3px;
+        background: #545146;
+        margin: 6px 0;
+      }
+    }
+
+    .nav-bar a {
+      display: block;
+      color: #FDFCF7;
+      font-size: 18px;
+      font-family: math;
+      padding: 10px 25px;
+      border-radius: 50px;
+      transition: all 0.2s;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+
+    .nav-bar ul li a:hover {
+      color: #545146;
+      background: #fefefe;
+    }
+
+    .nav-bar ul li a.active {
+      color: #545146;
+      background: #fefefe;
+    }
+
+    .nav-bar.active {
+      height: 100vh;
+    }
+  }
+}
+
+
+// section 01
+.section01 {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+
+  .tab-content {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .main_title {
+    font-size: 100px;
+    font-family: math;
+    color: #333;
+    opacity: 0.3;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  ul.tabs {
+    margin: 0px;
+    padding: 30px;
+    list-style: none;
+  }
+
+  ul.tabs li {
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  ul.tabs li.current {
+    color: #222;
+  }
+
+  .tab-content {
+    display: none;
+    padding: 15px;
+  }
+
+  .tab-content.current {
+    display: inherit;
+  }
+
+  .col-md-3 {
+    span {
+      text-decoration: line-through;
+    }
+  }
+
+  /* 탭 메뉴 스타일 */
+  .tabs {
+    display: flex;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+  }
+
+  .tab-link {
+    padding: 12px 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 4px;
+  }
+
+  .tab-link:hover {
+    color: #2a2a2a;
+    background-color: rgba(0, 119, 182, 0.05);
+  }
+
+  .tab-link.current {
+    color: #0077b6;
+  }
+
+  .tab-link.current::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #8E8675;
+  }
+
+  /* 제품 그리드 스타일 */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  /* 제품 카드 스타일 */
+  .col-md-3 {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .col-md-3>img:first-child {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .col-md-3:hover>img:first-child {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .col-md-3 h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .col-md-3:hover h4 {
+    color: #908B79;
+  }
+
+  .col-md-3 p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+  }
+
+  .col-md-3 p span {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 8px;
+  }
+
+  .col-md-3>img:nth-child(5) {
+    top: 50px;
+  }
+
+  /* 추가적인 hover 효과 */
+  .col-md-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 119, 182, 0);
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1;
+  }
+
+  .col-md-3:hover::before {
+    background: rgba(0, 119, 182, 0.03);
+  }
+
+  /* Quick view 버튼 (hover 시 나타남) */
+  .col-md-3::after {
+    content: '제품 비교하기';
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #908B79;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 3;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .col-md-3:hover::after {
+    opacity: 1;
+    bottom: 90px;
+  }
+
+  
+// pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 20px 0;
+  list-style: none;
+
+  li {
+    margin: 0 5px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #555;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid transparent;
+  }
+
+  a:hover {
+    background-color: #FAF8EE;
+    color: #6C685A;
+  }
+
+  .active a {
+    background-color: #D8D1B5;
+    color: white;
+    border-color: #D8D1B5;
+  }
+
+  .disabled a {
+    color: #ccc;
+    pointer-events: none;
+  }
+
+  .arrow a {
+    font-size: 1.2rem;
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+  // animation 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+}
+
+
+// 메인 타이틀
+.main_title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  color: #2a2a2a;
+}
+.main_title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #8E8675;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.main_title:hover::after {
+  width: 100%;
+}
+
+// footer
+.footer {
+  background-color: #8E8675;
+  padding: 50px 0 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #e1e1e1;
+  border-top: 1px solid #eee;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: space-between;
+  }
+
+  .footer-info p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  .footer-menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-menu a {
+    color: #e1e1e1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .footer-menu a:hover {
+    color: #000;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 15px;
+  }
+
+  .footer-social a {
+    color: #e1e1e1;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+  .footer-social a:hover {
+    color: #000;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #e1e1e1;
+  }
+}
+
+
+// responsible (product)
+@media (max-width: 992px) {
+  .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .main_title {
+    font-size: 2rem;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab-link {
+    margin: 5px;
+    padding: 8px 16px;
+  }
+
+  .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+// responsible (footer)
+@media (max-width: 768px) {
+  .footer .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer .footer-logo img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
