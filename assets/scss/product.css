@@ -15,9 +15,12 @@ header .d-flex {
 }
 header .d-flex .logo h1 {
   font-size: 30px;
+  padding-top: 10px;
+}
+header .d-flex .logo h1 a {
+  text-decoration: none;
   color: #FDFCF7;
   font-family: math;
-  padding-top: 10px;
 }
 header .d-flex .nav-bar ul {
   display: flex;
@@ -123,7 +126,7 @@ header .d-flex .nav-bar.active {
   background-color: rgba(0, 119, 182, 0.05);
 }
 .section01 .tab-link.current {
-  color: #0077b6;
+  color: #F0E8C9;
 }
 .section01 .tab-link.current::after {
   content: "";

@@ -16,10 +16,12 @@ header {
 
     .logo h1 {
       font-size: 30px;
+      padding-top: 10px;
+      a{
+      text-decoration: none;
       color: #FDFCF7;
       font-family: math;
-      padding-top: 10px;
-    }
+    }}
 
     .nav-bar ul {
       display: flex;

@@ -4,17 +4,22 @@
 header .d-flex {
   gap: 250px;
   width: 100%;
-  height: 60px;
-  background: #fff;
+  height: 50px;
+  background: #fefefe;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 100px;
   position: fixed;
   z-index: 999;
+  padding-top: 20px;
 }
 header .d-flex .logo h1 {
   font-size: 30px;
+  color: #545146;
+}
+header .d-flex .logo h1 a {
+  text-decoration: none;
   color: #545146;
   font-family: math;
 }
@@ -58,19 +63,6 @@ header {
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
-}
-
-/* 섹션1에서는 네비게이션 숨김 */
-.nav-bar {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-/* 섹션2부터 네비게이션 보이기 */
-.nav-visible .nav-bar {
-  opacity: 1;
-  visibility: visible;
 }
 
 .hero-slider {

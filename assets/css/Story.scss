@@ -15,12 +15,15 @@ header {
     position: fixed;
     z-index: 9999;
 
-    .logo h1 {
+ .logo h1 {
       font-size: 30px;
+      padding-top: 10px;
+       a{
+      text-decoration: none;
       color: #FDFCF7;
       font-family: math;
-      padding-top: 10px;
-    }
+    }}
+
 
     .nav-bar ul {
       display: flex;
@@ -167,8 +170,7 @@ header {
 
 // section03 섹션3 (news)
 .section03 {
-  padding: 100px 0;
-
+  padding: 100px 0 0 0;
   .section-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -207,7 +209,9 @@ header {
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    // box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0px 10px 0px rgba(0,0,0,0.1);
+
     transition: all 0.3s ease;
     
     &:hover {
@@ -271,6 +275,7 @@ header {
         border-radius: 20px;
         font-size: 0.8rem;
         margin-bottom: 0.8rem;
+        //  width: 100px;
       }
       
       .news-title {
@@ -338,7 +343,7 @@ header {
       &::after {
         content: '';
         position: absolute;
-        bottom: -647px;
+        bottom: -615px;
         left: 50%;
         transform: translateX(-50%);
         width: 50px;
@@ -468,6 +473,7 @@ header {
   .footer-info p {
     margin: 5px 0;
     font-size: 14px;
+    text-align: right;
   }
 
   /* 메뉴 & SNS 영역 */
@@ -477,8 +483,8 @@ header {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px 0;
-    border-top: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e12b;
+    border-bottom: 1px solid #e1e1e12b;
   }
 
   .footer-menu ul {

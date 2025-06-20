@@ -18,10 +18,12 @@ header {
 
     .logo h1 {
       font-size: 30px;
+      padding-top: 10px;
+       a{
+      text-decoration: none;
       color: #FDFCF7;
       font-family: math;
-      padding-top: 10px;
-    }
+    }}
 
     .nav-bar ul {
       display: flex;
@@ -146,7 +148,7 @@ header {
   }
 
   .tab-link.current {
-    color: #0077b6;
+    color: #F0E8C9;
   }
 
   .tab-link.current::after {

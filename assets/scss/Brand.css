@@ -15,9 +15,12 @@ header .d-flex {
 }
 header .d-flex .logo h1 {
   font-size: 30px;
+  padding-top: 10px;
+}
+header .d-flex .logo h1 a {
+  text-decoration: none;
   color: #FDFCF7;
   font-family: math;
-  padding-top: 10px;
 }
 header .d-flex .nav-bar ul {
   display: flex;
