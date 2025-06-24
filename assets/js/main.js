@@ -1,4 +1,5 @@
-var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+
+let triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new bootstrap.Tab(triggerEl)
 
@@ -94,3 +95,29 @@ hbg.onclick = function () {
   navBar.classList.toggle('active');
   // $(function () { });
 };
+
+
+// nav bar scroll effect
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('header');
+  const section01 = document.getElementById('section01');
+  const section02 = document.getElementById('section02');
+
+  // 섹션01의 높이 계산
+  const section01Height = section01.offsetHeight;
+
+  // 스크롤 이벤트 리스너 추가
+  window.addEventListener('scroll', function () {
+    // 현재 스크롤 위치가 섹션01의 높이를 넘으면 헤더 표시
+    if (window.scrollY > section01Height * 0.8) {
+      header.classList.add('visible');
+    } else {
+      header.classList.remove('visible');
+    }
+  });
+
+  // 페이지 로드 시 섹션01의 높이 확인
+  if (window.scrollY > section01Height * 0.8) {
+    header.classList.add('visible');
+  }
+});

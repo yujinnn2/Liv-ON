@@ -1,6 +1,6 @@
 // Initialize Swiper
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
+  slidesPerView: 3.5,
   spaceBetween: 30,
   centeredSlides: true,
   pagination: {

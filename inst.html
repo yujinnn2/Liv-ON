@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        // section06 섹션6
+        // .section06 {
+        //   .container {
+        //     .row {
+
+        //       &:first-child {
+        //         .col-md-4 {
+        //           p {
+        //             font-family: math;
+        //             font-size: 24px;
+        //             color: #333;
+        //             margin: 0;
+        //             padding-top: 10px;
+        //           }
+
+        //           h3 {
+        //             font-family: math;
+        //             font-size: 60px;
+        //           }
+        //         }
+        //       }
+
+        //       .col-md-2 {
+        //         position: relative;
+        //         height: 180px;
+        //         overflow: hidden;
+
+        //         img {
+        //           width: 100%;
+        //           height: 100%;
+        //           object-fit: cover;
+        //           display: block;
+        //           transition: opacity 0.5s ease;
+        //         }
+
+        //         &::after {
+        //           content: '';
+        //           position: absolute;
+        //           top: 0;
+        //           left: 0;
+        //           width: 100%;
+        //           height: 100%;
+        //           background: rgba(255, 255, 255, 1);
+        //           backdrop-filter: blur(2px);
+        //           opacity: 1;
+        //           z-index: 1;
+        //           /* 호버 해제 시 2초 동안 지연 후 서서히 복귀 */
+        //           transition:
+        //             opacity 0.5s ease 2s, // 2초 딜레이 후 0.5초 동안 효과
+        //             backdrop-filter 0.5s ease 2s;
+        //         }
+
+        //         &:hover {
+        //           &::after {
+        //             opacity: 0;
+        //             backdrop-filter: blur(0);
+        //             /* 호버 시 즉시 반응 (0.5초) */
+        //             transition:
+        //               opacity 0.2s ease 0s,
+        //               backdrop-filter 0.5s ease 0s;
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+
+
+
+        .section06 img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .section06 .col-md-2 {
+            position: relative;
+            overflow: hidden;
+            // padding: 0 5px;
+        }
+
+        .instagram-hover {
+            position: absolute;
+            top: 0;
+            // left: 5px;
+            // right: 5px;
+            bottom: 0;
+            background-color: rgba(72, 52, 42, 0.8);
+            /* 모카무스 색상 (약간 어두운 브라운) */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .section06 .col-md-2:hover .instagram-hover {
+            opacity: 1;
+        }
+
+        .instagram-hover i {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .instagram-hover span {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- section06 섹션6 -->
+    <section class="section06">
+        <div class="container mt-5 mt-5">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <p>follow us on instagram</p>
+                    <h3 class="mt-1">@Liv;ON</h3>
+                </div>
+                <div class="col-md-2"><img src="assets/images/01.png" alt="">
+                    <div class="instagram-hover">
+                        <i class="fab fa-instagram"></i>
+                        <span>Check out our latest collection #LivON</span>
+                    </div>
+                </div>
+                <div class="col-md-2"><img src="assets/images/02.png" alt="">
+                    <div class="instagram-hover">
+                        <i class="fab fa-instagram"></i>
+                        <span>Check out our latest collection #LivON</span>
+                    </div>
+                </div>
+                <div class="col-md-2"><img src="assets/images/03.png" alt=""></div>
+                <div class="col-md-2"><img src="assets/images/04.png" alt=""></div>
+            </div>
+            <div class="row g-0">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-2"><img src="assets/images/05.png" alt="">
+                    <div class="instagram-hover">
+                        <i class="fab fa-instagram"></i>
+                        <span>Check out our latest collection #LivON</span>
+                    </div>
+                </div>
+                <div class="col-md-2"><img src="assets/images/06.png" alt=""></div>
+                <div class="col-md-2"><img src="assets/images/07.png" alt="">
+                    <div class="instagram-hover">
+                        <i class="fab fa-instagram"></i>
+                        <span>Check out our latest collection #LivON</span>
+                    </div>
+                </div>
+                <div class="col-md-2"><img src="assets/images/08.png" alt=""></div>
+            </div>
+            <div class="row g-0">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-2"><img src="assets/images/09.png" alt="">
+                    <div class="instagram-hover">
+                        <i class="fab fa-instagram"></i>
+                        <span>Check out our latest collection #LivON</span>
+                    </div>
+                </div>
+                <div class="col-md-2"><img src="assets/images/10.png" alt=""></div>
+                <div class="col-md-2"><img src="assets/images/11.png" alt=""></div>
+                <div class="col-md-2"><img src="assets/images/12.png" alt="">
+                    <div class="instagram-hover">
+                        <i class="fab fa-instagram"></i>
+                        <span>Check out our latest collection #LivON</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

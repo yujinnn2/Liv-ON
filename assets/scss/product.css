@@ -68,6 +68,22 @@ header .d-flex .nav-bar.active {
   /* 추가적인 hover 효과 */
   /* Quick view 버튼 (hover 시 나타남) */
 }
+.section01 .text {
+  padding: 0 15px;
+}
+.section01 h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2a2a2a;
+}
+.section01 p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  padding: 0 5px;
+}
 .section01 .tab-content {
   animation: fadeIn 0.5s ease-out;
 }
@@ -82,7 +98,6 @@ header .d-flex .nav-bar.active {
 }
 .section01 ul.tabs {
   margin: 0px;
-  padding: 30px;
   list-style: none;
 }
 .section01 ul.tabs li {
@@ -109,7 +124,6 @@ header .d-flex .nav-bar.active {
   display: flex;
   margin-bottom: 40px;
   border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 15px;
 }
 .section01 .tab-link {
   padding: 12px 24px;

@@ -75,6 +75,24 @@ header {
 .section01 {
   padding: 100px 0;
   background-color: #f8f9fa;
+  .text{
+    padding: 0 15px;
+  }
+
+  h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2a2a2a;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  padding: 0 5px;
+}
 
   .tab-content {
     animation: fadeIn 0.5s ease-out;
@@ -92,7 +110,6 @@ header {
 
   ul.tabs {
     margin: 0px;
-    padding: 30px;
     list-style: none;
   }
 
@@ -128,7 +145,6 @@ header {
     display: flex;
     margin-bottom: 40px;
     border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 15px;
   }
 
   .tab-link {

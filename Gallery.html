@@ -42,22 +42,18 @@
     <!-- section01 섹션1 -->
     <section class="section01">
         <div class="container">
-            <!-- main-title -->
-            <!-- <div class="row">
-                <div class="col-md-12">
-                    <h3 class="main_title">Liv;ON Gallery</h3>
-                </div>
-            </div> -->
             <div class="row">
                 <div class="text">
-                    <div class="col-md-12">
-                        <h4>침실을 자연의 감성을 담은 나만의 오아시스로 만들어 보세요</h4>
-                        <p>그린은 단순한 색상 그 이상입니다. 이건 감성이자, 거의 철학에 가깝습니다. 성장과 희망을 상징하기 때문에 우리가 휴식하고 꿈을 꾸는<br> 방에서 그린 색상으로
-                            둘러싸이고자
-                            하는 사람이 많은 것은 놀라운 일이 아니죠. 자연스러운 소재와 부드러운 텍스처가 함께 공존하는<br> 이 침실은 정말 꿈처럼 느껴지네요.</p>
+                    <div class="col-md-12 mt-5">
+                        <h4>갤러리</h4>
+                        <p>Visualize Your Dream<br>
+                            Step Into Inspiration<br>
+                            제품이 실제 공간에서 어떻게 빛나는지 직접 눈으로 확인해 보세요.<br>
+                            다양한 컨셉으로 꾸며진 공간들을 거닐며 당신의 취향을 발견하고, 꿈꾸던 인테리어 아이디어를 구체화할 수 있을 거예요.
+                            </p>
                     </div>
                     <div class="image">
-                        <div class="col-md-12 mt-3">
+                        <div class="col-md-12 mt-4">
                             <img src="assets/images/gallery01.png" alt="">
                         </div>
                     </div>
@@ -478,7 +474,7 @@
     <!-- main JS -->
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        let swiper = new Swiper(".mySwiper", {
             slidesPerView: 4,
             spaceBetween: 30,
             loop: true,
@@ -494,30 +490,40 @@
     </script>
 
     <script>
-        //모달 버튼(제품 상세 버튼)
         $(function () {
-            $('.act__btn_01').click(function () {
-                $('.act__text_01').toggleClass('act_btn_show');
-            })
-
-        })
-
-        $(function () {
-            $('.act__btn_02').click(function () {
-                $('.act__text_02').toggleClass('act_btn_show');
-            })
-
-        })
-
-        $(function () {
-            $('.act__btn_03').click(function () {
-                $('.act__text_03').toggleClass('act_btn_show');
-            })
-
-        })
+        // 모달 버튼 클릭 이벤트
+        $('.act__btn_01').click(function(e) {
+            e.stopPropagation();
+            $('.act__text_01').toggleClass('act_btn_show');
+            $('.modal-overlay').toggleClass('active');
+        });
+        
+        $('.act__btn_02').click(function(e) {
+            e.stopPropagation();
+            $('.act__text_02').toggleClass('act_btn_show');
+            $('.modal-overlay').toggleClass('active');
+        });
+        
+        $('.act__btn_03').click(function(e) {
+            e.stopPropagation();
+            $('.act__text_03').toggleClass('act_btn_show');
+            $('.modal-overlay').toggleClass('active');
+        });
+        
+        // 모달 외부 클릭 시 닫기
+        $(document).click(function(e) {
+            // 클릭한 요소가 모달이나 버튼이 아닌 경우
+            if (!$(e.target).closest('.act__text_01, .act__text_02, .act__text_03, .act__btn_01, .act__btn_02, .act__btn_03').length) {
+                $('.act__text_01, .act__text_02, .act__text_03').removeClass('act_btn_show');
+                $('.modal-overlay').removeClass('active');
+            }
+        });
+        
+        // 모달 내부 클릭 시 이벤트 전파 방지
+        $('.act__text_01, .act__text_02, .act__text_03').click(function(e) {
+            e.stopPropagation();
+        });
+    });
     </script>
-
-
 </body>
-
 </html>
