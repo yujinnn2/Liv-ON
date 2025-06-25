@@ -1,18 +1,31 @@
 @charset "UTF-8";
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-header .d-flex {
-  gap: 250px;
+.mg-img img {
   width: 100%;
-  height: 60px;
-  background: #8e8675;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-  position: fixed;
-  z-index: 9999;
+  height: 228px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
+.top-img img {
+  width: 100%;
+  height: 357px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bt-img img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery__modal img {
+  cursor: pointer;
+}
+
 header .d-flex .logo h1 {
   font-size: 30px;
   padding-top: 10px;

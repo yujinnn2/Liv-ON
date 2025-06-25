@@ -1,6 +1,82 @@
 @import url('../scss/common.css');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 
+
+/* 
+  these type the CSS variable as color
+  unlocking the ability for the browser 
+  to animate just that portion
+*/
+@property --＠color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #D5D4D2;
+}
+
+@property --＠color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #928B7B;
+}
+
+/* keyframes that change the color variable */
+@keyframes gradient-change {
+  to {
+    --＠color-1: #534334;
+    --＠color-2: #CACBC6;
+  }
+}
+
+article {
+  /* apply variable changes over time */
+  animation: gradient-change 2s linear infinite alternate;
+  
+  background: linear-gradient(
+
+    to right in oklch, 
+    var(--＠color-1), 
+    var(--＠color-2)
+  );
+  
+  /* old browser support */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* modern browser version */
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@layer demo.support {
+  h1 {
+    font-size: 10vmin;
+    line-height: 1.1;
+  }
+
+
+
+
+
+  article {
+    display: grid;
+    gap: 1lh;
+    text-align: center;
+  }
+}
+
+// 
 header {
   .d-flex {
     gap: 250px;
@@ -77,6 +153,36 @@ header {
 
 
 .section01 {
+  .row{
+
+.bar {
+      width: 50px;
+      height: 3px;
+      background-color: #D8D2C7;
+      position: relative;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: -100px;
+      z-index: 10;
+    }
+  .col-md-12 {
+    text-align: center;
+
+    h3 {
+      color: #333;
+      font-size: 64px;
+      font-weight: 600;
+    }
+
+    h4 {
+      color: #333;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 140%;
+      padding-top: 30px;
+    }
+     
+  }
   padding-top: 150px;
   .main_title {
     font-size: 100px;
@@ -115,30 +221,6 @@ header {
     }
   }
 }
-
-.main_title {
-  font-size: 6rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-  color: #2a2a2a;
-  letter-spacing: -0.5px;
-}
-
-.main_title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background-color: #545146;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.main_title:hover::after {
-  width: 100%;
 }
 
 

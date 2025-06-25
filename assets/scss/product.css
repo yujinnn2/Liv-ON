@@ -59,6 +59,44 @@ header .d-flex .nav-bar.active {
   height: 100vh;
 }
 
+.top_cover {
+  width: 100%;
+  height: 500px;
+  background: url("../images/g07.png");
+  background-position: top top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.top_cover .top_cover_title {
+  width: 100%;
+  color: #fff;
+  font-size: 3.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.top_cover .top_cover_text {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+}
+.top_cover .bg_cover_black {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  height: 500px;
+}
+
 .section01 {
   padding: 100px 0;
   background-color: #f8f9fa;
