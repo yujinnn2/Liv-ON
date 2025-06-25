@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        <style>* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .compare-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .product-selector {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .compare-slots {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .slot {
+            flex: 1;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .slot-header {
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .product-search {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 14px;
+        }
+
+        .search-btn {
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .product-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .product-item {
+            padding: 10px;
+            border: 1px solid #eee;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .product-item:hover {
+            background-color: #eaf2f8;
+            border-color: #3498db;
+        }
+
+        .product-item.selected {
+            background-color: #d4e6f1;
+            border-color: #2980b9;
+        }
+
+        .compare-btn {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            padding: 12px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .compare-btn:hover {
+            background-color: #27ae60;
+        }
+
+        .comparison-result {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: none;
+        }
+
+        .result-header {
+            display: flex;
+            border-bottom: 2px solid #3498db;
+            margin-bottom: 15px;
+        }
+
+        .header-item {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .feature-header {
+            flex: 1;
+            text-align: left;
+        }
+
+        .product-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-header img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .result-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-row {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature-row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .feature-name {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .feature-value {
+            flex: 1;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .compare-slots {
+                flex-direction: column;
+            }
+
+            .result-header,
+            .feature-row {
+                flex-direction: column;
+            }
+
+            .header-item,
+            .feature-name,
+            .feature-value {
+                text-align: center;
+                padding: 5px 0;
+            }
+
+            .feature-header {
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    </style>
+
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>제품 비교 | 인테리어 웹사이트</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            /* CSS 부분은 아래에 포함되어 있습니다 */
+        </style>
+    </head>
+
+    <body>
+        <div class="compare-container">
+            <h1>제품 비교</h1>
+
+            <!-- 제품 선택 섹션 -->
+            <div class="product-selector">
+                <div class="compare-slots">
+                    <div class="slot" id="slot1">
+                        <div class="slot-header">제품 1</div>
+                        <div class="product-search">
+                            <input type="text" placeholder="제품명 검색" class="search-input">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="product-list">
+                            <!-- 제품 목록이 여기에 동적으로 로드됩니다 -->
+                        </div>
+                    </div>
+
+                    <div class="slot" id="slot2">
+                        <div class="slot-header">제품 2</div>
+                        <div class="product-search">
+                            <input type="text" placeholder="제품명 검색" class="search-input">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="product-list">
+                            <!-- 제품 목록이 여기에 동적으로 로드됩니다 -->
+                        </div>
+                    </div>
+
+                    <div class="slot" id="slot3">
+                        <div class="slot-header">제품 3</div>
+                        <div class="product-search">
+                            <input type="text" placeholder="제품명 검색" class="search-input">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="product-list">
+                            <!-- 제품 목록이 여기에 동적으로 로드됩니다 -->
+                        </div>
+                    </div>
+                </div>
+
+                <button class="compare-btn" id="compareButton">비교하기</button>
+            </div>
+
+            <!-- 비교 결과 섹션 -->
+            <div class="comparison-result" id="comparisonResult">
+                <div class="result-header">
+                    <div class="header-item feature-header">제품 특성</div>
+                    <div class="header-item product-header" id="productHeader1"></div>
+                    <div class="header-item product-header" id="productHeader2"></div>
+                    <div class="header-item product-header" id="productHeader3"></div>
+                </div>
+
+                <div class="result-body">
+                    <!-- 비교 결과가 여기에 동적으로 로드됩니다 -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // JavaScript 부분은 아래에 포함되어 있습니다
+        </script>
+    </body>
+
+    </html>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 샘플 제품 데이터
+            const products = [
+                {
+                    id: 1,
+                    name: "에너지 절약형 창호",
+                    image: "https://via.placeholder.com/80",
+                    features: {
+                        "재질": "PVC",
+                        "단열성능": "우수",
+                        "방음성능": "우수",
+                        "시공기간": "3-5일",
+                        "보증기간": "10년",
+                        "가격": "1,200,000원"
+                    }
+                },
+                {
+                    id: 2,
+                    name: "프리미엄 알루미늄 창호",
+                    image: "https://via.placeholder.com/80",
+                    features: {
+                        "재질": "알루미늄",
+                        "단열성능": "보통",
+                        "방음성능": "우수",
+                        "시공기간": "5-7일",
+                        "보증기간": "15년",
+                        "가격": "1,800,000원"
+                    }
+                },
+                {
+                    id: 3,
+                    name: "스탠다드 목재 창호",
+                    image: "https://via.placeholder.com/80",
+                    features: {
+                        "재질": "목재",
+                        "단열성능": "보통",
+                        "방음성능": "보통",
+                        "시공기간": "7-10일",
+                        "보증기간": "5년",
+                        "가격": "900,000원"
+                    }
+                },
+                {
+                    id: 4,
+                    name: "하이브리드 창호",
+                    image: "https://via.placeholder.com/80",
+                    features: {
+                        "재질": "PVC + 알루미늄",
+                        "단열성능": "우수",
+                        "방음성능": "우수",
+                        "시공기간": "4-6일",
+                        "보증기간": "12년",
+                        "가격": "1,500,000원"
+                    }
+                },
+                {
+                    id: 5,
+                    name: "초경량 창호",
+                    image: "https://via.placeholder.com/80",
+                    features: {
+                        "재질": "특수 합금",
+                        "단열성능": "보통",
+                        "방음성능": "보통",
+                        "시공기간": "2-3일",
+                        "보증기간": "8년",
+                        "가격": "1,100,000원"
+                    }
+                }
+            ];
+
+            // 선택된 제품 저장
+            const selectedProducts = {
+                slot1: null,
+                slot2: null,
+                slot3: null
+            };
+
+            // DOM 요소
+            const slots = document.querySelectorAll('.slot');
+            const compareButton = document.getElementById('compareButton');
+            const comparisonResult = document.getElementById('comparisonResult');
+
+            // 제품 목록 렌더링
+            function renderProductList(slotId) {
+                const slot = document.getElementById(slotId);
+                const productList = slot.querySelector('.product-list');
+
+                productList.innerHTML = '';
+
+                products.forEach(product => {
+                    const productItem = document.createElement('div');
+                    productItem.className = 'product-item';
+                    productItem.textContent = product.name;
+                    productItem.dataset.productId = product.id;
+
+                    // 이미 선택된 제품은 선택 불가능
+                    if (Object.values(selectedProducts).includes(product.id)) {
+                        productItem.classList.add('disabled');
+                        productItem.style.opacity = '0.5';
+                        productItem.style.cursor = 'not-allowed';
+                    }
+
+                    productItem.addEventListener('click', function () {
+                        if (this.classList.contains('disabled')) return;
+
+                        // 기존 선택 해제
+                        const previouslySelected = productList.querySelector('.selected');
+                        if (previouslySelected) {
+                            previouslySelected.classList.remove('selected');
+                        }
+
+                        // 새 제품 선택
+                        this.classList.add('selected');
+                        selectedProducts[slotId] = product.id;
+
+                        // 다른 슬롯에서 선택 해제
+                        Object.keys(selectedProducts).forEach(key => {
+                            if (key !== slotId && selectedProducts[key] === product.id) {
+                                selectedProducts[key] = null;
+                                const otherSlot = document.getElementById(key);
+                                const otherSelected = otherSlot.querySelector('.selected');
+                                if (otherSelected) {
+                                    otherSelected.classList.remove('selected');
+                                }
+                            }
+                        });
+                    });
+
+                    productList.appendChild(productItem);
+                });
+            }
+
+            // 검색 기능
+            slots.forEach(slot => {
+                const searchInput = slot.querySelector('.search-input');
+                const searchBtn = slot.querySelector('.search-btn');
+
+                const performSearch = () => {
+                    const searchTerm = searchInput.value.toLowerCase();
+                    const productItems = slot.querySelectorAll('.product-item');
+
+                    productItems.forEach(item => {
+                        const productName = item.textContent.toLowerCase();
+                        if (productName.includes(searchTerm)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                };
+
+                searchInput.addEventListener('input', performSearch);
+                searchBtn.addEventListener('click', performSearch);
+            });
+
+            // 비교 결과 렌더링
+            function renderComparisonResult() {
+                const selectedIds = Object.values(selectedProducts).filter(id => id !== null);
+
+                if (selectedIds.length < 2) {
+                    alert('최소 2개 이상의 제품을 선택해주세요.');
+                    return;
+                }
+
+                // 헤더 설정
+                for (let i = 0; i < 3; i++) {
+                    const productHeader = document.getElementById(`productHeader${i + 1}`);
+
+                    if (selectedProducts[`slot${i + 1}`]) {
+                        const product = products.find(p => p.id === selectedProducts[`slot${i + 1}`]);
+                        productHeader.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}">
+                        <span>${product.name}</span>
+                    `;
+                        productHeader.style.display = 'flex';
+                    } else {
+                        productHeader.style.display = 'none';
+                    }
+                }
+
+                // 비교 결과 테이블 생성
+                const resultBody = document.querySelector('.result-body');
+                resultBody.innerHTML = '';
+
+                // 모든 특성 수집
+                const allFeatures = new Set();
+                selectedIds.forEach(id => {
+                    const product = products.find(p => p.id === id);
+                    Object.keys(product.features).forEach(feature => {
+                        allFeatures.add(feature);
+                    });
+                });
+
+                // 각 특성에 대한 행 추가
+                allFeatures.forEach(feature => {
+                    const featureRow = document.createElement('div');
+                    featureRow.className = 'feature-row';
+
+                    const featureName = document.createElement('div');
+                    featureName.className = 'feature-name';
+                    featureName.textContent = feature;
+                    featureRow.appendChild(featureName);
+
+                    // 각 제품의 특성 값 추가
+                    for (let i = 0; i < 3; i++) {
+                        const featureValue = document.createElement('div');
+                        featureValue.className = 'feature-value';
+
+                        if (selectedProducts[`slot${i + 1}`]) {
+                            const product = products.find(p => p.id === selectedProducts[`slot${i + 1}`]);
+                            featureValue.textContent = product.features[feature] || '-';
+                        } else {
+                            featureValue.textContent = '-';
+                        }
+
+                        featureRow.appendChild(featureValue);
+                    }
+
+                    resultBody.appendChild(featureRow);
+                });
+
+                comparisonResult.style.display = 'block';
+            }
+
+            // 초기 제품 목록 렌더링
+            slots.forEach(slot => {
+                renderProductList(slot.id);
+            });
+
+            // 비교하기 버튼 클릭 이벤트
+            compareButton.addEventListener('click', renderComparisonResult);
+        });
+    </script>
+
+</body>
+
+</html>

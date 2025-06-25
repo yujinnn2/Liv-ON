@@ -10,18 +10,18 @@
 @property --＠color-1 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #D5D4D2;
+  initial-value: #d5d4d2;
 }
 @property --＠color-2 {
   syntax: "<color>";
   inherits: false;
-  initial-value: #928B7B;
+  initial-value: #928b7b;
 }
 /* keyframes that change the color variable */
 @keyframes gradient-change {
   to {
     --＠color-1: #534334;
-    --＠color-2: #CACBC6;
+    --＠color-2: #cacbc6;
   }
 }
 article {
@@ -47,62 +47,120 @@ article {
     text-align: center;
   }
 }
-header .d-flex {
-  gap: 250px;
-  width: 100%;
-  height: 60px;
-  background: #8E8675;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-  position: fixed;
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
   z-index: 999;
+  padding: 0 5%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+header .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: 0 auto;
+  /* 액티브 효과 - 점진적 채우기 */
 }
 header .d-flex .logo h1 {
-  font-size: 30px;
-  padding-top: 10px;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
 }
-header .d-flex .logo h1 a {
+header .d-flex .logo a {
+  color: #333;
   text-decoration: none;
-  color: #FDFCF7;
-  font-family: math;
+  position: relative;
+  transition: all 0.3s ease;
+}
+header .d-flex .logo a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #8e8675;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+header .d-flex .logo a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+header .d-flex .hbg {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+}
+header .d-flex .hbg .line {
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  transition: all 0.3s ease;
 }
 header .d-flex .nav-bar ul {
   display: flex;
   list-style: none;
-  padding-top: 20px;
-}
-header .d-flex .hbg {
-  display: none;
-}
-header .d-flex .hbg .line {
-  width: 30px;
-  height: 3px;
-  background: #545146;
-  margin: 6px 0;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
 }
 header .d-flex .nav-bar a {
-  display: block;
-  color: #FDFCF7;
-  font-size: 18px;
-  font-family: math;
-  padding: 10px 25px;
-  border-radius: 50px;
-  transition: all 0.2s;
-  margin: 0 5px;
+  color: #333;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
 }
-header .d-flex .nav-bar ul li a:hover {
-  color: #545146;
-  background: #fefefe;
+header .d-flex .nav-bar a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #8e8675;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
 }
-header .d-flex .nav-bar ul li a.active {
-  color: #545146;
-  background: #fefefe;
+header .d-flex .nav-bar a:hover::before {
+  width: 100%;
 }
-header .d-flex .nav-bar.active {
-  height: 100vh;
+header .d-flex .nav-bar a.active {
+  color: #000;
+  font-weight: 600;
+}
+header .d-flex .nav-bar a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8e8675;
+  animation: fillActive 0.3s ease forwards;
+}
+@keyframes fillActive {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+header .d-flex .nav-bar a:hover {
+  transform: translateY(-3px);
+  color: #000;
 }
 
 .section00 img {
@@ -116,7 +174,7 @@ header .d-flex .nav-bar.active {
 .section01 .row .bar {
   width: 50px;
   height: 3px;
-  background-color: #D8D2C7;
+  background-color: #d8d2c7;
   position: relative;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -158,7 +216,7 @@ header .d-flex .nav-bar.active {
 .section01 .row button {
   border: none;
   outline: none;
-  background: #D8D2C7;
+  background: #d8d2c7;
   border-radius: 20px;
   padding: 12px 20px;
   margin-top: 60px;
@@ -182,7 +240,7 @@ header .d-flex .nav-bar.active {
   font-weight: 600;
 }
 .section02 .col-md-12 h4 {
-  color: #D8D2C7;
+  color: #d8d2c7;
   font-size: 24px;
   font-weight: 500;
   line-height: 140%;
@@ -197,7 +255,7 @@ header .d-flex .nav-bar.active {
 .section02 .row .col-md-4 .logo_text {
   width: 100%;
   height: 287.98px;
-  background-color: #D8D2C7;
+  background-color: #d8d2c7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,7 +269,7 @@ header .d-flex .nav-bar.active {
 .section02 .row .bar {
   width: 50px;
   height: 3px;
-  background-color: #D8D2C7;
+  background-color: #d8d2c7;
   position: relative;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -250,20 +308,20 @@ header .d-flex .nav-bar.active {
 }
 
 .footer {
-  background-color: #8E8675;
+  background-color: #8e8675;
   padding: 50px 0 20px;
   font-family: "Noto Sans KR", sans-serif;
   color: #e1e1e1;
   border-top: 1px solid #eee;
+  /* 로고 & 주소 영역 */
+  /* 메뉴 & SNS 영역 */
+  /* 저작권 영역 */
 }
-
 .footer .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* 로고 & 주소 영역 */
 .footer .footer-top {
   display: flex;
   flex-wrap: wrap;
@@ -271,57 +329,47 @@ header .d-flex .nav-bar.active {
   margin-bottom: 30px;
   justify-content: space-between;
 }
-
 .footer .footer-info p {
   margin: 5px 0;
   font-size: 14px;
+  text-align: right;
 }
-
-/* 메뉴 & SNS 영역 */
 .footer .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 20px 0;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid rgba(225, 225, 225, 0.168627451);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.168627451);
 }
-
 .footer .footer-menu ul {
   display: flex;
   gap: 20px;
   list-style: none;
   padding: 0;
 }
-
 .footer .footer-menu a {
   color: #e1e1e1;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
 }
-
 .footer .footer-menu a:hover {
-  color: #000;
+  color: #000000;
 }
-
 .footer .footer-social {
   display: flex;
   gap: 15px;
 }
-
 .footer .footer-social a {
   color: #e1e1e1;
   font-size: 18px;
   transition: color 0.3s;
 }
-
 .footer .footer-social a:hover {
-  color: #000;
+  color: #000000;
 }
-
-/* 저작권 영역 */
 .footer .footer-copyright {
   text-align: center;
   margin-top: 20px;

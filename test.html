@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 푸터 스타일링 */
+        .footer {
+            background-color: #1a1a1a;
+            color: #e1e1e1;
+            padding: 60px 0 30px;
+            font-family: 'Noto Sans KR', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 푸터 상단 */
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo h1 {
+            font-family: 'math', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #e1e1e1, #b8b8b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .footer-logo p {
+            font-size: 0.9rem;
+            color: #b8b8b8;
+            letter-spacing: 1px;
+        }
+
+        .footer-contact p {
+            margin: 8px 0;
+            font-size: 0.95rem;
+            color: #b8b8b8;
+            text-align: right;
+        }
+
+        /* 푸터 중간 */
+        .footer-middle {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-menu ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-menu a {
+            color: #e1e1e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .footer-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -3px;
+            left: 0;
+            background-color: #e1e1e1;
+            transition: width 0.3s ease;
+        }
+
+        .footer-menu a:hover::after {
+            width: 100%;
+        }
+
+        .footer-subscribe p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            color: #b8b8b8;
+        }
+
+        .subscribe-form {
+            display: flex;
+        }
+
+        .subscribe-form input {
+            padding: 12px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: #e1e1e1;
+            width: 250px;
+            font-size: 0.9rem;
+        }
+
+        .subscribe-form button {
+            padding: 0 20px;
+            background: #e1e1e1;
+            color: #1a1a1a;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .subscribe-form button:hover {
+            background: #c5c5c5;
+        }
+
+        /* 푸터 하단 */
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            color: #b8b8b8;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: #e1e1e1;
+            transform: translateY(-3px);
+        }
+
+        .footer-copyright p {
+            font-size: 0.8rem;
+            color: #7a7a7a;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+
+            .footer-top,
+            .footer-middle {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-contact p {
+                text-align: left;
+            }
+
+            .footer-menu ul {
+                gap: 15px;
+            }
+
+            .subscribe-form input {
+                width: 100%;
+            }
+
+            .footer-bottom {
+                flex-direction: column-reverse;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <h1>Liv;ON</h1>
+                        <p>Modern Interior Design</p>
+                    </div>
+                    <div class="footer-contact">
+                        <p>서울시 강남구 테헤란로 123</p>
+                        <p>전화: 02-1234-5678</p>
+                        <p>이메일: info@livon.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-middle">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Media</a></li>
+                            <li><a href="#">Virtual</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-subscribe">
+                        <p>새로운 소식을 받아보세요</p>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="이메일 주소">
+                            <button type="submit">구독</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>© 2024 Liv;ON. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </header>
+</body>
+
+</html>

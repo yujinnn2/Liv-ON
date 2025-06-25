@@ -1,69 +1,127 @@
 @charset "UTF-8";
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-header .d-flex {
-  gap: 250px;
-  width: 100%;
-  height: 60px;
-  background: #8E8675;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-  position: fixed;
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
   z-index: 999;
+  padding: 0 5%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+header .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: 0 auto;
+  /* 액티브 효과 - 점진적 채우기 */
 }
 header .d-flex .logo h1 {
-  font-size: 30px;
-  padding-top: 10px;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
 }
-header .d-flex .logo h1 a {
+header .d-flex .logo a {
+  color: #333;
   text-decoration: none;
-  color: #FDFCF7;
-  font-family: math;
+  position: relative;
+  transition: all 0.3s ease;
+}
+header .d-flex .logo a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #8e8675;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+header .d-flex .logo a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+header .d-flex .hbg {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+}
+header .d-flex .hbg .line {
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  transition: all 0.3s ease;
 }
 header .d-flex .nav-bar ul {
   display: flex;
   list-style: none;
-  padding-top: 20px;
-}
-header .d-flex .hbg {
-  display: none;
-}
-header .d-flex .hbg .line {
-  width: 30px;
-  height: 3px;
-  background: #545146;
-  margin: 6px 0;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
 }
 header .d-flex .nav-bar a {
-  display: block;
-  color: #FDFCF7;
-  font-size: 18px;
-  font-family: math;
-  padding: 10px 25px;
-  border-radius: 50px;
-  transition: all 0.2s;
-  margin: 0 5px;
+  color: #333;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
 }
-header .d-flex .nav-bar ul li a:hover {
-  color: #545146;
-  background: #fefefe;
+header .d-flex .nav-bar a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #8e8675;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
 }
-header .d-flex .nav-bar ul li a.active {
-  color: #545146;
-  background: #fefefe;
+header .d-flex .nav-bar a:hover::before {
+  width: 100%;
 }
-header .d-flex .nav-bar.active {
-  height: 100vh;
+header .d-flex .nav-bar a.active {
+  color: #000;
+  font-weight: 600;
+}
+header .d-flex .nav-bar a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8e8675;
+  animation: fillActive 0.3s ease forwards;
+}
+@keyframes fillActive {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+header .d-flex .nav-bar a:hover {
+  transform: translateY(-3px);
+  color: #000;
 }
 
 .top_cover {
   width: 100%;
   height: 500px;
-  background: url("../images/g07.png");
-  background-position: top top;
+  background: url("../images/banner01.png");
+  background-position: bottom bottom;
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
@@ -92,13 +150,12 @@ header .d-flex .nav-bar.active {
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
   width: 100%;
-  top: 0;
+  top: 60px;
   z-index: 1;
   height: 500px;
 }
 
 .section01 {
-  padding: 100px 0;
   background-color: #f8f9fa;
   /* 탭 메뉴 스타일 */
   /* 제품 그리드 스타일 */
@@ -106,20 +163,18 @@ header .d-flex .nav-bar.active {
   /* 추가적인 hover 효과 */
   /* Quick view 버튼 (hover 시 나타남) */
 }
-.section01 .text {
-  padding: 0 15px;
-}
-.section01 h4 {
-  font-size: 1.4rem;
+.section01 .text h4 {
+  font-size: 32px;
   font-weight: 600;
   margin-bottom: 15px;
   color: #2a2a2a;
 }
-.section01 p {
-  font-size: 1rem;
+.section01 .text p {
+  font-size: 16px;
   color: #555;
   margin-bottom: 20px;
   line-height: 1.7;
+  letter-spacing: 0.1rem;
   padding: 0 5px;
 }
 .section01 .tab-content {
@@ -178,7 +233,7 @@ header .d-flex .nav-bar.active {
   background-color: rgba(0, 119, 182, 0.05);
 }
 .section01 .tab-link.current {
-  color: #F0E8C9;
+  color: #f0e8c9;
 }
 .section01 .tab-link.current::after {
   content: "";
@@ -187,7 +242,7 @@ header .d-flex .nav-bar.active {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #8E8675;
+  background-color: #8e8675;
 }
 .section01 .row {
   display: flex;
@@ -223,7 +278,7 @@ header .d-flex .nav-bar.active {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .section01 .col-md-3:hover h4 {
-  color: #908B79;
+  color: #908b79;
 }
 .section01 .col-md-3 p {
   font-size: 1rem;
@@ -259,7 +314,7 @@ header .d-flex .nav-bar.active {
   bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #908B79;
+  background-color: #908b79;
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -299,13 +354,13 @@ header .d-flex .nav-bar.active {
   border: 1px solid transparent;
 }
 .section01 .pagination a:hover {
-  background-color: #FAF8EE;
-  color: #6C685A;
+  background-color: #faf8ee;
+  color: #6c685a;
 }
 .section01 .pagination .active a {
-  background-color: #D8D1B5;
+  background-color: #d8d1b5;
   color: white;
-  border-color: #D8D1B5;
+  border-color: #d8d1b5;
 }
 .section01 .pagination .disabled a {
   color: #ccc;
@@ -328,36 +383,15 @@ header .d-flex .nav-bar.active {
   }
 }
 
-.main_title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  position: relative;
-  display: inline-block;
-  color: #2a2a2a;
-}
-
-.main_title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background-color: #8E8675;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.main_title:hover::after {
-  width: 100%;
-}
-
 .footer {
-  background-color: #8E8675;
+  background-color: #8e8675;
   padding: 50px 0 20px;
   font-family: "Noto Sans KR", sans-serif;
   color: #e1e1e1;
   border-top: 1px solid #eee;
+  /* 로고 & 주소 영역 */
+  /* 메뉴 & SNS 영역 */
+  /* 저작권 영역 */
 }
 .footer .footer-container {
   max-width: 1200px;
@@ -374,6 +408,7 @@ header .d-flex .nav-bar.active {
 .footer .footer-info p {
   margin: 5px 0;
   font-size: 14px;
+  text-align: right;
 }
 .footer .footer-bottom {
   display: flex;
@@ -381,8 +416,8 @@ header .d-flex .nav-bar.active {
   align-items: center;
   flex-wrap: wrap;
   padding: 20px 0;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid rgba(225, 225, 225, 0.168627451);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.168627451);
 }
 .footer .footer-menu ul {
   display: flex;
@@ -397,7 +432,7 @@ header .d-flex .nav-bar.active {
   font-size: 14px;
 }
 .footer .footer-menu a:hover {
-  color: #000;
+  color: #000000;
 }
 .footer .footer-social {
   display: flex;
@@ -409,7 +444,7 @@ header .d-flex .nav-bar.active {
   transition: color 0.3s;
 }
 .footer .footer-social a:hover {
-  color: #000;
+  color: #000000;
 }
 .footer .footer-copyright {
   text-align: center;
@@ -453,5 +488,42 @@ header .d-flex .nav-bar.active {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
+  }
+}
+/* responsible GNB menu*/
+@media (max-width: 992px) {
+  .hbg {
+    display: flex;
+  }
+  .nav-bar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: -webkit-clip-path 0.4s ease;
+    transition: clip-path 0.4s ease;
+    transition: clip-path 0.4s ease, -webkit-clip-path 0.4s ease;
+  }
+  .nav-bar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .nav-bar ul {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  .hbg.active .line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hbg.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .hbg.active .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 }/*# sourceMappingURL=Product.css.map */

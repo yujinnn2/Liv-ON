@@ -1,120 +1,225 @@
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-
-.mg-img img{
+.mg-img img {
     width: 100%;
     height: 228px;
     object-fit: cover;
 }
 
-.top-img img{
+.top-img img {
     width: 100%;
     height: 357px;
     object-fit: cover;
 }
 
-.bt-img img{
+.bt-img img {
     width: 100%;
     height: 350px;
     object-fit: cover;
 }
 
-.gallery__modal img{
+.gallery__modal img {
     cursor: pointer;
 }
 
-// GNB
+
+// GNB menu
 header {
-    .d-flex {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 0 5%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
+  .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: 0 auto;
 
-        .logo h1 {
-            font-size: 30px;
-            padding-top: 10px;
-            a {
-                text-decoration: none;
-                color: #fdfcf7;
-                font-family: math;
-            }
-        }
+  .logo h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
 
-        .nav-bar ul {
-            display: flex;
-            list-style: none;
-            padding-top: 20px;
-        }
+.logo a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
 
-        .hbg {
-            display: none;
+.logo a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #8e8675;;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
 
-            .line {
-                width: 30px;
-                height: 3px;
-                background: #545146;
-                margin: 6px 0;
-            }
-        }
+.logo a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
-        .nav-bar a {
-            display: block;
-            color: #fdfcf7;
-            font-size: 18px;
-            font-family: math;
-            padding: 10px 25px;
-            border-radius: 50px;
-            transition: all 0.2s;
-            margin: 0 5px;
-            text-decoration: none;
-        }
+.hbg {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+}
 
-        .nav-bar ul li a:hover {
-            color: #545146;
-            background: #fefefe;
-        }
+.hbg .line {
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
 
-        .nav-bar ul li a.active {
-            color: #545146;
-            background: #fefefe;
-        }
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
 
-        .nav-bar.active {
-            height: 100vh;
-        }
+.nav-bar a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-bar a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #8e8675;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-bar a:hover::before {
+  width: 100%;
+}
+
+/* 액티브 효과 - 점진적 채우기 */
+.nav-bar a.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.nav-bar a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8e8675;;
+  animation: fillActive 0.3s ease forwards;
+}
+
+@keyframes fillActive {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.nav-bar a:hover {
+  transform: translateY(-3px);
+  color: #000;
+}
+}
+}
+
+// Banner
+.top_cover {
+    width: 100%;
+    height: 500px;
+    background: url("../images/g07.png");
+    background-position: top top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .top_cover_title {
+        width: 100%;
+        color: #fff;
+        font-size: 3.5rem;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .top_cover_text {
+        color: #fff;
+        font-size: 1.2rem;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        margin-top: 20px;
+    }
+
+    .bg_cover_black {
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        z-index: 1;
+        height: 500px;
+        // margin-top: 82px;
     }
 }
 
 // section01 섹션1
 .section01 {
-    padding-top: 100px;
+    position: relative;
     .col-md-12 {
         margin-top: 50px;
     }
 
-    .main_title {
-        font-size: 100px;
-        font-family: math;
-        color: #333;
-        opacity: 0.3;
-        font-weight: 300;
-        text-align: center;
-        padding-top: 110px;
-    }
-
     .text {
         h4 {
-            font-size: 1.4rem;
+            font-size: 32px;
             font-weight: 600;
             margin-bottom: 15px;
             color: #2a2a2a;
         }
 
         p {
-            font-size: 1rem;
+            font-size: 16px;
             color: #555;
             margin-bottom: 20px;
             line-height: 1.7;
             padding: 0 5px;
+            letter-spacing: 0.1rem;
         }
     }
 
@@ -123,80 +228,20 @@ header {
         height: 15px;
         background: rgba(255, 255, 255, 1);
         position: absolute;
-        top: 572px;
+        top: 380px;
         border-radius: 100px;
-        left: 752px;
+        left: 745px;
         cursor: pointer;
         z-index: 2;
     }
-
-    .act__btn_02 {
-        width: 10px;
-        height: 10px;
-        background: rgba(255, 255, 255, 1);
-        position: absolute;
-        top: 820px;
-        border-radius: 100px;
-        left: 1170px;
-        cursor: pointer;
-        z-index: 2;
-    }
-
-    .act__btn_03 {
-        width: 10px;
-        height: 10px;
-        background: rgba(255, 255, 255, 1);
-        position: absolute;
-        top: 805px;
-        border-radius: 100px;
-        left: 440px;
-        cursor: pointer;
-        z-index: 2;
-    }
-
-    // .active_content {
-    //     position: relative;
-    // }
 
     .act__btn_bg {
         width: 30px;
         height: 30px;
         background-color: #fff;
         position: absolute;
-        top: 565px;
-        left: 745px;
-        opacity: 0.3;
-        border-radius: 100px;
-        animation-duration: 3s;
-        animation-name: slidein;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        z-index: 1;
-    }
-
-    .act__btn_bg02 {
-        width: 20px;
-        height: 20px;
-        background-color: #fff;
-        position: absolute;
-        top: 815px;
-        left: 1165px;
-        opacity: 0.3;
-        border-radius: 100px;
-        animation-duration: 3s;
-        animation-name: slidein;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        z-index: 1;
-    }
-
-    .act__btn_bg03 {
-        width: 20px;
-        height: 20px;
-        background-color: #fff;
-        position: absolute;
-        top: 800px;
-        left: 435px;
+        top: 373px;
+        left: 737px;
         opacity: 0.3;
         border-radius: 100px;
         animation-duration: 3s;
@@ -210,23 +255,51 @@ header {
         position: absolute;
         background: #fff;
         border-radius: 5px;
-        top: 575px;
+        top: 395px;
         width: 10%;
-        left: 775px;
+        left: 780px;
         display: none;
         padding: 20px;
         opacity: 0;
         display: flex;
         transition: all 0.3s;
+    }
+
+    .act__btn_02 {
+        width: 15px;
+        height: 15px;
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 580px;
+        border-radius: 100px;
+        left: 1100px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .act__btn_bg02 {
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        position: absolute;
+        top: 573px;
+        left: 1093px;
+        opacity: 0.3;
+        border-radius: 100px;
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 1;
     }
 
     .act__text_02 {
         position: absolute;
         background: #fff;
         border-radius: 5px;
-        top: 825px;
+        top: 583px;
         width: 10%;
-        left: 1195px;
+        left: 1133px;
         display: none;
         padding: 20px;
         opacity: 0;
@@ -234,18 +307,50 @@ header {
         transition: all 0.3s;
     }
 
+    .act__btn_03 {
+        width: 15px;
+        height: 15px;
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 560px;
+        border-radius: 100px;
+        left: 480px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .act__btn_bg03 {
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        position: absolute;
+        top: 554px;
+        left: 473px;
+        opacity: 0.3;
+        border-radius: 100px;
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 1;
+    }
+
     .act__text_03 {
         position: absolute;
         background: #fff;
         border-radius: 5px;
-        top: 810px;
+        top: 575px;
         width: 10%;
-        left: 465px;
+        left: 520px;
         display: none;
         padding: 20px;
         opacity: 0;
         display: flex;
         transition: all 0.3s;
+    }
+
+    .active_content {
+        position: relative;
     }
 
     h4 {
@@ -1017,6 +1122,7 @@ header {
     .footer-info p {
         margin: 5px 0;
         font-size: 14px;
+        text-align: right;
     }
 
     /* 메뉴 & SNS 영역 */
@@ -1026,8 +1132,8 @@ header {
         align-items: center;
         flex-wrap: wrap;
         padding: 20px 0;
-        border-top: 1px solid #e1e1e1;
-        border-bottom: 1px solid #e1e1e1;
+        border-top: 1px solid #e1e1e12b;
+        border-bottom: 1px solid #e1e1e12b;
     }
 
     .footer-menu ul {
@@ -1045,7 +1151,7 @@ header {
     }
 
     .footer-menu a:hover {
-        color: #000;
+        color: #000000;
     }
 
     .footer-social {
@@ -1060,7 +1166,7 @@ header {
     }
 
     .footer-social a:hover {
-        color: #000;
+        color: #000000;
     }
 
     /* 저작권 영역 */
