@@ -19,23 +19,21 @@
     <header>
         <div class="d-flex">
             <div class="logo">
-                <a href="/">
-                    <h1><a href="">Liv;ON</a></h1>
-                </a>
+                <h1><a href="/">Liv;ON</a></h1>
             </div>
-            <div class="hbg">
+            <div class="hbg" id="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <nav class="nav-bar">
+            <nav class="nav-bar" id="navBar">
                 <ul>
-                   <li><a href="Brand.html">Brand</a></li>
-          <li><a href="Product.html">Product</a></li>
-          <li><a href="Gallery.html">Gallery</a></li>
-          <li><a href="News.html">News</a></li>
-          <li><a href="Media.html">Media</a></li>
-          <li><a href="Virtual.html">Virtual</a></li>
+                    <li><a href="Brand.html" class="active">Brand</a></li>
+                    <li><a href="Product.html">Product</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="Media.html">Media</a></li>
+                    <li><a href="Virtual.html">Virtual</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,7 +45,7 @@
             <h2 class="top_cover_title">
                 Media
             </h2>
-            <p class="top_cover_text">리브온이 함께한 다양한 미디어</p>
+            <p class="top_cover_text">Where your brand belongs in spaces that inspire.</p>
         </div>
         <div class="bg_cover_black"></div>
     </section>
@@ -73,7 +71,7 @@
                 </div>
                 <!--  Media item 02 -->
                 <div class="media-card">
-                    <img src="assets/images/media02.png" alt="7인의 부활">
+                    <img src="assets/images/media02.png" alt="눈물의 여왕">
                     <div class="media-overlay">
                         <h3>눈물의 여왕</h3>
                         <p>드라마 협찬 및 촬영지</p>
@@ -82,7 +80,7 @@
                 </div>
                 <!--  Media item 03 -->
                 <div class="media-card">
-                    <img src="assets/images/media03.png" alt="7인의 부활">
+                    <img src="assets/images/media03.png" alt="진짜가 나타났다">
                     <div class="media-overlay">
                         <h3>진짜가 나타났다</h3>
                         <p>드라마 협찬 및 촬영지</p>
@@ -91,7 +89,7 @@
                 </div>
                 <!--  Media item 04 -->
                 <div class="media-card">
-                    <img src="assets/images/media04.png" alt="7인의 부활">
+                    <img src="assets/images/media04.png" alt="우리들의 블루스">
                     <div class="media-overlay">
                         <h3>우리들의 블루스</h3>
                         <p>드라마 협찬 및 촬영지</p>
@@ -100,18 +98,18 @@
                 </div>
                 <!--  Media item 05 -->
                 <div class="media-card">
-                    <img src="assets/images/media03.png" alt="7인의 부활">
+                    <img src="assets/images/media05.png" alt="사내맞선">
                     <div class="media-overlay">
-                        <h3>진짜가 나타났다</h3>
+                        <h3>사내맞선</h3>
                         <p>드라마 협찬 및 촬영지</p>
                         <a href="#none" class="media-link">보러가기</a>
                     </div>
                 </div>
                 <!--  Media item 06 -->
                 <div class="media-card">
-                    <img src="assets/images/media04.png" alt="7인의 부활">
+                    <img src="assets/images/media06.png" alt="서른아홉">
                     <div class="media-overlay">
-                        <h3>우리들의 블루스</h3>
+                        <h3>서른아홉</h3>
                         <p>드라마 협찬 및 촬영지</p>
                         <a href="#none" class="media-link">보러가기</a>
                     </div>
@@ -188,6 +186,47 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- JavaScript -->
     <script src="assets/js/story.js"></script>
+    <script>
+        // 햄버거 메뉴 토글 기능
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.getElementById('hamburger');
+            const navBar = document.getElementById('navBar');
+
+            hamburger.addEventListener('click', function () {
+                this.classList.toggle('active');
+                navBar.classList.toggle('active');
+
+                // 메뉴 열릴 때 body 스크롤 막기
+                if (navBar.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // 메뉴 링크 클릭 시 모바일에서 자동으로 닫히도록
+            const navLinks = document.querySelectorAll('.nav-bar a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth <= 992) {
+                        hamburger.classList.remove('active');
+                        navBar.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+
+            // 화면 크기 변경 시 체크
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 992) {
+                    hamburger.classList.remove('active');
+                    navBar.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

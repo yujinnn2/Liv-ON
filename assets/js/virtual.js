@@ -1,4 +1,5 @@
 
+
 // tab 
 $(document).ready(function () {
   $('ul.tabs li').click(function () {
@@ -17,7 +18,7 @@ $(function () {
     $('.bg').removeClass('bg2');
     $('.bg').removeClass('bg3');
     $('.bg').removeClass('bg4');
-    $('.bg').removeClass('bg5');
+    $('.bg').removeClass('bg5'); s
     $('.bg').removeClass('bg6');
     $('.bg').removeClass('bg7');
     $('.bg').removeClass('bg8');

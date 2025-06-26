@@ -15,22 +15,20 @@
 </head>
 
 <body>
-  <!-- GNB nav -->
+  <!-- GNB -->
   <header>
     <div class="d-flex">
       <div class="logo">
-        <a href="#">
-          <h1><a href="/">Liv;ON</a></h1>
-        </a>
+        <h1><a href="/">Liv;ON</a></h1>
       </div>
-      <div class="hbg">
+      <div class="hbg" id="hamburger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
       </div>
-      <nav class="nav-bar">
+      <nav class="nav-bar" id="navBar">
         <ul>
-          <li><a href="Brand.html">Brand</a></li>
+          <li><a href="Brand.html" class="active">Brand</a></li>
           <li><a href="Product.html">Product</a></li>
           <li><a href="Gallery.html">Gallery</a></li>
           <li><a href="News.html">News</a></li>
@@ -165,7 +163,57 @@
   </footer>
 
 
+  <script>
+    // hbg button 
+    let hbg = document.querySelector('.hbg');
+    hbg.onclick = function () {
+      navBar = document.querySelector('.nav-bar');
+      navBar.classList.toggle('active');
+      // $(function () { });
+    };
 
+  </script>
+
+  <script>
+    // 햄버거 메뉴 토글 기능
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+      const navBar = document.getElementById('navBar');
+
+      hamburger.addEventListener('click', function () {
+        this.classList.toggle('active');
+        navBar.classList.toggle('active');
+
+        // 메뉴 열릴 때 body 스크롤 막기
+        if (navBar.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      });
+
+      // 메뉴 링크 클릭 시 모바일에서 자동으로 닫히도록
+      const navLinks = document.querySelectorAll('.nav-bar a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 992) {
+            hamburger.classList.remove('active');
+            navBar.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+      });
+
+      // 화면 크기 변경 시 체크
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 992) {
+          hamburger.classList.remove('active');
+          navBar.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

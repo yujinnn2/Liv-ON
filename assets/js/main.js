@@ -88,36 +88,42 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// hbg button 
-let hbg = document.querySelector('.hbg');
-hbg.onclick = function () {
-  navBar = document.querySelector('.nav-bar');
-  navBar.classList.toggle('active');
-  // $(function () { });
-};
 
-
-// nav bar scroll effect
+// 햄버거 메뉴 토글 기능
 document.addEventListener('DOMContentLoaded', function () {
-  const header = document.querySelector('header');
-  const section01 = document.getElementById('section01');
-  const section02 = document.getElementById('section02');
+  const hamburger = document.getElementById('hamburger');
+  const navBar = document.getElementById('navBar');
 
-  // 섹션01의 높이 계산
-  const section01Height = section01.offsetHeight;
+  hamburger.addEventListener('click', function () {
+    this.classList.toggle('active');
+    navBar.classList.toggle('active');
 
-  // 스크롤 이벤트 리스너 추가
-  window.addEventListener('scroll', function () {
-    // 현재 스크롤 위치가 섹션01의 높이를 넘으면 헤더 표시
-    if (window.scrollY > section01Height * 0.8) {
-      header.classList.add('visible');
+    // 메뉴 열릴 때 body 스크롤 막기
+    if (navBar.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
     } else {
-      header.classList.remove('visible');
+      document.body.style.overflow = '';
     }
   });
 
-  // 페이지 로드 시 섹션01의 높이 확인
-  if (window.scrollY > section01Height * 0.8) {
-    header.classList.add('visible');
-  }
+  // 메뉴 링크 클릭 시 모바일에서 자동으로 닫히도록
+  const navLinks = document.querySelectorAll('.nav-bar a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      if (window.innerWidth <= 992) {
+        hamburger.classList.remove('active');
+        navBar.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // 화면 크기 변경 시 체크
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 992) {
+      hamburger.classList.remove('active');
+      navBar.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
 });

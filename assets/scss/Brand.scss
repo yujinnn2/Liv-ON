@@ -188,14 +188,81 @@ header {
 }
 }
 
-.section00 {
-  img {
-    width: 100%;
-    height: 500px;
+@media (max-width: 992px) {
+  .hbg {
+    display: flex !important;
+    z-index: 1001;
+  }
+  
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 90%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 80px 30px 30px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-bar.active {
+    right: 0;
+  }
+  
+  .nav-bar ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .nav-bar a {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    display: block;
+  }
+  
+  /* 햄버거 메뉴 애니메이션 */
+  .hbg.active .line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  
+  .hbg.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hbg.active .line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  
+  .hbg .line {
+    transition: all 0.3s ease;
   }
 }
 
+/* 데스크탑 메뉴 스타일 (기존 코드 유지) */
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-bar a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+
 .section01 {
+  background: #f8f9fa;;
   .row {
     .bar {
       width: 50px;
@@ -218,7 +285,7 @@ header {
 
       h4 {
         color: #333;
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 500;
         line-height: 140%;
         padding-top: 30px;
@@ -536,4 +603,53 @@ header {
       }
     }
   }
+
 }
+
+@media (max-width:768px){
+   header {
+    .container {
+      padding: 0 55px;
+
+      .hbg {
+        display: block;
+        cursor: pointer;
+
+        .line {
+          background: #efefef;
+          margin: 6px 0;
+        }
+      }
+
+      .nav-bar {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 0;
+        background: #fefefe;
+        transition: all 0.2s;
+        overflow: hidden;
+        
+        ul {
+            opacity: 0;
+            display: block;
+            width: fit-content;
+            margin: 80px auto 0 auto;
+            text-align: center;
+            transition: all 0.5s;
+            padding: 0;
+            li a{
+              color: #545146;
+              background: #fff;
+            }
+          }
+        }
+
+        .active ul {
+          opacity: 1;
+        }
+    }
+  }
+} 
