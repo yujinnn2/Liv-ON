@@ -24,6 +24,8 @@
 }
 
 
+
+
 // GNB menu
 header {
   background-color: rgba(255, 255, 255, 0.9);
@@ -159,8 +161,8 @@ header {
 .top_cover {
     width: 100%;
     height: 500px;
-    background: url("../images/g07.png");
-    background-position: top top;
+    background: url("../images/banner06.png");
+    background-position: bottom bottom;
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -203,7 +205,7 @@ header {
     position: relative;
     .col-md-12 {
         margin-top: 50px;
-    }
+        }
 
     .text {
         h4 {
@@ -358,6 +360,9 @@ header {
         font-size: 18px;
         font-weight: 600;
     }
+    a{
+        color: #A5A4a4;
+    }
 
     .name {
         color: #333;
@@ -416,363 +421,47 @@ header {
     }
 }
 
-// section02 섹션2
-.section02 {
-    margin-top: 100px;
-    .col-md-4 {
-        margin-left: 10%;
-        h4 {
-            color: #000;
-            font-size: 18px;
-            font-weight: 700;
+// gallery__modal
+.gallery__modal{
+    .container{
+             h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2a2a2a;
         }
+
         p {
-            color: #515151;
-            font-size: 12px;
-            font-weight: 400;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            padding: 0 5px;
+            letter-spacing: 0.1rem;
         }
-    }
-    button {
-        border: 1px solid #000;
-        border-radius: 30px;
-        padding: 10px 10px;
-        background: none;
-        font-size: 13px;
-        margin-top: 30px;
-    }
-    .act__btn_01 {
-        width: 10px;
-        height: 10px;
-        background: rgba(255, 255, 255, 1);
-        position: absolute;
-        top: 1570px;
-        border-radius: 100px;
-        left: 360px;
-        cursor: pointer;
-        z-index: 2;
-    }
-    .active_content {
-        position: relative;
-    }
-    .act__btn_bg {
-        width: 20px;
-        height: 20px;
-        background-color: #fff;
-        position: absolute;
-        top: 1566px;
-        left: 355px;
-        opacity: 0.3;
-        border-radius: 100px;
-        animation-duration: 3s;
-        animation-name: slidein;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        z-index: 1;
-    }
-    .act__text_01 {
-        position: absolute;
-        background: #fff;
-        border-radius: 5px;
-        top: 1575px;
-        width: 10%;
-        left: 390px;
-        display: none;
-        padding: 20px;
-        opacity: 0;
-        display: flex;
-        transition: all 0.3s;
-    }
-    h4 {
-        color: tomato;
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    .name {
-        color: #333;
-        font-weight: 600;
-    }
-
-    .sub {
-        color: #a5a4a4;
-        font-size: 15px;
-    }
-
-    .buy_wrap a {
-        text-align: center;
-        text-decoration: none;
-        font-size: 20px;
-    }
-
-    .act_btn_show {
-        opacity: 1;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    .imgbox {
-        padding: 20px 10px;
-
-        .content {
-            border-top: 1px solid #000;
-            display: flex;
-            justify-content: space-between;
-
-            .txtwrap {
-                flex-direction: column;
+        .modal-dialog{
+           .btn{
+                background-color: #fff;
+                color: #aaaaaa;
+                border: 1px solid #c4c4c4;
             }
-
-            .icon {
-                width: 40px;
+            .btn:hover {
+                color: #f36a6a;
             }
+           }
         }
     }
-
-    @keyframes slidein {
-        0% {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 0.5;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-}
-
-// section03 섹션3
-.section03 {
-    margin-top: 100px;
-    .col-md-4 {
-        margin-right: 16.5%;
-        h4 {
-            color: #000;
-            font-size: 18px;
-            font-weight: 700;
-        }
-        p {
-            color: #515151;
-            font-size: 12px;
-            font-weight: 400;
-        }
-    }
-    button {
-        border: 1px solid #000;
-        border-radius: 30px;
-        padding: 10px 10px;
-        background: none;
-        font-size: 13px;
-        margin-top: 30px;
-    }
-    .act__btn_01 {
-        width: 10px;
-        height: 10px;
-        background: rgba(255, 255, 255, 1);
-        position: absolute;
-        top: 2750px;
-        border-radius: 100px;
-        left: 1130px;
-        cursor: pointer;
-        z-index: 2;
-    }
-
-    .act__btn_02 {
-        width: 10px;
-        height: 10px;
-        background: rgba(255, 255, 255, 1);
-        position: absolute;
-        top: 2790px;
-        border-radius: 100px;
-        left: 1405px;
-        cursor: pointer;
-        z-index: 2;
-    }
-
-    .act__btn_03 {
-        width: 10px;
-        height: 10px;
-        background: rgba(255, 255, 255, 1);
-        position: absolute;
-        top: 805px;
-        border-radius: 100px;
-        left: 440px;
-        cursor: pointer;
-        z-index: 2;
-    }
-
-    .active_content {
-        position: relative;
-    }
-
-    .act__btn_bg {
-        width: 20px;
-        height: 20px;
-        background-color: #fff;
-        position: absolute;
-        top: 2745px;
-        left: 1125px;
-        opacity: 0.3;
-        border-radius: 100px;
-        animation-duration: 3s;
-        animation-name: slidein;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        z-index: 1;
-    }
-
-    .act__btn_bg02 {
-        width: 20px;
-        height: 20px;
-        background-color: #fff;
-        position: absolute;
-        top: 2785px;
-        left: 1400px;
-        opacity: 0.3;
-        border-radius: 100px;
-        animation-duration: 3s;
-        animation-name: slidein;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        z-index: 1;
-    }
-
-    .act__btn_bg03 {
-        width: 20px;
-        height: 20px;
-        background-color: #fff;
-        position: absolute;
-        top: 800px;
-        left: 435px;
-        opacity: 0.3;
-        border-radius: 100px;
-        animation-duration: 3s;
-        animation-name: slidein;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        z-index: 1;
-    }
-
-    .act__text_01 {
-        position: absolute;
-        background: #fff;
-        border-radius: 5px;
-        top: 2750px;
-        width: 10%;
-        left: 1155px;
-        display: none;
-        padding: 20px;
-        opacity: 0;
-        display: flex;
-        transition: all 0.3s;
-    }
-
-    .act__text_02 {
-        position: absolute;
-        background: #fff;
-        border-radius: 5px;
-        top: 2810px;
-        width: 10%;
-        left: 1405px;
-        display: none;
-        padding: 20px;
-        opacity: 0;
-        display: flex;
-        transition: all 0.3s;
-    }
-
-    .act__text_03 {
-        position: absolute;
-        background: #fff;
-        border-radius: 5px;
-        top: 810px;
-        width: 10%;
-        left: 465px;
-        display: none;
-        padding: 20px;
-        opacity: 0;
-        display: flex;
-        transition: all 0.3s;
-    }
-
-    h4 {
-        color: tomato;
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    .name {
-        color: #333;
-        font-weight: 600;
-    }
-
-    .sub {
-        color: #a5a4a4;
-        font-size: 15px;
-    }
-
-    .buy_wrap a {
-        text-align: center;
-        text-decoration: none;
-        font-size: 20px;
-    }
-
-    .act_btn_show {
-        opacity: 1;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    .imgbox {
-        padding: 20px 10px;
-
-        .content {
-            border-top: 1px solid #000;
-            display: flex;
-            justify-content: space-between;
-
-            .txtwrap {
-                flex-direction: column;
-            }
-
-            .icon {
-                width: 40px;
-            }
-        }
-    }
-
-    @keyframes slidein {
-        0% {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 0.5;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-}
-
 // section04 섹션4
 .section04 {
     margin-top: 100px;
+    
     .col-md-12 {
         h4 {
             color: #000;
             font-size: 18px;
             font-weight: 700;
         }
-    }
-    .col-md-12 {
+        
         margin-top: 24px;
         p {
             margin: 0px;
@@ -793,16 +482,31 @@ header {
             margin-top: 5px;
         }
     }
+    
     .hover-slide {
         position: relative;
+        overflow: hidden; // 추가: 호버 시 이미지가 컨테이너 밖으로 나가지 않도록
     }
 
-    .hover-slide .hover-img {
+    .img_wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 100%; // 정사각형 비율 유지 (이미지에 따라 조정 가능)
+    }
+
+    .default-img, 
+    .hover-img {
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // 이미지 비율 유지하며 채움
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .hover-img {
         opacity: 0;
-        transition: opacity 0.3s ease;
     }
 
     .hover-slide:hover .default-img {
@@ -811,14 +515,7 @@ header {
 
     .hover-slide:hover .hover-img {
         opacity: 1;
-        transform: translateY(20px);
-    }
-
-    /* Swiper 슬라이드 내 이미지 컨테이너 스타일 */
-    .swiper-slide img {
-        width: 100%;
-        height: auto;
-        transition: opacity 0.3s ease;
+        transform: none; // transform 제거로 정확한 위치 고정
     }
 
     /* Swiper 버튼 스타일 */
@@ -858,14 +555,14 @@ header {
 
     /* 모바일에서는 버튼 크기 줄이기 */
     @media (max-width: 768px) {
-        .section04 .swiper-button-next,
-        .section04 .swiper-button-prev {
+        .swiper-button-next,
+        .swiper-button-prev {
             width: 36px;
             height: 36px;
         }
 
-        .section04 .swiper-button-next::after,
-        .section04 .swiper-button-prev::after {
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
             font-size: 14px;
         }
     }
@@ -1098,101 +795,181 @@ header {
 
 // footer
 .footer {
-    background-color: #8e8675;
-    padding: 50px 0 20px;
-    font-family: "Noto Sans KR", sans-serif;
-    color: #e1e1e1;
-    border-top: 1px solid #eee;
+  background-color: #f8f9fa;
+  backdrop-filter: blur(10px);
+  padding: 40px 5% 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 100;
 
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Footer Top - Logo and Info */
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+
+    .footer-logo h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: #333;
     }
 
-    /* 로고 & 주소 영역 */
-    .footer-top {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: 30px;
-        justify-content: space-between;
+    .footer-logo a {
+      color: #333;
+      text-decoration: none;
+      position: relative;
+      transition: all 0.3s ease;
     }
 
-    .footer-info p {
-        margin: 5px 0;
+    .footer-logo a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #333;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-logo a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    .footer-info {
+      text-align: right;
+
+      p {
+        margin: 6px 0;
         font-size: 14px;
-        text-align: right;
-    }
+        color: #333;
+      }
 
-    /* 메뉴 & SNS 영역 */
-    .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 20px 0;
-        border-top: 1px solid #e1e1e12b;
-        border-bottom: 1px solid #e1e1e12b;
+      .cs {
+        font-weight: 500;
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
     }
+  }
+
+  /* Footer Bottom - Menu and Social */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
 
     .footer-menu ul {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-        padding: 0;
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 2rem;
     }
 
     .footer-menu a {
-        color: #e1e1e1;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 14px;
+      color: #333;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .footer-menu a::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: #8e8675;
+      transform: translateX(-50%);
+      transition: width 0.3s ease;
+    }
+
+    .footer-menu a:hover::before {
+      width: 100%;
     }
 
     .footer-menu a:hover {
-        color: #000000;
+      transform: translateY(-3px);
+      color: #000;
     }
 
     .footer-social {
-        display: flex;
-        gap: 15px;
-    }
+      display: flex;
+      gap: 1.5rem;
 
-    .footer-social a {
-        color: #e1e1e1;
+      a {
+        color: #333;
+        text-decoration: none;
         font-size: 18px;
-        transition: color 0.3s;
-    }
+        transition: all 0.3s ease;
+        position: relative;
+        padding: 0.5rem 0;
+      }
 
-    .footer-social a:hover {
-        color: #000000;
-    }
+      a:hover::before {
+        width: 100%;
+      }
 
-    /* 저작권 영역 */
-    .footer-copyright {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 12px;
-        color: #e1e1e1;
+      a:hover {
+        transform: translateY(-3px);
+        color: #000;
+      }
     }
-}
+  }
 
-// footer resonsive
-@media (max-width: 768px) {
+  /* Copyright */
+  .footer-copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    padding: 30px 5% 15px;
+
     .footer-top {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+      flex-direction: column;
+      gap: 20px;
 
-    .footer-logo img {
-        margin-right: 0;
-        margin-bottom: 20px;
+      .footer-info {
+        text-align: left;
+      }
     }
 
     .footer-bottom {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+
+      .footer-menu ul {
         flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
+        gap: 1rem;
+      }
     }
+  }
 }
+
