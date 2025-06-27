@@ -15,329 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap"
         rel="stylesheet">
     <!-- Stylesheet -->
-    <style>
-        :root {
-            --primary-color: #333333;
-            --secondary-color: #8e8675;
-            --accent-color: #d8d2c7;
-            --text-dark: #222222;
-            --text-light: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            color: var(--text-dark);
-            overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        .display-font {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Header */
-        header {
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        header.scrolled {
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo h1 {
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin: 0;
-        }
-
-        .logo a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .nav-bar ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-bar a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            position: relative;
-            padding: 0.5rem 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .nav-bar a:hover {
-            color: var(--secondary-color);
-        }
-
-        .nav-bar a.active {
-            color: var(--secondary-color);
-        }
-
-        .nav-bar a.active:after {
-            content: '';
-            position: absolute;
-            width: 60%;
-            height: 2px;
-            bottom: 0;
-            left: 20%;
-            background-color: var(--secondary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            min-height: 700px;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            color: white;
-            position: relative;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin-bottom: 2rem;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 6rem 0;
-        }
-
-        .section-title {
-            position: relative;
-            margin-bottom: 4rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-title .divider {
-            width: 80px;
-            height: 3px;
-            background-color: var(--secondary-color);
-            margin: 0 auto;
-        }
-
-        /* About Section */
-        .about-img {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-img img {
-            transition: transform 0.5s ease;
-        }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Philosophy Section */
-        .philosophy-item {
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .philosophy-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .philosophy-item i {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Gallery Section */
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 30px;
-            border-radius: 8px;
-        }
-
-        .gallery-item img {
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        /* Team Section */
-        .team-member {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .team-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto 20px;
-            border: 5px solid white;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Numbers Section */
-        .numbers {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/numbers-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            padding: 5rem 0;
-        }
-
-        .number-item {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .number-item h3 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 5rem 0 2rem;
-        }
-
-        .footer-logo h1 {
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-links h4 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: white;
-            padding-left: 5px;
-        }
-
-        .footer-social a {
-            color: white;
-            font-size: 1.25rem;
-            margin-right: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            color: var(--secondary-color);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            margin-top: 3rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-
-            section {
-                padding: 4rem 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                min-height: 600px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/scss/Brand.css">
 </head>
 
 <body>
@@ -362,16 +40,38 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- section01 섹션1 -->
+    <section class="section01">
         <div class="container">
-            <div class="hero-content">
-                <h1>Redefining Modern Living Spaces</h1>
-                <p class="lead">Liv;ON은 미니멀리즘의 본질을 현대적으로 재해석하여 공간의 진정한 가치를 구현합니다.</p>
-                <a href="#about" class="btn btn-outline-light btn-lg">Explore Our Philosophy</a>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content">
+                        <article>
+                            <h3>당신의 공간에 여백을 더하다.</h3>
+                        </article>
+                    </div>
+                    <h4 class="mt-5">모던함 속의 따뜻함, 미니멀 속의 디테일</h4>
+                </div>
+                <div class="bar">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <img src="assets/images/barnd01.png" alt="">
+                </div>
+                <div class="col-md-6 ">
+                    <p>우리는 공간을 채우지 않습니다.<br> <strong>오히려 비움으로써 본질을 드러냅니다.</strong><br><br>
+                        당신의 일상에 조용히 스며드는 디자인, 기능보다는 감각,<br> 트렌드보다는 시간의 깊이를 생각합니다.<br><br>
+
+                        진짜 필요한 것만이 남는, 정제된 공간.<br>
+                        그것이 우리가 지향하는 미니멀
+                        인테리어입니다.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- About Section -->
     <section id="about" class="bg-light">
@@ -384,7 +84,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <img src="assets/images/about-img.jpg" alt="About Liv;ON" class="img-fluid">
+                        <img src="assets/images/barnd01.png" alt="About Liv;ON" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -454,7 +154,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="gallery-item">
-                        <img src="assets/images/project1.jpg" alt="Project 1" class="img-fluid">
+                        <img src="assets/images/media01.png" alt="Project 1" class="img-fluid">
                         <div class="gallery-overlay">
                             <h4 class="text-white">서울 한남동 레지던스</h4>
                         </div>
@@ -462,7 +162,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="gallery-item">
-                        <img src="assets/images/project2.jpg" alt="Project 2" class="img-fluid">
+                        <img src="assets/images/media02.png" alt="Project 2" class="img-fluid">
                         <div class="gallery-overlay">
                             <h4 class="text-white">제주 오션뷰 빌라</h4>
                         </div>
@@ -470,7 +170,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="gallery-item">
-                        <img src="assets/images/project3.jpg" alt="Project 3" class="img-fluid">
+                        <img src="assets/images/media03.png" alt="Project 3" class="img-fluid">
                         <div class="gallery-overlay">
                             <h4 class="text-white">강릉 산속의 주택</h4>
                         </div>
@@ -497,7 +197,7 @@
                 <div class="col-md-3">
                     <div class="team-member">
                         <div class="team-img">
-                            <img src="assets/images/team1.jpg" alt="Team Member" class="img-fluid">
+                            <img src="assets/images/04.png" alt="Team Member" class="img-fluid">
                         </div>
                         <h4>노유진</h4>
                         <p>창립자 &amp; 크리에이티브 디렉터</p>
@@ -506,7 +206,7 @@
                 <div class="col-md-3">
                     <div class="team-member">
                         <div class="team-img">
-                            <img src="assets/images/team2.jpg" alt="Team Member" class="img-fluid">
+                            <img src="assets/images/05.png" alt="Team Member" class="img-fluid">
                         </div>
                         <h4>김민수</h4>
                         <p>수석 디자이너</p>
@@ -515,7 +215,7 @@
                 <div class="col-md-3">
                     <div class="team-member">
                         <div class="team-img">
-                            <img src="assets/images/team3.jpg" alt="Team Member" class="img-fluid">
+                            <img src="assets/images/06.png" alt="Team Member" class="img-fluid">
                         </div>
                         <h4>이하늘</h4>
                         <p>프로덕트 매니저</p>
@@ -524,7 +224,7 @@
                 <div class="col-md-3">
                     <div class="team-member">
                         <div class="team-img">
-                            <img src="assets/images/team4.jpg" alt="Team Member" class="img-fluid">
+                            <img src="assets/images/07.png" alt="Team Member" class="img-fluid">
                         </div>
                         <h4>박지원</h4>
                         <p>인테리어 아키텍트</p>
@@ -566,50 +266,54 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- footer 푸터 -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="footer-logo">
-                        <h1>Liv;ON</h1>
-                        <p>Redefining Modern Living Spaces</p>
-                    </div>
-                    <div class="footer-social mt-4">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    </div>
+        <div class="footer-container">
+            <!-- 로고 및 주소 영역 -->
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h1>Liv;ON</h1>
                 </div>
-                <div class="col-lg-4">
-                    <div class="footer-links">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Projects</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
+                <div class="footer-info">
+                    <div class="cs d-flex">
+                        <p>고객센터 :</p>
+                        <p class="tel"> 1588-1234</p>
                     </div>
+                    <p>평일 : 09:00 ~ 19:00</p>
+                    <p>주말 : 09:00 ~ 17:00</p>
                 </div>
-                <div class="col-lg-4">
-                    <div class="footer-links">
-                        <h4>Contact Info</h4>
-                        <p><i class="fas fa-map-marker-alt me-2"></i> 서울특별시 강남구 테헤란로 123, 리브빌딩 10층</p>
-                        <p><i class="fas fa-phone me-2"></i> 02-1234-5678</p>
-                        <p><i class="fas fa-envelope me-2"></i> contact@livon.com</p>
-                        <p><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM - 6PM</p>
-                    </div>
+                <div class="footer-info">
+                    <p>서울특별시 강남구 테헤란로 123, 리브빌딩 10층</p>
+                    <p>사업자등록번호: 123-45-67890 | 대표: 노유진</p>
+                    <p>Tel: 02-1234-5678 | Email: contact@livon.com</p>
                 </div>
             </div>
 
-            <div class="footer-bottom text-center mt-5">
-                <p>&copy; 2024 Liv;ON. All Rights Reserved. | Designed by Liv;ON Creative Team</p>
+
+            <!-- 메뉴 및 SNS 영역 -->
+            <div class="footer-bottom">
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- 저작권 영역 -->
+            <div class="footer-copyright">
+                <p>© 2024 Liv;ON. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

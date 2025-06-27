@@ -162,29 +162,10 @@ header .d-flex .nav-bar a:hover {
     transition: all 0.3s ease;
   }
 }
-/* 데스크탑 메뉴 스타일 (기존 코드 유지) */
-.nav-bar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-}
-
-.nav-bar a {
-  color: #333;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-  transition: all 0.3s ease;
-}
-
 .top_cover {
   width: 100%;
   height: 300px;
-  background: url("../images/banner10.png");
+  background: url("../images/banner12.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -279,7 +260,7 @@ header .d-flex .nav-bar a:hover {
   position: absolute;
   top: 380px;
   border-radius: 100px;
-  left: 745px;
+  left: 455px;
   cursor: pointer;
   z-index: 2;
 }
@@ -289,7 +270,7 @@ header .d-flex .nav-bar a:hover {
   background-color: #fff;
   position: absolute;
   top: 373px;
-  left: 737px;
+  left: 448px;
   opacity: 0.3;
   border-radius: 100px;
   animation-duration: 3s;
@@ -304,7 +285,7 @@ header .d-flex .nav-bar a:hover {
   border-radius: 5px;
   top: 395px;
   width: 10%;
-  left: 780px;
+  left: 480px;
   display: none;
   padding: 20px;
   opacity: 0;
