@@ -226,7 +226,7 @@
   position: relative;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 30px;
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
