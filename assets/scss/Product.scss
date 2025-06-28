@@ -142,7 +142,7 @@
     display: inherit;
   }
 
-  .col-md-3 {
+  .col-md-12 {
     span {
       text-decoration: line-through;
     }
@@ -188,23 +188,9 @@
   .tab-content {
     .d-grid {
       grid-template-columns: repeat(4, 1fr);
+      margin-top: 15px;
     }
   }
-
-  /* 제품 그리드 스타일 */
-  // .row {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   margin: 0 -15px;
-  // }
-
-  // .col-md-3 {
-  //   flex: 0 0 25%;
-  //   max-width: 25%;
-  //   padding: 0 15px;
-  //   margin-bottom: 30px;
-  // }
-
   /* 제품 카드 스타일 */
   .col-md-12 {
     position: relative;
@@ -363,139 +349,42 @@
 
 
 
-
 /* 모바일 메뉴 스타일 */
-@media (max-width: 992px) {
-  .hbg {
-    display: flex !important;
-    z-index: 1001;
-  }
-  
-  .nav-bar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    padding: 80px 30px 30px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-bar.active {
-    right: 0;
-  }
-  
-  .nav-bar ul {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .nav-bar a {
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    display: block;
-  }
-  
-  /* 햄버거 메뉴 애니메이션 */
-  .hbg.active .line:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-  
-  .hbg.active .line:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hbg.active .line:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-  
-  .hbg .line {
-    transition: all 0.3s ease;
-  }
-}
-
-/* 데스크탑 메뉴 스타일 (기존 코드 유지) */
-.nav-bar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-}
-
-.nav-bar a {
-  color: #333;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-  transition: all 0.3s ease;
-}
-
-/* 반응형 그리드 조정 */
+@media (max-width: 992px)
+{
 .row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
-
-/* 데스크탑 (4열) */
-.col-md-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
-  padding: 0 15px;
-  margin-bottom: 30px;
-}
-
-/* 태블릿 (768px 이하) - 2열로 변경 */
-@media (max-width: 768px) {
-  .col-md-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
   .section01 .tab-content .d-grid {
     grid-template-columns: repeat(2, 1fr);
-}
+}}
 
-  /* 제품 카드 간격 조정 */
+@media (max-width: 768px) {
+  .section01{
+  .d-grid{
+    margin-top:20px;
+  }
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0.5rem; 
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+   }}
+
   .row {
     margin: 0 -10px;
   }
-  
-  .col-md-3 {
-    padding: 0 10px;
-    margin-bottom: 20px;
-  }
-  
-  /* 탭 메뉴 스타일 조정 */
-  .tabs {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .tab-link {
-    padding: 8px 16px;
-    margin: 5px;
-    font-size: 14px;
-  }
-  
-  /* 제목 크기 조정 */
+
   .text h4 {
     font-size: 24px;
-  }
-  
-  .text p {
+    p {
     font-size: 14px;
-  }
+  }}
   
-  /* Quick view 버튼 숨기기 */
-  .col-md-3::after {
-    display: none;
-  }
-}
