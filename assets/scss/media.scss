@@ -81,7 +81,7 @@
   }
 }
 
-// section01 섹션1 (media)
+// section01 섹션1
 .section01 {
   padding: 100px 0;
   position: relative;
@@ -180,22 +180,6 @@
     }
   }
 
-  .button{
-    text-align: center;
-    margin-top: 80px;
-     button{
-    border: none;
-    outline: none;
-    background: #D8D2C7;
-    border-radius: 20px;
-    padding: 12px 35px;
-    a {
-      text-decoration: none;
-      color: #333333;
-      font-size: 15px;
-    }
-  }
-  } 
   // pagination
   .pagination {
       display: flex;
@@ -249,29 +233,69 @@
   }
 
 
-
-
-//mediaquery 반응형 구간
-@media (max-width:540px){
-.section01{
-  .media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 2rem;
-  }
+// mediaquery 반응형 구간
+@media (max-width: 768px) {
+  .section01 {
+    padding: 60px 0;
+    
+    .media-grid {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.5rem;
+    }
   }
 }
 
+@media (max-width: 540px) {
+  .section01 {
+    .media-grid {
+      grid-template-columns: 1fr; // 모바일에서는 1열로 변경
+      gap: 1rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.5rem;
+      
+      &::after {
+        top: 120px;
+      }
+    }
+  }
+}
 
-  @media (max-width:390px){
-.section01{
-  .media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
+@media (max-width: 390px) {
+  .section01 {
+    padding: 40px 0;
+    
+    .media-grid {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+    
+    .section-header {
+      margin-bottom: 2rem;
+      
+      h2 {
+        font-size: 1.3rem;
+        
+        &::after {
+          width: 30px;
+          top: 110px;
+        }
+      }
+      
+      p {
+        font-size: 0.9rem;
+      }
+    }
+    
+    .button {
+      margin-top: 50px;
+      
+      button {
+        padding: 10px 25px;
+      }
+    }
   }
-  }
-  }
-
+}
 
   

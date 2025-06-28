@@ -155,22 +155,6 @@
 .section01 .media-card:hover .media-overlay {
   transform: translateY(0);
 }
-.section01 .button {
-  text-align: center;
-  margin-top: 80px;
-}
-.section01 .button button {
-  border: none;
-  outline: none;
-  background: #D8D2C7;
-  border-radius: 20px;
-  padding: 12px 35px;
-}
-.section01 .button button a {
-  text-decoration: none;
-  color: #333333;
-  font-size: 15px;
-}
 .section01 .pagination {
   display: flex;
   justify-content: center;
@@ -214,17 +198,52 @@
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .section01 {
+    padding: 60px 0;
+  }
+  .section01 .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+}
 @media (max-width: 540px) {
   .section01 .media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .section01 .section-header h2 {
+    font-size: 1.5rem;
+  }
+  .section01 .section-header h2::after {
+    top: 120px;
   }
 }
 @media (max-width: 390px) {
+  .section01 {
+    padding: 40px 0;
+  }
   .section01 .media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .section01 .section-header {
+    margin-bottom: 2rem;
+  }
+  .section01 .section-header h2 {
+    font-size: 1.3rem;
+  }
+  .section01 .section-header h2::after {
+    width: 30px;
+    top: 110px;
+  }
+  .section01 .section-header p {
+    font-size: 0.9rem;
+  }
+  .section01 .button {
+    margin-top: 50px;
+  }
+  .section01 .button button {
+    padding: 10px 25px;
   }
 }/*# sourceMappingURL=media.css.map */
