@@ -1,27 +1,6 @@
 @import url('../scss/common.css');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-
-/* 데스크탑 메뉴 스타일 (기존 코드 유지) */
-.nav-bar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-}
-
-.nav-bar a {
-  color: #333;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-  transition: all 0.3s ease;
-}
-
-
 // Banner 
 .top_cover {
   width: 100%;
