@@ -1,8 +1,6 @@
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-// GNB menu
-
 // Banner 
 .top_cover {
   width: 100%;
@@ -194,26 +192,26 @@
   }
 
   /* 제품 그리드 스타일 */
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-  }
+  // .row {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   margin: 0 -15px;
+  // }
 
-  .col-md-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-    padding: 0 15px;
-    margin-bottom: 30px;
-  }
+  // .col-md-3 {
+  //   flex: 0 0 25%;
+  //   max-width: 25%;
+  //   padding: 0 15px;
+  //   margin-bottom: 30px;
+  // }
 
   /* 제품 카드 스타일 */
-  .col-md-3 {
+  .col-md-12 {
     position: relative;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
 
-  .col-md-3 > img:first-child {
+  .col-md-12 > img:first-child {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -222,40 +220,40 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .col-md-3:hover > img:first-child {
+  .col-md-12:hover > img:first-child {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   }
 
-  .col-md-3 h4 {
+  .col-md-12 h4 {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 8px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
 
-  .col-md-3:hover h4 {
+  .col-md-12:hover h4 {
     color: #908b79;
   }
 
-  .col-md-3 p {
+  .col-md-12 p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 8px;
   }
 
-  .col-md-3 p span {
+  .col-md-12 p span {
     text-decoration: line-through;
     color: #999;
     margin-left: 8px;
   }
 
-  .col-md-3 > img:nth-child(5) {
+  .col-md-12 > img:nth-child(5) {
     top: 50px;
   }
 
   /* 추가적인 hover 효과 */
-  .col-md-3::before {
+  .col-md-12::before {
     content: "";
     position: absolute;
     top: 0;
@@ -268,12 +266,12 @@
     z-index: 1;
   }
 
-  .col-md-3:hover::before {
+  .col-md-12:hover::before {
     background: rgba(0, 119, 182, 0.03);
   }
 
   /* Quick view 버튼 (hover 시 나타남) */
-  .col-md-3::after {
+  .col-md-12::after {
     content: "제품 비교하기";
     position: absolute;
     bottom: 80px;
@@ -292,7 +290,7 @@
     cursor: pointer;
   }
 
-  .col-md-3:hover::after {
+  .col-md-12:hover::after {
     opacity: 1;
     bottom: 90px;
   }
@@ -363,270 +361,7 @@
   }
 }
 
-// footer
-.footer {
-  background-color: #f8f9fa;
-  backdrop-filter: blur(10px);
-  padding: 40px 5% 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  position: relative;
-  z-index: 100;
 
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Footer Top - Logo and Info */
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    margin-bottom: 25px;
-
-    .footer-logo h1 {
-      margin: 0;
-      font-size: 28px;
-      font-weight: 700;
-      color: #333;
-    }
-
-    .footer-logo a {
-      color: #333;
-      text-decoration: none;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .footer-logo a::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background-color: #333;
-      transform: scaleX(0);
-      transform-origin: bottom right;
-      transition: transform 0.3s ease;
-    }
-
-    .footer-logo a:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-
-    .footer-info {
-      text-align: right;
-
-      p {
-        margin: 6px 0;
-        font-size: 14px;
-        color: #333;
-      }
-
-      .cs {
-        font-weight: 500;
-        color: #333;
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-    }
-  }
-
-  /* Footer Bottom - Menu and Social */
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-
-    .footer-menu ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 2rem;
-    }
-
-    .footer-menu a {
-      color: #333;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-      position: relative;
-      padding: 0.5rem 0;
-      transition: all 0.3s ease;
-    }
-
-    .footer-menu a::before {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: 0;
-      left: 50%;
-      background-color: #8e8675;
-      transform: translateX(-50%);
-      transition: width 0.3s ease;
-    }
-
-    .footer-menu a:hover::before {
-      width: 100%;
-    }
-
-    .footer-menu a:hover {
-      transform: translateY(-3px);
-      color: #000;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 1.5rem;
-
-      a {
-        color: #333;
-        text-decoration: none;
-        font-size: 18px;
-        transition: all 0.3s ease;
-        position: relative;
-        padding: 0.5rem 0;
-      }
-
-      a:hover::before {
-        width: 100%;
-      }
-
-      a:hover {
-        transform: translateY(-3px);
-        color: #000;
-      }
-    }
-  }
-
-  /* Copyright */
-  .footer-copyright {
-    text-align: center;
-    font-size: 12px;
-    color: #777;
-    padding-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    padding: 30px 5% 15px;
-
-    .footer-top {
-      flex-direction: column;
-      gap: 20px;
-
-      .footer-info {
-        text-align: left;
-      }
-    }
-
-    .footer-bottom {
-      flex-direction: column;
-      gap: 20px;
-      align-items: flex-start;
-
-      .footer-menu ul {
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }
-  }
-}
-
-
-// responsible (product)
-@media (max-width: 992px) {
-  .col-md-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-@media (max-width: 768px) {
-  .main_title {
-    font-size: 2rem;
-  }
-
-  .tabs {
-    flex-wrap: wrap;
-  }
-
-  .tab-link {
-    margin: 5px;
-    padding: 8px 16px;
-  }
-
-  .col-md-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-// responsible (footer)
-@media (max-width: 768px) {
-  .footer .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer .footer-logo img {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .footer .footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  }
-}
-/* responsible GNB menu*/
-@media (max-width: 992px) {
-  .hbg {
-    display: flex;
-  }
-  
-  .nav-bar {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: clip-path 0.4s ease;
-  }
-  
-  .nav-bar.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  
-  .nav-bar ul {
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-  }
-  
-  .hbg.active .line:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-  
-  .hbg.active .line:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hbg.active .line:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-}
 
 
 /* 모바일 메뉴 스타일 */
@@ -762,29 +497,5 @@
   /* Quick view 버튼 숨기기 */
   .col-md-3::after {
     display: none;
-  }
-}
-
-/* 모바일 (576px 이하) - 추가 조정 */
-@media (max-width: 576px) {
-  .col-md-3 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  
-  .main_title {
-    font-size: 60px;
-    padding-top: 40px;
-  }
-  
-  /* 페이지네이션 조정 */
-  .pagination {
-    margin-top: 30px;
-  }
-  
-  .pagination a {
-    width: 35px;
-    height: 35px;
-    font-size: 14px;
   }
 }

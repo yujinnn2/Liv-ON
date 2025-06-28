@@ -1,3 +1,44 @@
+@charset "UTF-8";
+@property --＠color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #d5d4d2;
+}
+@property --＠color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #928b7b;
+}
+/* keyframes that change the color variable */
+@keyframes gradient-change {
+  to {
+    --＠color-1: #534334;
+    --＠color-2: #cacbc6;
+  }
+}
+article {
+  /* apply variable changes over time */
+  animation: gradient-change 2s linear infinite alternate;
+  background: linear-gradient(to right in oklch, var(--＠color-1), var(--＠color-2));
+  /* old browser support */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* modern browser version */
+  background-clip: text;
+  color: transparent;
+}
+
+@layer demo.support {
+  h1 {
+    font-size: 10vmin;
+    line-height: 1.1;
+  }
+  article {
+    display: grid;
+    gap: 1lh;
+    text-align: center;
+  }
+}
 :root {
   --primary-color: #333333;
   --secondary-color: #8e8675;
