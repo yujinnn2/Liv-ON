@@ -1,4 +1,4 @@
-ff@import url("../scss/common.css");
+@import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 
@@ -380,10 +380,10 @@ ff@import url("../scss/common.css");
     border-radius: 1.5rem;
     font-size: 0.8rem;
     transition: all 0.3s ease;
-  }
-
-  .tab-link.current {
+    .current {
     color: #fff;
     background: #908b79;
   }
+  }
+
   }

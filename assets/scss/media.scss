@@ -118,7 +118,6 @@
   }
   
   .media-card {
-    height: 300px;
     position: relative;
     border-radius: 8px;
     overflow: hidden;
@@ -254,12 +253,21 @@
 
 //mediaquery 반응형 구간
 @media (max-width:540px){
-  .section02 .media-card {
-    width: 98.5%;}
 .section01{
   .media-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  }
+}
+
+
+  @media (max-width:390px){
+.section01{
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
   }
   }

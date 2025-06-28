@@ -346,7 +346,7 @@
     font-size: 0.8rem;
     transition: all 0.3s ease;
   }
-  .tab-link.current {
+  .tab-link .current {
     color: #fff;
     background: #908b79;
   }
