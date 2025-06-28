@@ -779,52 +779,6 @@
 }
 
 @media (max-width:768px) {
-  header {
-    .container {
-      padding: 0 55px;
-
-      .hbg {
-        display: block;
-        cursor: pointer;
-
-        .line {
-          background: #efefef;
-          margin: 6px 0;
-        }
-      }
-
-      .nav-bar {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        height: 0;
-        background: #fefefe;
-        transition: all 0.2s;
-        overflow: hidden;
-        
-        ul {
-            opacity: 0;
-            display: block;
-            width: fit-content;
-            margin: 80px auto 0 auto;
-            text-align: center;
-            transition: all 0.5s;
-            padding: 0;
-            li a{
-              color: #545146;
-              background: #fff;
-            }
-          }
-        }
-
-        .active ul {
-          opacity: 1;
-        }
-    }
-  
-  }
 
 
   //section02 섹션2
@@ -878,7 +832,7 @@
       }
     }
   
-
+  // section03 섹션3
     .section03 {
       .text_3{
       top:1390px;
@@ -921,7 +875,7 @@
       }
     }
   
-    // section05 섹션5
+  // section05 섹션5
     .section05 .col-md-4 {
       flex: 0 0 100%;
       max-width: 100%;
@@ -942,6 +896,7 @@
         margin-top: 10px;
       }
     }
+
   // section06 섹션6
     .section06 {
       .col-md-2 {
@@ -986,17 +941,46 @@
     .plant3 {
       padding-top: 0px;
     }
-  }
+  }}
 
 // section04 섹션4
-  .section04 {
-    .main_text p {
-      font-size: 15px;
+  .section04{
+    .bg_img{
+      height:700px;
+      .main_text{
+        padding:225px 0;
+        p{
+          font-size: 12px;
+        }
+      }
     }
   }
-}
 
-@media (max-width:391px) {
+// section05 섹션5
+  .section05{
+    .col-md-12{
+      padding:0 10px;
+    }
+    h3{
+      font-size: 22px;
+    }
+    .view_more{
+      text-align:right;
+    }
+    .d-flex{
+      flex-direction: column;
+      align-items: right;
+    }
+    .img_section{
+      img{
+        border-radius:10px;
+      }
+    }
+  }
+
+@media (max-width:394px) {
+
+  //section02 섹션2
   .section02 {
     .hover-content h3 {
       font-size: 1.5rem;
@@ -1005,8 +989,15 @@
     .hover-content p {
       font-size: .5rem;
     }
+    .col-md-12{
+      h4{
+        font-size:17px;
+
+      }
+    }
   }
 
+  // section03 섹션3
   .section03 {
     .text_3{
       top:1185px;
@@ -1024,6 +1015,7 @@
     }
   }
 
+  // section04 섹션4
   .section04{
     .bg_img{
       height:700px;
@@ -1036,6 +1028,7 @@
     }
   }
 
+  // section05 섹션5
   .section05{
     .col-md-12{
       padding:0 10px;
