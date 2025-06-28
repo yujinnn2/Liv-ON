@@ -388,3 +388,20 @@
     font-size: 14px;
   }}
   
+
+  @media (max-width: 390px) {
+  .section01{
+  .d-grid{
+    margin-top:20px;
+  }
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0.5rem; 
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+   }}
