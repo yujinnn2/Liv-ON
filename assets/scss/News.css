@@ -246,4 +246,10 @@
 }
 .section01 .pagination img {
   cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  .news-card .news-excerpt {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=News.css.map */

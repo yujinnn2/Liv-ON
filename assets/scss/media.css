@@ -83,11 +83,12 @@
 .section01 .section-header h2 {
   font-size: 32px;
   color: #2a2a2a;
+  position: relative;
 }
 .section01 .section-header h2::after {
   content: "";
   position: absolute;
-  top: 150px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
@@ -216,7 +217,7 @@
     font-size: 1.5rem;
   }
   .section01 .section-header h2::after {
-    top: 120px;
+    top: 40px;
   }
 }
 @media (max-width: 390px) {

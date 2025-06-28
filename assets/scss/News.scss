@@ -82,7 +82,7 @@
 }
 
 
-// section01 섹션1 (news)
+// section01 섹션1
 .section01 {
   padding: 100px 0 0 0;
   .section-header {
@@ -286,5 +286,13 @@
     cursor: pointer;
   }
 }
+}
+
+@media (max-width:430px){
+  .news-card{
+    .news-excerpt{
+      font-size:14px;
+    }
+  }
 }
 
