@@ -531,6 +531,9 @@ section {
   .section01 .bg-light .col-lg-6 p {
     font-size: 15px;
   }
+  .philosophy .gap {
+    gap: 20px;
+  }
 }
 @media (max-width: 431px) {
   .section01 .row .bar {
