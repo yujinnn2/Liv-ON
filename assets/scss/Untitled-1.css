@@ -52,7 +52,7 @@ article {
   background-color: #d8d2c7;
   position: relative;
   transform: translate(-50%, -50%);
-  left: 50%;
+  left: 0%;
   top: -100px;
   z-index: 10;
 }
@@ -101,14 +101,6 @@ article {
   text-decoration: none;
   color: #333;
   font-size: 15px;
-}
-
-:root {
-  --primary-color: #333333;
-  --secondary-color: #8e8675;
-  --accent-color: #d8d2c7;
-  --text-dark: #222222;
-  --text-light: #f8f9fa;
 }
 
 body {
@@ -340,4 +332,217 @@ section {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+/* Section 01 */
+.section01 {
+  background: #F8F9FA;
+  padding: 150px 0 100px;
+}
+
+.section01 .bar {
+  width: 50px;
+  height: 3px;
+  background-color: #D8D2C7;
+  margin: 0 auto;
+  position: relative;
+  top: -100px;
+}
+
+.section01 h3 {
+  color: #333333;
+  font-size: 64px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section01 h4 {
+  color: #333333;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* About Section */
+#about {
+  padding: 100px 0;
+}
+
+#about h3 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+#about .lead {
+  color: #8E8675;
+  font-weight: 500;
+}
+
+/* Philosophy Section */
+#philosophy {
+  padding: 100px 0;
+  background: #F8F9FA;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #333333;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: #8E8675;
+  margin: 20px auto;
+}
+
+.philosophy-item {
+  padding: 30px;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  height: 100%;
+}
+
+.philosophy-item i {
+  font-size: 2.5rem;
+  color: #8E8675;
+  margin-bottom: 20px;
+}
+
+/* Gallery Section */
+#gallery {
+  padding: 100px 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Team Section */
+#team {
+  padding: 100px 0;
+  background: #F8F9FA;
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 5px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Numbers Section */
+.numbers {
+  padding: 80px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/images/numbers-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.number-item h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .section01 h3 {
+    font-size: 48px;
+  }
+  .section01 h4 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .section01 {
+    padding: 120px 0 80px;
+  }
+  .section01 .row .col-md-12 h3 {
+    font-size: 58px;
+  }
+  .section01 h3 {
+    font-size: 36px;
+  }
+  .section01 h4 {
+    font-size: 24px;
+  }
+  .nav-bar ul {
+    flex-direction: column;
+  }
+  .footer-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bg-light .col-lg-6 {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .section01 h3 {
+    font-size: 28px;
+  }
+  .section01 h4 {
+    font-size: 20px;
+  }
+  .section01 .row .col-md-12 h3 {
+    font-size: 44px;
+  }
+  .section01 .bg-light .col-lg-6 p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 431px) {
+  .section01 .row .bar {
+    left: 8%;
+    top: -95px;
+  }
+  .section01 .row .col-md-12 h4 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 390px) {
+  .section01 .row .col-md-12 h3 {
+    font-size: 35px;
+  }
 }/*# sourceMappingURL=Untitled-1.css.map */
