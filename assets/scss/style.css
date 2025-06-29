@@ -14,7 +14,7 @@
 }
 .hero-slider body {
   margin: 0;
-  font-family: "math, pretandard, sans-serif";
+  font-family: "pretandard, sans-serif";
 }
 .hero-slider h2 {
   line-height: 1.1;
@@ -69,7 +69,6 @@
   transform: translateX(50px);
 }
 .hero-slider .swiper-button-prev::before {
-  font-family: "math";
   font-size: 15px;
   color: #d4d3d3;
   font-style: normal;
@@ -82,7 +81,6 @@
   transform: translateX(-50px);
 }
 .hero-slider .swiper-button-next::before {
-  font-family: "math";
   font-size: 15px;
   color: #d4d3d3;
   font-style: normal;
@@ -126,7 +124,6 @@
   max-width: 690px;
 }
 .hero-slider .slide-title h2 {
-  font-family: math;
   font-size: 40px;
   font-weight: 500;
   line-height: 1;
@@ -137,7 +134,6 @@
 }
 .hero-slider .slide-text p {
   opacity: 0.8;
-  font-family: math;
   font-size: 25px;
   font-weight: 500;
   line-height: 1.25;
@@ -316,7 +312,6 @@
 }
 .section02 .section02__img .hover-content h3 {
   font-size: 3rem;
-  font-family: math;
   margin-bottom: 10px;
   transform: translateY(0);
   transition: all 0.4s ease 0.1s;
@@ -716,35 +711,33 @@
   .section03 .plant3 {
     padding-top: 0px;
   }
+  .section04 .bg_img {
+    height: 700px;
+  }
+  .section04 .bg_img .main_text {
+    padding: 225px 0;
+  }
+  .section04 .bg_img .main_text p {
+    font-size: 12px;
+  }
+  .section05 .col-md-12 {
+    padding: 0 10px;
+  }
+  .section05 h3 {
+    font-size: 22px;
+  }
+  .section05 .view_more {
+    text-align: right;
+  }
+  .section05 .d-flex {
+    flex-direction: column;
+    align-items: right;
+  }
+  .section05 .img_section img {
+    border-radius: 10px;
+  }
 }
-.section04 .bg_img {
-  height: 700px;
-}
-.section04 .bg_img .main_text {
-  padding: 225px 0;
-}
-.section04 .bg_img .main_text p {
-  font-size: 12px;
-}
-
-.section05 .col-md-12 {
-  padding: 0 10px;
-}
-.section05 h3 {
-  font-size: 22px;
-}
-.section05 .view_more {
-  text-align: right;
-}
-.section05 .d-flex {
-  flex-direction: column;
-  align-items: right;
-}
-.section05 .img_section img {
-  border-radius: 10px;
-}
-
-@media (max-width: 394px) {
+@media (max-width: 391px) {
   .section02 .hover-content h3 {
     font-size: 1.5rem;
   }
@@ -752,7 +745,7 @@
     font-size: 0.5rem;
   }
   .section02 .col-md-12 h4 {
-    font-size: 17px;
+    font-size: 1;
   }
   .section03 .text_3 {
     top: 1185px;

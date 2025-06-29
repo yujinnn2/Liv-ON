@@ -12,7 +12,7 @@
 
   body {
     margin: 0;
-    font-family: 'math, pretandard, sans-serif';
+    font-family: 'pretandard, sans-serif';
   }
 
   h2 {
@@ -85,7 +85,7 @@
     transform: translateX(50px);
 
     &::before {
-      font-family: 'math';
+      // font-family: 'math';
       font-size: 15px;
       color: #d4d3d3;
       font-style: normal;
@@ -100,7 +100,7 @@
     transform: translateX(-50px);
 
     &::before {
-      font-family: 'math';
+      // font-family: 'math';
       font-size: 15px;
       color: #d4d3d3;
       font-style: normal;
@@ -154,7 +154,7 @@
   }
 
   .slide-title h2 {
-    font-family: math;
+    // font-family: math;
     font-size: 40px;
     font-weight: 500;
     line-height: 1;
@@ -166,7 +166,7 @@
 
   .slide-text p {
     opacity: 0.8;
-    font-family: math;
+    // font-family: math;
     font-size: 25px;
     font-weight: 500;
     line-height: 1.25;
@@ -395,7 +395,7 @@
       
       h3 {
         font-size: 3rem;
-        font-family: math;
+        // font-family: math;
         margin-bottom: 10px;
         transform: translateY(0);
         transition: all 0.4s ease 0.1s;
@@ -941,7 +941,7 @@
     .plant3 {
       padding-top: 0px;
     }
-  }}
+  }
 
 // section04 섹션4
   .section04{
@@ -976,9 +976,10 @@
         border-radius:10px;
       }
     }
-  }
+  }}
 
-@media (max-width:394px) {
+
+@media (max-width:391px) {
 
   //section02 섹션2
   .section02 {
@@ -991,7 +992,7 @@
     }
     .col-md-12{
       h4{
-        font-size:17px;
+        font-size:1
 
       }
     }
