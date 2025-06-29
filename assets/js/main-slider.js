@@ -5,7 +5,7 @@ var interleaveOffset = .8;
 // Swiper 슬라이더 설정 객체
 var swiperOptions = {
     loop: true, // 슬라이드 무한 반복
-    speed: 10000, // 슬라이드 전환 속도 (밀리초)
+    speed: 1000, // 슬라이드 전환 속도 (밀리초)
     parallax: true, // parallax 효과 활성화
     autoplay: {
         delay: 6500, // 자동 슬라이드 간 간격 (밀리초)

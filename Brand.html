@@ -18,24 +18,27 @@
     <link rel="stylesheet" href="/assets/scss/Untitled-1.css" </head>
 
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center py-3">
-                <div class="logo">
-                    <h1><a href="/">Liv;ON</a></h1>
-                </div>
-                <nav class="nav-bar">
-                    <ul>
-                        <li><a href="Brand.html" class="active">Brand</a></li>
-                        <li><a href="Product.html">Product</a></li>
-                        <li><a href="Gallery.html">Gallery</a></li>
-                        <li><a href="News.html">News</a></li>
-                        <li><a href="Media.html">Media</a></li>
-                        <li><a href="Virtual.html">Virtual</a></li>
-                    </ul>
-                </nav>
+    <!-- GNB -->
+    <header>
+        <div class="d-flex">
+            <div class="logo">
+                <h1><a href="/">Liv;ON</a></h1>
             </div>
+            <div class="hbg" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav-bar" id="navBar">
+                <ul>
+                    <li><a href="Brand.html">Brand</a></li>
+                    <li><a href="Product.html">Product</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="Media.html">Media</a></li>
+                    <li><a href="Virtual.html">Virtual</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -159,7 +162,7 @@
             </div>
 
             <div class="text-center mt-5">
-                <a href="#" class="btn btn-outline-dark">View All Projects</a>
+                <a href="#none" class="btn btn-outline-dark">View All Projects</a>
             </div>
         </div>
     </section>
@@ -274,16 +277,16 @@
             <div class="footer-bottom">
                 <div class="footer-menu">
                     <ul>
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#none">회사소개</a></li>
+                        <li><a href="#none">이용약관</a></li>
+                        <li><a href="#none">개인정보처리방침</a></li>
+                        <li><a href="#none">고객센터</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#none"><i class="fab fa-instagram"></i></a>
+                    <a href="#none"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#none"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -298,6 +301,7 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/common.js"></script>
 </body>
 
 </html>
