@@ -9,6 +9,8 @@ var swiper = new Swiper(".mySwiper", {
     hide: "false",
     clickable: true,
   },
+  centeredSlides: false, // centeredSlides 비활성화
+  slidesOffsetBefore: 50, // 왼쪽 여백 추가 (px 단위)
   breakpoints: {
     1024: {
       slidesPerView: 3,
@@ -26,3 +28,4 @@ var swiper = new Swiper(".mySwiper", {
     }
   }
 });
+
