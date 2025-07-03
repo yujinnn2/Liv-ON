@@ -1,206 +1,75 @@
 @charset "UTF-8";
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-@property --＠color-1 {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #d5d4d2;
-}
-@property --＠color-2 {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #928b7b;
-}
-@keyframes gradient-change {
-  to {
-    --＠color-1: #534334;
-    --＠color-2: #cacbc6;
-  }
-}
-article {
-  /* apply variable changes over time */
-  animation: gradient-change 2s linear infinite alternate;
-  background: linear-gradient(to right in oklch, var(--＠color-1), var(--＠color-2));
-  /* old browser support */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* modern browser version */
-  background-clip: text;
-  color: transparent;
-}
-
-@layer demo.support {
-  h1 {
-    font-size: 10vmin;
-    line-height: 1.1;
-  }
-  article {
-    display: grid;
-    gap: 1lh;
-    text-align: center;
-  }
-}
-.section01 {
-  background: #f8f9fa;
-}
-.section01 .row {
-  padding-top: 150px;
-}
-.section01 .row .bar {
-  width: 50px;
-  height: 3px;
-  background-color: #d8d2c7;
-  position: relative;
-  transform: translate(-50%, -50%);
-  left: 0%;
-  top: -100px;
-  z-index: 10;
-}
-.section01 .row .col-md-12 {
-  text-align: center;
-}
-.section01 .row .col-md-12 h3 {
-  color: #333;
-  font-size: 64px;
-  font-weight: 600;
-}
-.section01 .row .col-md-12 h4 {
-  color: #333;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 140%;
-  padding-top: 30px;
-}
-.section01 .row .main_title {
-  font-size: 100px;
-  font-family: math;
-  color: #333;
-  opacity: 0.3;
-  font-weight: 300;
-  text-align: center;
-  padding-top: 162px;
-}
-.section01 .row .col-md-6 p {
-  font-size: 22px;
-  font-weight: 400;
-  color: #545146;
-  line-height: 180%;
-  padding-top: 145px;
-  padding: 35px 70px;
-}
-.section01 .row button {
-  border: none;
-  outline: none;
-  background: #d8d2c7;
-  border-radius: 20px;
-  padding: 12px 20px;
-  margin-top: 60px;
-  margin-left: 70px;
-}
-.section01 .row button a {
-  text-decoration: none;
-  color: #333;
-  font-size: 15px;
-}
-
-body {
-  font-family: "Noto Sans KR", sans-serif;
-  color: var(--text-dark);
-  overflow-x: hidden;
-}
-
-/* Header */
-header {
-  background-color: rgba(255, 255, 255, 0.98);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-  position: fixed;
-  top: 0;
+.top_cover {
   width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-header.scrolled {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.logo h1 {
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-.logo a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.nav-bar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-bar a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
-}
-
-.nav-bar a:hover {
-  color: var(--secondary-color);
-}
-
-.nav-bar a.active {
-  color: var(--secondary-color);
-}
-
-.nav-bar a.active:after {
-  content: "";
-  position: absolute;
-  width: 60%;
-  height: 2px;
-  bottom: 0;
-  left: 20%;
-  background-color: var(--secondary-color);
-}
-
-/* Hero Section */
-.hero {
-  height: 100vh;
-  min-height: 700px;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/images/hero-bg.jpg");
+  height: 300px;
+  background: url("../images/banner00.png");
+  background-position: center center;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  color: white;
+  justify-content: center;
   position: relative;
+  overflow: hidden;
 }
-
-.hero-content {
+.top_cover .top {
   position: relative;
   z-index: 2;
+  padding: 0 20px;
+  text-align: center;
 }
-
-.hero h1 {
-  font-size: 4.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+.top_cover .top_cover_title {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
 }
-
-.hero p {
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin-bottom: 2rem;
+.top_cover .top_cover_text {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+.top_cover .bg_cover_black {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .top_cover {
+    height: 400px;
+  }
+  .top_cover .top_cover_title {
+    font-size: 3rem;
+  }
+  .top_cover .top_cover_text {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 992px) {
+  .top_cover {
+    height: 500px;
+    background-attachment: fixed;
+  }
+  .top_cover .top_cover_title {
+    font-size: 3.5rem;
+  }
+  .top_cover .top_cover_text {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .top_cover {
+    height: 600px;
+  }
 }
 
 /* Section Styling */
@@ -322,13 +191,14 @@ section {
   color: white;
   padding: 5rem 0;
 }
-
-.number-item {
+.numbers .section-title {
+  color: #fff;
+}
+.numbers .number-item {
   text-align: center;
   padding: 2rem;
 }
-
-.number-item h3 {
+.numbers .number-item h3 {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -381,72 +251,200 @@ section {
 }
 
 /* Philosophy Section */
-#philosophy {
+.philosophy-section {
   padding: 100px 0;
-  background: #F8F9FA;
+  background-color: #f8f9fa;
 }
 
-.section-title {
+.section-header {
   text-align: center;
   margin-bottom: 60px;
 }
 
-.section-title h2 {
+.section-title {
   font-size: 2.5rem;
-  color: #333333;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.divider {
-  width: 80px;
-  height: 3px;
-  background: #8E8675;
-  margin: 20px auto;
+.title-line {
+  width: 60px;
+  height: 2px;
+  background-color: #5E8B7E;
+  margin: 0 auto 20px;
 }
 
-.philosophy-item {
-  padding: 30px;
+.section-desc {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.philosophy-card {
+  padding: 40px 30px;
+  background-color: white;
+  border-radius: 12px;
   text-align: center;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
-  height: 100%;
+  transition: transform 0.3s ease;
 }
 
-.philosophy-item i {
-  font-size: 2.5rem;
-  color: #8E8675;
-  margin-bottom: 20px;
+.philosophy-card:hover {
+  transform: translateY(-10px);
+}
+
+.philosophy-icon {
+  margin-bottom: 25px;
+}
+
+.philosophy-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.philosophy-card:hover .philosophy-icon svg {
+  transform: scale(1.1);
+}
+
+.philosophy-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.philosophy-desc {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
 }
 
 /* Gallery Section */
-#gallery {
+.gallery-section {
   padding: 100px 0;
+  background-color: #f8f9fa;
 }
 
-.gallery-item {
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
   position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 30px;
+  display: inline-block;
 }
 
-.gallery-overlay {
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.gallery-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: #fff;
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+.gallery-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  color: white;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.gallery-card:hover .gallery-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gallery-title {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.gallery-category {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery-link {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 }
 
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 30px;
+  background: transparent;
+  color: #222;
+  border: 2px solid #222;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #8E8675;
+  border: 2px solid #8E8675;
+  color: white;
+}
+
+.cta-button svg {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover svg {
+  transform: translateX(5px);
 }
 
 /* Team Section */
@@ -467,7 +465,6 @@ section {
   overflow: hidden;
   margin: 0 auto 20px;
   border: 5px solid white;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Numbers Section */
@@ -483,6 +480,42 @@ section {
 .number-item h3 {
   font-size: 3rem;
   font-weight: 700;
+}
+
+.numbers {
+  padding: 80px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/images/numbers-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.number-item h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+/* 추가된 스타일 */
+.number-item h3.animate {
+  transform: scale(1.1);
+}
+
+.numbers {
+  padding: 80px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/images/numbers-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.number-item h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  display: inline-block;
+  /* 자연스러운 숫자 흐름을 위해 추가 */
 }
 
 /* Responsive */
