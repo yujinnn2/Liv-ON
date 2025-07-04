@@ -83,6 +83,7 @@
   }
 }
 
+
 // section01 섹션1
 .section01 {
     position: relative;
@@ -305,31 +306,8 @@
 }
 
 
-// gallery 이미지
-.mg-img img {
-    width: 100%;
-    height: 228px;
-    object-fit: cover;
-}
-
-.top-img img {
-    width: 100%;
-    height: 357px;
-    object-fit: cover;
-}
-
-.bt-img img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
-.gallery__modal img {
-    cursor: pointer;
-}
-
-
 // section02 섹션2
-.gallery__modal{
+.section02{
     .container{
              h2 {
             font-size: 32px;
@@ -361,8 +339,29 @@
         }
         }
       
-
+// gallery 이미지
+.mg-img img {
+    width: 100%;
+    height: 228px;
+    object-fit: cover;
 }
+
+.top-img img {
+    width: 100%;
+    height: 357px;
+    object-fit: cover;
+}
+
+.bt-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.gallery__modal img {
+    cursor: pointer;
+}
+}
+
 
 // section03 섹션3
 .section03 {
@@ -398,13 +397,13 @@
     
     .hover-slide {
         position: relative;
-        overflow: hidden; // 추가: 호버 시 이미지가 컨테이너 밖으로 나가지 않도록
+        overflow: hidden; 
     }
 
     .img_wrapper {
         position: relative;
         width: 100%;
-        padding-top: 100%; // 정사각형 비율 유지 (이미지에 따라 조정 가능)
+        padding-top: 100%; 
     }
 
     .default-img, 
@@ -414,7 +413,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover; // 이미지 비율 유지하며 채움
+        object-fit: cover; 
         transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
@@ -428,10 +427,8 @@
 
     .hover-slide:hover .hover-img {
         opacity: 1;
-        transform: none; // transform 제거로 정확한 위치 고정
+        transform: none; 
     }
-
-    /* Swiper 버튼 스타일 */
     .swiper-button-next,
     .swiper-button-prev {
         width: 48px;
@@ -466,24 +463,12 @@
         right: 20px;
     }
 
-    /* 모바일에서는 버튼 크기 줄이기 */
-    @media (max-width: 768px) {
-        .swiper-button-next,
-        .swiper-button-prev {
-            width: 36px;
-            height: 36px;
-        }
-
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            font-size: 14px;
-        }
-    }
 }
 
 
-// 미디어쿼리 media
+// responsive 반응형
 @media(max-width:1280px){
+    // section01 섹션1
     .section01{ 
     .act__btn_01 {
         left: 465px;
@@ -528,23 +513,15 @@
         left: 280px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-.gallery__modal{
+    //section02 섹션2
+    .section02{
     .gallery15{
-    height: 481px;
+    height: 100%;}
 }
-}}
+}
 
 @media(max-width:1024px){
+//section01 섹션1
     .section01{ 
     .act__btn_01 {
         left: 365px;
@@ -590,33 +567,24 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
+//section02 섹션2
 .gallery__modal{
     .gallery15{
     height: 481px;
 }
-}}
-
-
+}
+}
 
 @media(max-width:768px){
+    //section01 섹션1
     .section01{
         .acvtive_btn,.act__text_01,.act__text_02,.act__text_03{
             display: none;
         }
     }
-}
 
-
-    @media (max-width:768px){
+    //section02 섹션2
+    .section02{
         .gallery__modal{
             .gallery02{
                 margin-bottom:25px;
@@ -629,3 +597,33 @@
             }
         }
     }
+
+    //section03 섹션3
+    .section03{
+         .swiper-button-next,
+        .swiper-button-prev {
+            width: 36px;
+            height: 36px;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 14px;
+        }
+    }
+}
+
+@media(max-width:540px){
+    //section02
+    .section02{
+        .gallery02{
+            margin-bottom:25px;
+        }
+        .gallery08{
+            margin-top: 25px;
+        }
+        .gallery16{
+            margin-bottom: 25px;
+        }
+    }
+}

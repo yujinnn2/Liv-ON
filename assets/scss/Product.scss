@@ -81,6 +81,7 @@
   }
 }
 
+
 // section 01
 .section01 {
   background-color: #f8f9fa;
@@ -348,20 +349,23 @@
 }
 
 
-
-/* 모바일 메뉴 스타일 */
-@media (max-width: 992px)
-{
-.row {
+// responsive 반응형
+@media (max-width: 992px){
+  //section01 섹션1
+  .section01{
+    .row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
-  .section01 .tab-content .d-grid {
+.tab-content .d-grid {
     grid-template-columns: repeat(2, 1fr);
-}}
+}
+  }
+}
 
 @media (max-width: 768px) {
+  // section01 섹션1
   .section01{
   .d-grid{
     margin-top:20px;
@@ -376,8 +380,6 @@
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 0.5rem;
   }
-   }}
-
   .row {
     margin: 0 -10px;
   }
@@ -386,10 +388,13 @@
     font-size: 24px;
     p {
     font-size: 14px;
-  }}
-  
+  }
+   }
+   }
+}
 
-  @media (max-width: 390px) {
+@media (max-width: 390px) {
+  // section01 섹션1
   .section01{
   .d-grid{
     margin-top:20px;
@@ -404,4 +409,5 @@
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 0.5rem;
   }
-   }}
+   }
+}

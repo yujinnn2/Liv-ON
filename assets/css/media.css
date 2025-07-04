@@ -1,0 +1,249 @@
+@charset "UTF-8";
+@import url("../scss/common.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+.top_cover {
+  width: 100%;
+  height: 300px;
+  background: url("../images/banner06.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.top_cover .top {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  text-align: center;
+}
+.top_cover .top_cover_title {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
+}
+.top_cover .top_cover_text {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+.top_cover .bg_cover_black {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .top_cover {
+    height: 400px;
+  }
+  .top_cover .top_cover_title {
+    font-size: 3rem;
+  }
+  .top_cover .top_cover_text {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 992px) {
+  .top_cover {
+    height: 500px;
+    background-attachment: fixed;
+  }
+  .top_cover .top_cover_title {
+    font-size: 3.5rem;
+  }
+  .top_cover .top_cover_text {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .top_cover {
+    height: 600px;
+  }
+}
+
+.section01 {
+  padding: 100px 0;
+  position: relative;
+}
+.section01 .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section01 .section-header h2 {
+  font-size: 32px;
+  color: #2a2a2a;
+  position: relative;
+}
+.section01 .section-header h2::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: #908B79;
+}
+.section01 .section-header p {
+  color: #6d6d6d;
+  margin-top: 1.5rem;
+}
+.section01 .media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(525px, 1fr));
+  gap: 2rem;
+}
+.section01 .media-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.section01 .media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.section01 .media-card .media-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 2rem;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+.section01 .media-card .media-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.section01 .media-card .media-overlay p {
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+.section01 .media-card .media-overlay .media-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.section01 .media-card .media-overlay .media-link::after {
+  content: "→";
+  transition: all 0.3s ease;
+}
+.section01 .media-card .media-overlay .media-link:hover::after {
+  transform: translateX(5px);
+}
+.section01 .media-card:hover img {
+  transform: scale(1.05);
+}
+.section01 .media-card:hover .media-overlay {
+  transform: translateY(0);
+}
+.section01 .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 20px 0;
+  list-style: none;
+}
+.section01 .pagination li {
+  margin: 0 5px;
+}
+.section01 .pagination a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #555;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid transparent;
+}
+.section01 .pagination a:hover {
+  background-color: #FAF8EE;
+  color: #6C685A;
+}
+.section01 .pagination .active a {
+  background-color: #D8D1B5;
+  color: white;
+  border-color: #D8D1B5;
+}
+.section01 .pagination .disabled a {
+  color: #ccc;
+  pointer-events: none;
+}
+.section01 .pagination .arrow a {
+  font-size: 1.2rem;
+}
+.section01 .pagination img {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .section01 {
+    padding: 60px 0;
+  }
+  .section01 .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 540px) {
+  .section01 .media-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .section01 .section-header h2 {
+    font-size: 1.5rem;
+  }
+  .section01 .section-header h2::after {
+    top: 40px;
+  }
+}
+@media (max-width: 390px) {
+  .section01 {
+    padding: 40px 0;
+  }
+  .section01 .media-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .section01 .section-header {
+    margin-bottom: 2rem;
+  }
+  .section01 .section-header h2 {
+    font-size: 1.3rem;
+  }
+  .section01 .section-header h2::after {
+    width: 30px;
+    top: 110px;
+  }
+  .section01 .section-header p {
+    font-size: 0.9rem;
+  }
+  .section01 .button {
+    margin-top: 50px;
+  }
+  .section01 .button button {
+    padding: 10px 25px;
+  }
+}/*# sourceMappingURL=media.css.map */

@@ -1,81 +1,95 @@
 @charset "UTF-8";
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-header .d-flex {
-  gap: 250px;
+.top_cover {
   width: 100%;
-  height: 60px;
-  background: #8E8675;
+  height: 300px;
+  background: url("../images/banner07.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-  position: fixed;
-  z-index: 999;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
-header .d-flex .logo h1 {
-  font-size: 30px;
-  padding-top: 10px;
+.top_cover .top {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  text-align: center;
 }
-header .d-flex .logo h1 a {
-  text-decoration: none;
-  color: #FDFCF7;
-  font-family: math;
+.top_cover .top_cover_title {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
 }
-header .d-flex .nav-bar ul {
-  display: flex;
-  list-style: none;
-  padding-top: 20px;
+.top_cover .top_cover_text {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.5;
 }
-header .d-flex .hbg {
-  display: none;
+.top_cover .bg_cover_black {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
-header .d-flex .hbg .line {
-  width: 30px;
-  height: 3px;
-  background: #545146;
-  margin: 6px 0;
+@media (min-width: 768px) {
+  .top_cover {
+    height: 400px;
+  }
+  .top_cover .top_cover_title {
+    font-size: 3rem;
+  }
+  .top_cover .top_cover_text {
+    font-size: 1.1rem;
+  }
 }
-header .d-flex .nav-bar a {
-  display: block;
-  color: #FDFCF7;
-  font-size: 18px;
-  font-family: math;
-  padding: 10px 25px;
-  border-radius: 50px;
-  transition: all 0.2s;
-  margin: 0 5px;
-  text-decoration: none;
+@media (min-width: 992px) {
+  .top_cover {
+    height: 500px;
+    background-attachment: fixed;
+  }
+  .top_cover .top_cover_title {
+    font-size: 3.5rem;
+  }
+  .top_cover .top_cover_text {
+    font-size: 1.2rem;
+  }
 }
-header .d-flex .nav-bar ul li a:hover {
-  color: #545146;
-  background: #fefefe;
-}
-header .d-flex .nav-bar ul li a.active {
-  color: #545146;
-  background: #fefefe;
-}
-header .d-flex .nav-bar.active {
-  height: 100vh;
+@media (min-width: 1200px) {
+  .top_cover {
+    height: 600px;
+  }
 }
 
+.section01 ul {
+  padding: 0;
+}
 .section01 .current {
   display: inherit;
 }
-.section01 .text {
-  padding: 80px 15px 15px 15px;
-}
-.section01 h4 {
-  font-size: 1.4rem;
+.section01 .text h4 {
+  font-size: 32px;
   font-weight: 600;
   margin-bottom: 15px;
   color: #2a2a2a;
 }
-.section01 p {
-  font-size: 1rem;
+.section01 .text p {
+  font-size: 16px;
   color: #555;
   margin-bottom: 20px;
   line-height: 1.7;
+  letter-spacing: 0.1rem;
   padding: 0 5px;
 }
 .section01 ul.tabs {
@@ -213,13 +227,13 @@ header .d-flex .nav-bar.active {
   position: relative;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 30px;
-  font-size: 0.95rem;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .tab-link.current {
-  color: #908B79;
+  color: #908b79;
 }
 
 .tab-link.current::after {
@@ -230,13 +244,23 @@ header .d-flex .nav-bar.active {
   transform: translateX(-50%);
   width: 60%;
   height: 3px;
-  background-color: #908B79;
+  background-color: #908b79;
 }
 
-.tab_01, .tab_02, .tab_03, .tab_04,
-.tab_05, .tab_06, .tab_07, .tab_08,
-.tab_09, .tab_10, .tab_11, .tab_12,
-.tab_13, .tab_14 {
+.tab_01,
+.tab_02,
+.tab_03,
+.tab_04,
+.tab_05,
+.tab_06,
+.tab_07,
+.tab_08,
+.tab_09,
+.tab_10,
+.tab_11,
+.tab_12,
+.tab_13,
+.tab_14 {
   position: relative;
   min-width: 120px;
   cursor: pointer;
@@ -246,117 +270,84 @@ header .d-flex .nav-bar.active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.tab_01:hover, .tab_02:hover, .tab_03:hover, .tab_04:hover,
-.tab_05:hover, .tab_06:hover, .tab_07:hover, .tab_08:hover,
-.tab_09:hover, .tab_10:hover, .tab_11:hover, .tab_12:hover,
-.tab_13:hover, .tab_14:hover {
+.tab_01:hover,
+.tab_02:hover,
+.tab_03:hover,
+.tab_04:hover,
+.tab_05:hover,
+.tab_06:hover,
+.tab_07:hover,
+.tab_08:hover,
+.tab_09:hover,
+.tab_10:hover,
+.tab_11:hover,
+.tab_12:hover,
+.tab_13:hover,
+.tab_14:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.tab_01:hover img, .tab_02:hover img, .tab_03:hover img, .tab_04:hover img,
-.tab_05:hover img, .tab_06:hover img, .tab_07:hover img, .tab_08:hover img,
-.tab_09:hover img, .tab_10:hover img, .tab_11:hover img, .tab_12:hover img,
-.tab_13:hover img, .tab_14:hover img {
+.tab_01:hover img,
+.tab_02:hover img,
+.tab_03:hover img,
+.tab_04:hover img,
+.tab_05:hover img,
+.tab_06:hover img,
+.tab_07:hover img,
+.tab_08:hover img,
+.tab_09:hover img,
+.tab_10:hover img,
+.tab_11:hover img,
+.tab_12:hover img,
+.tab_13:hover img,
+.tab_14:hover img {
   transform: scale(1.05);
 }
 
-.tab_01:hover .tab_01_text, .tab_02:hover .tab_02_text,
-.tab_03:hover .tab_03_text, .tab_04:hover .tab_04_text,
-.tab_05:hover .tab_05_text, .tab_06:hover .tab_06_text,
-.tab_07:hover .tab_07_text, .tab_08:hover .tab_08_text,
-.tab_09:hover .tab_09_text, .tab_10:hover .tab_10_text,
-.tab_11:hover .tab_11_text, .tab_12:hover .tab_12_text,
-.tab_13:hover .tab_13_text, .tab_14:hover .tab_14_text {
+.tab_01:hover .tab_01_text,
+.tab_02:hover .tab_02_text,
+.tab_03:hover .tab_03_text,
+.tab_04:hover .tab_04_text,
+.tab_05:hover .tab_05_text,
+.tab_06:hover .tab_06_text,
+.tab_07:hover .tab_07_text,
+.tab_08:hover .tab_08_text,
+.tab_09:hover .tab_09_text,
+.tab_10:hover .tab_10_text,
+.tab_11:hover .tab_11_text,
+.tab_12:hover .tab_12_text,
+.tab_13:hover .tab_13_text,
+.tab_14:hover .tab_14_text {
   transform: translateY(0);
   opacity: 1;
 }
 
-.footer {
-  background-color: #8E8675;
-  padding: 50px 0 20px;
-  font-family: "Noto Sans KR", sans-serif;
-  color: #FDFCF7;
-  border-top: 1px solid #eee;
-  /* 로고 & 주소 영역 */
-  /* 메뉴 & SNS 영역 */
-  /* 저작권 영역 */
-}
-.footer p {
-  color: #FDFCF7;
-}
-.footer .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.footer .footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 30px;
-  justify-content: space-between;
-}
-.footer .footer-info p {
-  margin: 5px 0;
-  font-size: 14px;
-}
-.footer .footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
-}
-.footer .footer-menu ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  padding-top: 15px;
-}
-.footer .footer-menu a {
-  color: #e1e1e1;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-}
-.footer .footer-menu a:hover {
-  color: #000;
-}
-.footer .footer-social {
-  display: flex;
-  gap: 15px;
-}
-.footer .footer-social a {
-  color: #e1e1e1;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-.footer .footer-social a:hover {
-  color: #000;
-}
-.footer .footer-copyright {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 12px;
-  color: #e1e1e1;
-}
-
-/* 반응형 (모바일) */
+/* 태블릿 이상에서는 1줄로 표시 */
 @media (max-width: 768px) {
-  .footer .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2열 그리드 */
+    gap: 0.5rem; /* 셀 간격 */
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
   }
-  .footer .footer-logo img {
-    margin-right: 0;
-    margin-bottom: 20px;
+  .tab-link {
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    background: #f5f5f5;
+    text-align: center;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
   }
-  .footer .footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
+  .tab-link .current {
+    color: #fff;
+    background: #908b79;
   }
 }/*# sourceMappingURL=Virtual.css.map */
