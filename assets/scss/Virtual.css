@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("../scss/common.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 .top_cover {
@@ -112,8 +111,7 @@
   display: none;
   padding: 15px;
 }
-
-.tab_bg_content {
+.tab-content .tab_bg_content {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -121,72 +119,72 @@
   width: 100%;
   height: 90%;
 }
-.tab_bg_content .bg1 {
+.tab-content .tab_bg_content .bg1 {
   width: 100%;
   background: url("../images/bg1.png");
   height: 780px;
 }
-.tab_bg_content .bg2 {
+.tab-content .tab_bg_content .bg2 {
   width: 100%;
   background: url("../images/bg2.png");
   height: 780px;
 }
-.tab_bg_content .bg3 {
+.tab-content .tab_bg_content .bg3 {
   width: 100%;
   background: url("../images/bg3.png");
   height: 780px;
 }
-.tab_bg_content .bg4 {
+.tab-content .tab_bg_content .bg4 {
   width: 100%;
   background: url("../images/bg4.png");
   height: 780px;
 }
-.tab_bg_content .bg5 {
+.tab-content .tab_bg_content .bg5 {
   width: 100%;
   background: url("../images/bg5.png");
   height: 780px;
 }
-.tab_bg_content .bg6 {
+.tab-content .tab_bg_content .bg6 {
   width: 100%;
   background: url("../images/bg6.png");
   height: 780px;
 }
-.tab_bg_content .bg7 {
+.tab-content .tab_bg_content .bg7 {
   width: 100%;
   background: url("../images/bg7.png");
   height: 780px;
 }
-.tab_bg_content .bg8 {
+.tab-content .tab_bg_content .bg8 {
   width: 100%;
   background: url("../images/bg8.png");
   height: 780px;
 }
-.tab_bg_content .bg9 {
+.tab-content .tab_bg_content .bg9 {
   width: 100%;
   background: url("../images/bg9.png");
   height: 780px;
 }
-.tab_bg_content .bg10 {
+.tab-content .tab_bg_content .bg10 {
   width: 100%;
   background: url("../images/bg10.png");
   height: 780px;
 }
-.tab_bg_content .bg11 {
+.tab-content .tab_bg_content .bg11 {
   width: 100%;
   background: url("../images/bg11.png");
   height: 780px;
 }
-.tab_bg_content .bg12 {
+.tab-content .tab_bg_content .bg12 {
   width: 100%;
   background: url("../images/bg12.png");
   height: 780px;
 }
-.tab_bg_content .bg13 {
+.tab-content .tab_bg_content .bg13 {
   width: 100%;
   background: url("../images/bg13.png");
   height: 780px;
 }
-.tab_bg_content .bg14 {
+.tab-content .tab_bg_content .bg14 {
   width: 100%;
   background: url("../images/bg14.png");
   height: 780px;
@@ -323,12 +321,11 @@
   opacity: 1;
 }
 
-/* 태블릿 이상에서는 1줄로 표시 */
 @media (max-width: 768px) {
   .tabs {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2열 그리드 */
-    gap: 0.5rem; /* 셀 간격 */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
     margin: 1rem 0;
     padding: 0;
     list-style: none;

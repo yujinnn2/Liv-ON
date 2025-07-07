@@ -333,7 +333,6 @@
     align-items: center;
     cursor: pointer;
     
-    /* 슬라이드 내부 컨테이너 */
     .slide-image, .section02__img {
       width: 100%;
       height: 100%;
@@ -349,7 +348,7 @@
     }
   }
 
-  /* 호버 효과 스타일 */
+
   .section02__img {
     &:hover {
       img {
@@ -418,14 +417,10 @@
 }
 
 
-
-
 // section03 섹션3
 .section03 {
-  // background: #FAF8EE;
   padding-top: 50px;
   
-
   .nav-tabs {
     justify-content: center;
     border: none;
@@ -450,7 +445,6 @@
     gap: 50px;
   }
 
-/* 탭 메뉴 스타일 재정의 */
 .nav-tabs {
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 40px;
@@ -538,7 +532,6 @@
       letter-spacing: 2.5rem;
       color: #181818;
       opacity: .7;
-      // text-shadow: -10px 10px 1px #D8D1B5;
     }
   }
 
@@ -670,9 +663,6 @@
   h3 {
     font-weight: 700;
   }
-
-
-
 }
 
 
@@ -680,6 +670,7 @@
 .section05 {
   .col-md-12 {
     padding: 50px 0;
+    padding: 0 15px 0 15px;
     .d-flex {
       justify-content: space-between;
       a{
@@ -721,15 +712,8 @@
 }
 
 
-
-
-
-// media 반응형 구간
+// responsive 반응형 
 @media (max-width:1280px) {
-
-  // section02 섹션2
-
-
   // section03 섹션3
   .section03 {
     .text_3{
@@ -749,16 +733,16 @@
     .col-md-12 .d-flex img {
       padding: 0 0 0 10px;
     }
-
   }
-
 }
 
 @media (max-width:1024px) {
+  // section02 섹션2
 .section02 {
   .section02__img .hover-content .hover-desc p {
     font-size: 0.9rem;
-  }}
+  }
+}
 
   // section03 섹션3
   .section03 {
@@ -781,8 +765,6 @@
 }
 
 @media (max-width:768px) {
-
-
   //section02 섹션2
   .section02 {
     .section02__img .hover-content .hover-desc p {
@@ -878,12 +860,12 @@
     }
   
   // section05 섹션5
-    .section05 .col-md-4 {
+    .section05{
+      .col-md-4 {
       flex: 0 0 100%;
       max-width: 100%;
       margin-bottom: 30px;
   
-      /* 카드 사이 간격 */
       .img_section img {
         width: 100%;
         height: auto;
@@ -898,6 +880,7 @@
         margin-top: 10px;
       }
     }
+  }
 
   // section06 섹션6
     .section06 {
@@ -908,7 +891,7 @@
 }
 
 @media (max-width:430px) {
-  //hero-slider 섹션1
+  //hero-slider 
   .hero-slider{
     .slide-title{
       h2{
@@ -919,6 +902,7 @@
       }
     }
   }
+
   //section02 섹션2
   .section02 {
     .col-md-12 h4 {
@@ -989,11 +973,10 @@
         border-radius:10px;
       }
     }
-  }}
-
+  }
+}
 
 @media (max-width:394px) {
-
   //section02 섹션2
   .section02 {
     .hover-content h3 {

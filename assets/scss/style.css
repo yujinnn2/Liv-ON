@@ -244,7 +244,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  /* 호버 효과 스타일 */
 }
 .section02 .container .col-md-12 p {
   color: #333;
@@ -261,7 +260,6 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  /* 슬라이드 내부 컨테이너 */
 }
 .section02 .swiper-slide .slide-image, .section02 .swiper-slide .section02__img {
   width: 100%;
@@ -331,7 +329,6 @@
 .section03 {
   padding-top: 50px;
   overflow: hidden;
-  /* 탭 메뉴 스타일 재정의 */
 }
 .section03 .nav-tabs {
   justify-content: center;
@@ -527,6 +524,7 @@
 
 .section05 .col-md-12 {
   padding: 50px 0;
+  padding: 0 15px 0 15px;
 }
 .section05 .col-md-12 .d-flex {
   justify-content: space-between;
@@ -665,7 +663,6 @@
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 30px;
-    /* 카드 사이 간격 */
   }
   .section05 .col-md-4 .img_section img {
     width: 100%;

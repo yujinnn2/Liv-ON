@@ -1,1 +1,344 @@
-@import"../scss/common.css";@import"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css";.top_cover{width:100%;height:300px;background:url("../images/banner01.png");background-position:center center;background-size:cover;background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.top_cover .top{position:relative;z-index:2;padding:0 20px;text-align:center}.top_cover .top_cover_title{color:#fff;font-size:2rem;text-align:center;margin:0;line-height:1.3}.top_cover .top_cover_text{color:#fff;font-size:1rem;text-align:center;margin-top:15px;line-height:1.5}.top_cover .bg_cover_black{background:rgba(0,0,0,.3);position:absolute;width:100%;height:100%;top:0;left:0;z-index:1}@media(min-width: 768px){.top_cover{height:400px}.top_cover .top_cover_title{font-size:3rem}.top_cover .top_cover_text{font-size:1.1rem}}@media(min-width: 992px){.top_cover{height:500px;background-attachment:fixed}.top_cover .top_cover_title{font-size:3.5rem}.top_cover .top_cover_text{font-size:1.2rem}}@media(min-width: 1200px){.top_cover{height:600px}}.section01{background-color:#f8f9fa}.section01 .text h4{font-size:32px;font-weight:600;margin-bottom:15px;color:#2a2a2a}.section01 .text p{font-size:16px;color:#555;margin-bottom:20px;line-height:1.7;letter-spacing:.1rem;padding:0 5px}.section01 .tab-content{animation:fadeIn .5s ease-out}.section01 .main_title{font-size:100px;font-family:math;color:#333;opacity:.3;font-weight:300;text-align:center;padding-top:80px}.section01 ul.tabs{margin:0px;list-style:none}.section01 ul.tabs li{background:none;color:#222;display:inline-block;padding:10px 15px;cursor:pointer}.section01 ul.tabs li.current{color:#222}.section01 .tab-content{display:none;padding:15px}.section01 .tab-content.current{display:inherit}.section01 .col-md-12 span{text-decoration:line-through}.section01 .tabs{display:flex;margin-bottom:40px;border-bottom:1px solid #e0e0e0}.section01 .tab-link{padding:12px 24px;margin:0 10px;cursor:pointer;font-weight:600;color:#555;position:relative;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1);border-radius:4px}.section01 .tab-link:hover{color:#2a2a2a;background-color:rgba(0,119,182,.05)}.section01 .tab-link.current{color:#f0e8c9}.section01 .tab-link.current::after{content:"";position:absolute;bottom:0px;left:0;width:100%;height:3px;background-color:#8e8675}.section01 .tab-content .d-grid{grid-template-columns:repeat(4, 1fr);margin-top:15px}.section01 .col-md-12{position:relative;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1)}.section01 .col-md-12>img:first-child{width:100%;height:auto;border-radius:8px;margin-bottom:15px;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1);box-shadow:0 4px 8px rgba(0,0,0,.1)}.section01 .col-md-12:hover>img:first-child{transform:translateY(-5px);box-shadow:0 8px 16px rgba(0,0,0,.15)}.section01 .col-md-12 h4{font-size:1.1rem;font-weight:600;margin-bottom:8px;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1)}.section01 .col-md-12:hover h4{color:#908b79}.section01 .col-md-12 p{font-size:1rem;color:#555;margin-bottom:8px}.section01 .col-md-12 p span{text-decoration:line-through;color:#999;margin-left:8px}.section01 .col-md-12>img:nth-child(5){top:50px}.section01 .col-md-12::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,119,182,0);border-radius:8px;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1);z-index:1}.section01 .col-md-12:hover::before{background:rgba(0,119,182,.03)}.section01 .col-md-12::after{content:"제품 비교하기";position:absolute;bottom:80px;left:50%;transform:translateX(-50%);background-color:#908b79;color:#fff;padding:8px 16px;border-radius:20px;font-size:.8rem;font-weight:500;opacity:0;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1);z-index:3;white-space:nowrap;cursor:pointer}.section01 .col-md-12:hover::after{opacity:1;bottom:90px}.section01 .pagination{display:flex;justify-content:center;margin-top:60px;padding:20px 0;list-style:none;margin-bottom:0}.section01 .pagination li{margin:0 5px}.section01 .pagination a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;color:#555;font-weight:600;text-decoration:none;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1);border:1px solid rgba(0,0,0,0)}.section01 .pagination a:hover{background-color:#faf8ee;color:#6c685a}.section01 .pagination .active a{background-color:#d8d1b5;color:#fff;border-color:#d8d1b5}.section01 .pagination .disabled a{color:#ccc;pointer-events:none}.section01 .pagination .arrow a{font-size:1.2rem}.section01 .pagination img{cursor:pointer}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@media(max-width: 992px){.section01 .row{display:flex;flex-wrap:wrap;margin:0 -15px}.section01 .tab-content .d-grid{grid-template-columns:repeat(2, 1fr)}}@media(max-width: 768px){.section01 .d-grid{margin-top:20px}.section01 .tabs{display:grid;grid-template-columns:repeat(2, 1fr);gap:.5rem;margin:1rem 0;padding:0;list-style:none;border-bottom:1px solid #e0e0e0;padding-bottom:.5rem}.section01 .row{margin:0 -10px}.section01 .text h4{font-size:24px}.section01 .text h4 p{font-size:14px}}@media(max-width: 390px){.section01 .d-grid{margin-top:20px}.section01 .tabs{display:grid;grid-template-columns:repeat(2, 1fr);gap:.5rem;margin:1rem 0;padding:0;list-style:none;border-bottom:1px solid #e0e0e0;padding-bottom:.5rem}}
+@charset "UTF-8";
+@import url("../scss/common.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+.top_cover {
+  width: 100%;
+  height: 300px;
+  background: url("../images/banner01.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.top_cover .top {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  text-align: center;
+}
+.top_cover .top_cover_title {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
+}
+.top_cover .top_cover_text {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+.top_cover .bg_cover_black {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .top_cover {
+    height: 400px;
+  }
+  .top_cover .top_cover_title {
+    font-size: 3rem;
+  }
+  .top_cover .top_cover_text {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 992px) {
+  .top_cover {
+    height: 500px;
+    background-attachment: fixed;
+  }
+  .top_cover .top_cover_title {
+    font-size: 3.5rem;
+  }
+  .top_cover .top_cover_text {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .top_cover {
+    height: 600px;
+  }
+}
+
+.section01 {
+  background-color: #f8f9fa;
+  /* 탭 메뉴 스타일 */
+  /* 제품 카드 스타일 */
+  /* 추가적인 hover 효과 */
+  /* Quick view 버튼 (hover 시 나타남) */
+}
+.section01 .text h4 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2a2a2a;
+}
+.section01 .text p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  letter-spacing: 0.1rem;
+  padding: 0 5px;
+}
+.section01 .tab-content {
+  animation: fadeIn 0.5s ease-out;
+}
+.section01 .main_title {
+  font-size: 100px;
+  font-family: math;
+  color: #333;
+  opacity: 0.3;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 80px;
+}
+.section01 ul.tabs {
+  margin: 0px;
+  list-style: none;
+}
+.section01 ul.tabs li {
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.section01 ul.tabs li.current {
+  color: #222;
+}
+.section01 .tab-content {
+  display: none;
+  padding: 15px;
+}
+.section01 .tab-content.current {
+  display: inherit;
+}
+.section01 .col-md-12 span {
+  text-decoration: line-through;
+}
+.section01 .tabs {
+  display: flex;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.section01 .tab-link {
+  padding: 12px 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 4px;
+}
+.section01 .tab-link:hover {
+  color: #2a2a2a;
+  background-color: rgba(0, 119, 182, 0.05);
+}
+.section01 .tab-link.current {
+  color: #f0e8c9;
+}
+.section01 .tab-link.current::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #8e8675;
+}
+.section01 .tab-content .d-grid {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 15px;
+}
+.section01 .col-md-12 {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.section01 .col-md-12 > img:first-child {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.section01 .col-md-12:hover > img:first-child {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.section01 .col-md-12 h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.section01 .col-md-12:hover h4 {
+  color: #908b79;
+}
+.section01 .col-md-12 p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+.section01 .col-md-12 p span {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 8px;
+}
+.section01 .col-md-12 > img:nth-child(5) {
+  top: 50px;
+}
+.section01 .col-md-12::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 119, 182, 0);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1;
+}
+.section01 .col-md-12:hover::before {
+  background: rgba(0, 119, 182, 0.03);
+}
+.section01 .col-md-12::after {
+  content: "제품 비교하기";
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #908b79;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 3;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.section01 .col-md-12:hover::after {
+  opacity: 1;
+  bottom: 90px;
+}
+.section01 .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 20px 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+.section01 .pagination li {
+  margin: 0 5px;
+}
+.section01 .pagination a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #555;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid transparent;
+}
+.section01 .pagination a:hover {
+  background-color: #faf8ee;
+  color: #6c685a;
+}
+.section01 .pagination .active a {
+  background-color: #d8d1b5;
+  color: white;
+  border-color: #d8d1b5;
+}
+.section01 .pagination .disabled a {
+  color: #ccc;
+  pointer-events: none;
+}
+.section01 .pagination .arrow a {
+  font-size: 1.2rem;
+}
+.section01 .pagination img {
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .section01 .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  .section01 .tab-content .d-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .section01 .d-grid {
+    margin-top: 20px;
+  }
+  .section01 .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+  .section01 .row {
+    margin: 0 -10px;
+  }
+  .section01 .text h4 {
+    font-size: 24px;
+  }
+  .section01 .text h4 p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 390px) {
+  .section01 .d-grid {
+    margin-top: 20px;
+  }
+  .section01 .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+}/*# sourceMappingURL=Product.css.map */
