@@ -31,7 +31,7 @@ Liv;ON은 모던하고 심플한 감성의 인테리어 브랜드 웹사이트�
 - Skills : HTML, SCSS, JavaScript, jQuery
 - 협업 툴 : Notion, Github
 - 서비스 배포 환경 : Netlify
-- 디자인 : [[Figma](https://www.figma.com/file/fAisC2pEKzxTOzet9CfqML/README(oh-my-code)?node-id=39%3A1814)](https://www.figma.com/design/eR9iJ2wgtY0Nvv6b4VWatf/Liv-ON_Portfolio?node-id=0-1&t=DhRIqltyz7KiOkpU-1)
+- 디자인 : [https://www.figma.com/file/fAisC2pEKzxTOzet9CfqML/README(oh-my-code)?node-id=39%3A1814)](https://www.figma.com/design/eR9iJ2wgtY0Nvv6b4VWatf/Liv-ON_Portfolio?node-id=0-1&t=DhRIqltyz7KiOkpU-]
 
 ## 3. 프로젝트 구조
 
