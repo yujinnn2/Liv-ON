@@ -1,4 +1,4 @@
-# 인테리어 웹 사이트 Liv;ON README
+# [Liv;ON] 인테리어 웹 페이지 README
 
 
 ![Image](https://github.com/user-attachments/assets/ae47b0d0-cc56-4604-afa1-90a8c2e2cdcf)
