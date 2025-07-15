@@ -1,4 +1,4 @@
-# Liv;ON README
+# 인테리어 웹 사이트 Liv;ON README
 
 
 ![Image](https://github.com/user-attachments/assets/ae47b0d0-cc56-4604-afa1-90a8c2e2cdcf)
@@ -98,11 +98,6 @@ Liv-ON/
 - UI 구현 : 2025-04-30 ~ 2025-05-23
 - 기능 구현 : 2022-05-26 ~ 2022-07-01
 
-**작업 관리**
-
-- GitHub Projects와 Issues를 사용하여 진행 상황을 공유했습니다.
-- 주간회의를 진행하며 작업 순서와 방향성에 대한 고민을 나누고 notion에 회의 내용을 기록했습니다.
-
 
 ## 5. 주요 기술 구현
 
@@ -187,7 +182,7 @@ Liv-ON/
 > 이미지 리소스: `assets/images/gallery/` 디렉토리
 
 
-## ✨ 기타 적용 사항 요약
+## 기타 적용 사항 요약
 
 | 항목 | 내용 |
 | --- | --- |
