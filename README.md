@@ -1,10 +1,6 @@
 # [Liv;ON] 인테리어 웹 페이지 README
 
 
-![Image](https://github.com/user-attachments/assets/ae47b0d0-cc56-4604-afa1-90a8c2e2cdcf)
-
-
-
 
 - 배포 URL :https://liveon1018.netlify.app
 
@@ -35,7 +31,7 @@ Liv;ON은 모던하고 심플한 감성의 인테리어 브랜드 웹사이트�
 - Skills : HTML, SCSS, JavaScript, jQuery
 - 협업 툴 : Notion, Github
 - 서비스 배포 환경 : Netlify
-- 디자인 : [Figma](https://www.figma.com/file/fAisC2pEKzxTOzet9CfqML/README(oh-my-code)?node-id=39%3A1814)
+- 디자인 : [[Figma](https://www.figma.com/file/fAisC2pEKzxTOzet9CfqML/README(oh-my-code)?node-id=39%3A1814)](https://www.figma.com/design/eR9iJ2wgtY0Nvv6b4VWatf/Liv-ON_Portfolio?node-id=0-1&t=DhRIqltyz7KiOkpU-1)
 
 ## 3. 프로젝트 구조
 
@@ -139,7 +135,6 @@ Liv-ON/
 > `Brand.scss`, `Gallery.scss`, `Product.scss` 등)
 > 
 
-![Image](https://github.com/user-attachments/assets/726a2452-32f5-42b0-867d-65f07db8e0d3)
 
 
 
@@ -161,7 +156,7 @@ Liv-ON/
 > 스크립트 파일: `assets/js/virtual.js`
 
 
-![Image](https://github.com/user-attachments/assets/48776fe2-c3a1-4b9d-a288-6d600e6f82ab)
+
 
 ###  4. 갤러리(제품 팝업, 모달창) 
 시공 사례 중심의 이미지 갤러리 구성
