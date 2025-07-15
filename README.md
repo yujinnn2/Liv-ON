@@ -142,9 +142,10 @@ Liv-ON/
 > - Desktop: 1280px 이상
 
 > 관련 파일:
-> assets/css/style.css, scss/style.scss
+> `assets/css/style.css`, `scss/style.scss`
 > 
-> 각 개별 페이지별 SCSS (예: Brand.scss, Gallery.scss, Product.scss 등)
+> 각 개별 페이지별 SCSS
+> `Brand.scss`, `Gallery.scss`, `Product.scss` 등)
 > 
 
 ![Image](https://github.com/user-attachments/assets/726a2452-32f5-42b0-867d-65f07db8e0d3)
@@ -153,12 +154,12 @@ Liv-ON/
 
 
 
-###  3. 가상체험관 (Virtual) 
+###  3. 가상체험관 (Virtual Interior Experience) 
+사용자가 직접 인테리어 스타일을 체험해볼 수 있도록 구성된 가상 체험 공간
 
-- **시장 내 점포 위치를 시각적으로 안내**
-- **Kakao 지도 API**를 통해 부평시장 주변 정보 및 상세 위치 표시
-- 사용자 현재 위치 기반 거리 안내 및 마커 클릭 시 **오버레이 정보창** 출력
-- 지도 컨트롤: 줌인/줌아웃, 드래그, 터치 대응
+- 마우스 오버 / 클릭 시 전환되는 시뮬레이션 UI 제공
+- 향후 실제 3D 가상 인테리어 구현도 가능하도록 기본 구조 설계
+- 가상의 방에 제품 배치 등 브랜드 몰입 경험 유도
 - **커스텀 마커 이미지 적용**으로 시각적 차별화
 
 > 관련 파일:
@@ -169,7 +170,20 @@ Liv-ON/
 > `assets/js/common.js`
 > 
 > `assets/css/map.css`, `scss/map.scss`
-> 
+
+3. 가상체험관 (Virtual Interior Experience)
+사용자가 직접 인테리어 스타일을 체험해볼 수 있도록 구성된 가상 체험 공간
+
+
+
+
+
+
+
+사용 파일:
+Virtual.html
+스타일 파일: assets/css/Virtual.css, scss/Virtual.scss
+스크립트 파일: assets/js/virtual.js
 
 ![Image](https://github.com/user-attachments/assets/48776fe2-c3a1-4b9d-a288-6d600e6f82ab)
 
