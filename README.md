@@ -155,7 +155,7 @@ Liv-ON/
 > 
 > 스크립트 파일: `assets/js/virtual.js`
 
-
+![Image](https://github.com/user-attachments/assets/aa3daa49-5598-4c68-aa4c-2a58d551058a)
 
 
 ###  4. 갤러리(제품 팝업, 모달창) 
@@ -176,6 +176,7 @@ Liv-ON/
 > 
 > 이미지 리소스: `assets/images/gallery/` 디렉토리
 
+![Image](https://github.com/user-attachments/assets/7ab9fe65-4311-438d-8756-748fdcdb7658)
 
 ## 기타 적용 사항 요약
 
