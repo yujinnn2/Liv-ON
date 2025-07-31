@@ -1,6 +1,6 @@
 # [Liv;ON] 인테리어 웹 페이지 README
 
-
+![Image](https://github.com/user-attachments/assets/c8bac820-b972-4fe6-a532-40a9189aaa32)
 
 - 배포 URL :https://liveon1018.netlify.app
 
